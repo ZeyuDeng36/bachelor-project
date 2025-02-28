@@ -1,0 +1,88 @@
+MODEL:resnet18_MNIST_Evidence , Train Loss: 0.0024, Train Accuracy: 95.87, Validation Loss: 0.0451, Validation Accuracy: 98.19%
+MODEL:resnet18_MNIST , Train Loss: 0.0025, Train Accuracy: 95.71, Validation Loss: 0.0508, Validation Accuracy: 97.78%
+
+MODEL:resnet18-MNIST-random-0 , Train Loss: 0.0030, Train Accuracy: 95.46, Validation Loss: 0.0671, Validation Accuracy: 97.86%
+MODEL:resnet18-MNIST-random-0.3 , Train Loss: 0.0077, Train Accuracy: 94.75, Validation Loss: 0.0956, Validation Accuracy: 97.02%
+MODEL:resnet18-MNIST-random-0.5 , Train Loss: 0.0169, Train Accuracy: 93.98, Validation Loss: 0.2049, Validation Accuracy: 93.07%
+MODEL:resnet18-MNIST-random-0.7 , Train Loss: 0.0406, Train Accuracy: 92.43, Validation Loss: 0.1239, Validation Accuracy: 96.02%
+MODEL:resnet18-MNIST-random-0.8 , Train Loss: 0.0808, Train Accuracy: 91.05, Validation Loss: 0.1875, Validation Accuracy: 93.93%
+MODEL:resnet18-MNIST-random-0.9 , Train Loss: 0.3527, Train Accuracy: 87.18, Validation Loss: 0.3365, Validation Accuracy: 88.78%
+MODEL:resnet18-MNIST-random-0.95 , Train Loss: 0.4007, Train Accuracy: 83.50, Validation Loss: 0.2249, Validation Accuracy: 93.30%
+
+MODEL:resnet18_MNIST_Evidence , Train Loss: 0.0024, Train Accuracy: 95.85, Validation Loss: 0.0577, Validation Accuracy: 97.28%
+MODEL:resnet18_MNIST , Train Loss: 0.0024, Train Accuracy: 95.85, Validation Loss: 0.0536, Validation Accuracy: 97.66%
+
+MODEL:resnet18-MNIST-random-0 , Train Loss: 0.0029, Train Accuracy: 95.56, Validation Loss: 0.0592, Validation Accuracy: 98.24%
+MODEL:resnet18-MNIST-random-0.3 , Train Loss: 0.0080, Train Accuracy: 94.77, Validation Loss: 0.0604, Validation Accuracy: 97.99%
+MODEL:resnet18-MNIST-random-0.5 , Train Loss: 0.0144, Train Accuracy: 94.09, Validation Loss: 0.0849, Validation Accuracy: 97.17%
+MODEL:resnet18-MNIST-random-0.7 , Train Loss: 0.0398, Train Accuracy: 92.45, Validation Loss: 0.1436, Validation Accuracy: 95.42%
+MODEL:resnet18-MNIST-random-0.8 , Train Loss: 0.0913, Train Accuracy: 90.60, Validation Loss: 0.1344, Validation Accuracy: 95.77%
+MODEL:resnet18-MNIST-random-0.9 , Train Loss: 0.3526, Train Accuracy: 87.48, Validation Loss: 0.5272, Validation Accuracy: 85.84%
+MODEL:resnet18-MNIST-random-0.95 , Train Loss: 0.4282, Train Accuracy: 83.13, Validation Loss: 0.5180, Validation Accuracy: 84.79%
+
+MODEL:resnet18_MNIST_Evidence , Train Loss: 0.0019, Train Accuracy: 95.77, Validation Loss: 0.0496, Validation Accuracy: 97.93%
+MODEL:resnet18_MNIST , Train Loss: 0.0021, Train Accuracy: 95.84, Validation Loss: 0.0560, Validation Accuracy: 97.58%
+
+MODEL:resnet18-MNIST-random-0 , Train Loss: 0.0029, Train Accuracy: 95.57, Validation Loss: 0.0590, Validation Accuracy: 98.14%
+MODEL:resnet18-MNIST-random-0.3 , Train Loss: 0.0091, Train Accuracy: 94.87, Validation Loss: 0.0819, Validation Accuracy: 97.54%
+MODEL:resnet18-MNIST-random-0.5 , Train Loss: 0.0166, Train Accuracy: 93.91, Validation Loss: 0.1054, Validation Accuracy: 96.76%
+MODEL:resnet18-MNIST-random-0.7 , Train Loss: 0.0434, Train Accuracy: 92.62, Validation Loss: 0.1084, Validation Accuracy: 96.87%
+MODEL:resnet18-MNIST-random-0.8 , Train Loss: 0.0851, Train Accuracy: 90.80, Validation Loss: 0.1566, Validation Accuracy: 95.38%
+MODEL:resnet18-MNIST-random-0.9 , Train Loss: 0.3544, Train Accuracy: 87.18, Validation Loss: 0.5545, Validation Accuracy: 85.15%
+MODEL:resnet18-MNIST-random-0.95 , Train Loss: 0.4735, Train Accuracy: 81.93, Validation Loss: 0.2403, Validation Accuracy: 92.22%
+
+MODEL:resnet18-EvidenceLoss-MNIST-random-0 , Train Loss: 0.0021, Train Accuracy: 95.78, Validation Loss: 0.0458, Validation Accuracy: 98.21%
+MODEL:resnet18-EvidenceLoss-MNIST-random-0.3 , Train Loss: 0.0060, Train Accuracy: 95.27, Validation Loss: 0.0630, Validation Accuracy: 97.15%
+MODEL:resnet18-EvidenceLoss-MNIST-random-0.5 , Train Loss: 0.0099, Train Accuracy: 94.55, Validation Loss: 0.0677, Validation Accuracy: 97.00%
+MODEL:resnet18-EvidenceLoss-MNIST-random-0.7 , Train Loss: 0.0294, Train Accuracy: 93.26, Validation Loss: 0.0670, Validation Accuracy: 97.29%
+MODEL:resnet18-EvidenceLoss-MNIST-random-0.8 , Train Loss: 0.0549, Train Accuracy: 91.52, Validation Loss: 0.2827, Validation Accuracy: 82.58%
+MODEL:resnet18-EvidenceLoss-MNIST-random-0.9 , Train Loss: 0.2560, Train Accuracy: 88.25, Validation Loss: 0.1698, Validation Accuracy: 91.10%
+MODEL:resnet18-EvidenceLoss-MNIST-random-0.95 , Train Loss: 0.3449, Train Accuracy: 83.23, Validation Loss: 0.2908, Validation Accuracy: 83.32%
+
+MODEL:resnet18-MNIST-predictive_entropy-balanced_by_score-0 , Train Loss: 0.0032, Train Accuracy: 95.61, Validation Loss: 0.1549, Validation Accuracy: 94.86%
+MODEL:resnet18-MNIST-predictive_entropy-balanced_by_score-0.3 , Train Loss: 0.0074, Train Accuracy: 94.76, Validation Loss: 0.0746, Validation Accuracy: 97.77%
+MODEL:resnet18-MNIST-predictive_entropy-balanced_by_score-0.5 , Train Loss: 0.0145, Train Accuracy: 93.94, Validation Loss: 0.1154, Validation Accuracy: 96.12%
+MODEL:resnet18-MNIST-predictive_entropy-balanced_by_score-0.7 , Train Loss: 0.0441, Train Accuracy: 92.68, Validation Loss: 0.1058, Validation Accuracy: 96.69%
+MODEL:resnet18-MNIST-predictive_entropy-balanced_by_score-0.8 , Train Loss: 0.0786, Train Accuracy: 91.05, Validation Loss: 0.3042, Validation Accuracy: 91.05%
+MODEL:resnet18-MNIST-predictive_entropy-balanced_by_score-0.9 , Train Loss: 0.3465, Train Accuracy: 87.58, Validation Loss: 0.1931, Validation Accuracy: 93.51%
+MODEL:resnet18-MNIST-predictive_entropy-balanced_by_score-0.95 , Train Loss: 0.4686, Train Accuracy: 82.03, Validation Loss: 0.6034, Validation Accuracy: 83.09%
+
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_label-balanced_by_score-0 , Train Loss: 0.0020, Train Accuracy: 95.83, Validation Loss: 0.0464, Validation Accuracy: 98.12%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_label-balanced_by_score-0.3 , Train Loss: 0.0068, Train Accuracy: 95.14, Validation Loss: 0.0522, Validation Accuracy: 97.85%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_label-balanced_by_score-0.5 , Train Loss: 0.0095, Train Accuracy: 94.55, Validation Loss: 0.0955, Validation Accuracy: 95.02%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_label-balanced_by_score-0.7 , Train Loss: 0.0251, Train Accuracy: 93.37, Validation Loss: 0.0938, Validation Accuracy: 95.30%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_label-balanced_by_score-0.8 , Train Loss: 0.0517, Train Accuracy: 91.98, Validation Loss: 0.0784, Validation Accuracy: 96.74%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_label-balanced_by_score-0.9 , Train Loss: 0.2452, Train Accuracy: 88.49, Validation Loss: 0.3917, Validation Accuracy: 74.31%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_label-balanced_by_score-0.95 , Train Loss: 0.3324, Train Accuracy: 84.80, Validation Loss: 0.2129, Validation Accuracy: 89.45%
+
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_label-balanced_by_score-0 , Train Loss: 0.0023, Train Accuracy: 95.77, Validation Loss: 0.0640, Validation Accuracy: 96.95%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_label-balanced_by_score-0.3 , Train Loss: 0.0060, Train Accuracy: 95.05, Validation Loss: 0.0776, Validation Accuracy: 96.13%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_label-balanced_by_score-0.5 , Train Loss: 0.0105, Train Accuracy: 94.40, Validation Loss: 0.0996, Validation Accuracy: 94.69%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_label-balanced_by_score-0.7 , Train Loss: 0.0271, Train Accuracy: 92.86, Validation Loss: 0.0909, Validation Accuracy: 95.46%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_label-balanced_by_score-0.8 , Train Loss: 0.0527, Train Accuracy: 91.60, Validation Loss: 0.0956, Validation Accuracy: 95.86%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_label-balanced_by_score-0.9 , Train Loss: 0.2367, Train Accuracy: 89.81, Validation Loss: 0.1592, Validation Accuracy: 92.39%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_label-balanced_by_score-0.95 , Train Loss: 0.3240, Train Accuracy: 85.70, Validation Loss: 0.2062, Validation Accuracy: 90.00%
+
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_total-balanced_by_score-0 , Train Loss: 0.0025, Train Accuracy: 95.71, Validation Loss: 0.0513, Validation Accuracy: 97.88%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_total-balanced_by_score-0.3 , Train Loss: 0.0056, Train Accuracy: 95.04, Validation Loss: 0.0622, Validation Accuracy: 97.22%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_total-balanced_by_score-0.5 , Train Loss: 0.0118, Train Accuracy: 94.24, Validation Loss: 0.0619, Validation Accuracy: 97.40%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_total-balanced_by_score-0.7 , Train Loss: 0.0256, Train Accuracy: 93.14, Validation Loss: 0.0815, Validation Accuracy: 96.14%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_total-balanced_by_score-0.8 , Train Loss: 0.0514, Train Accuracy: 91.83, Validation Loss: 0.0857, Validation Accuracy: 96.31%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_total-balanced_by_score-0.9 , Train Loss: 0.2481, Train Accuracy: 89.02, Validation Loss: 0.1108, Validation Accuracy: 95.74%
+MODEL:resnet18-EvidenceLoss-MNIST-evidence_total-balanced_by_score-0.95 , Train Loss: 0.3300, Train Accuracy: 84.57, Validation Loss: 0.2637, Validation Accuracy: 83.96%
+
+MODEL:resnet18-EvidenceLoss-MNIST-uncertainty_label-balanced_by_score-0 , Train Loss: 0.0021, Train Accuracy: 95.69, Validation Loss: 0.0498, Validation Accuracy: 98.00%
+MODEL:resnet18-EvidenceLoss-MNIST-uncertainty_label-balanced_by_score-0.3 , Train Loss: 0.0057, Train Accuracy: 95.20, Validation Loss: 0.0647, Validation Accuracy: 96.95%
+MODEL:resnet18-EvidenceLoss-MNIST-uncertainty_label-balanced_by_score-0.5 , Train Loss: 0.0106, Train Accuracy: 94.44, Validation Loss: 0.0770, Validation Accuracy: 96.36%
+MODEL:resnet18-EvidenceLoss-MNIST-uncertainty_label-balanced_by_score-0.7 , Train Loss: 0.0273, Train Accuracy: 93.06, Validation Loss: 0.1529, Validation Accuracy: 91.13%
+MODEL:resnet18-EvidenceLoss-MNIST-uncertainty_label-balanced_by_score-0.8 , Train Loss: 0.0508, Train Accuracy: 91.48, Validation Loss: 0.1058, Validation Accuracy: 94.98%
+MODEL:resnet18-EvidenceLoss-MNIST-uncertainty_label-balanced_by_score-0.9 , Train Loss: 0.2388, Train Accuracy: 89.85, Validation Loss: 0.1669, Validation Accuracy: 91.03%
+MODEL:resnet18-EvidenceLoss-MNIST-uncertainty_label-balanced_by_score-0.95 , Train Loss: 0.3373, Train Accuracy: 84.40, Validation Loss: 0.2187, Validation Accuracy: 88.80%
+
+MODEL:resnet18-EvidenceLoss-MNIST-uncertainty_total-balanced_by_score-0 , Train Loss: 0.0021, Train Accuracy: 95.80, Validation Loss: 0.0472, Validation Accuracy: 98.15%
+MODEL:resnet18-EvidenceLoss-MNIST-uncertainty_total-balanced_by_score-0.3 , Train Loss: 0.0060, Train Accuracy: 95.03, Validation Loss: 0.0601, Validation Accuracy: 97.41%
+MODEL:resnet18-EvidenceLoss-MNIST-uncertainty_total-balanced_by_score-0.5 , Train Loss: 0.0122, Train Accuracy: 94.34, Validation Loss: 0.0695, Validation Accuracy: 97.03%
+MODEL:resnet18-EvidenceLoss-MNIST-uncertainty_total-balanced_by_score-0.7 , Train Loss: 0.0232, Train Accuracy: 93.24, Validation Loss: 0.0795, Validation Accuracy: 96.48%
+MODEL:resnet18-EvidenceLoss-MNIST-uncertainty_total-balanced_by_score-0.8 , Train Loss: 0.0507, Train Accuracy: 92.10, Validation Loss: 0.1239, Validation Accuracy: 93.53%
+MODEL:resnet18-EvidenceLoss-MNIST-uncertainty_total-balanced_by_score-0.9 , Train Loss: 0.2435, Train Accuracy: 88.97, Validation Loss: 0.1355, Validation Accuracy: 93.64%
+MODEL:resnet18-EvidenceLoss-MNIST-uncertainty_total-balanced_by_score-0.95 , Train Loss: 0.3255, Train Accuracy: 85.57, Validation Loss: 0.2292, Validation Accuracy: 87.62%

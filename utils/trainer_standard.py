@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader
 from torch import nn
 
 class Trainer:
-    def __init__(self, model, train_dataset, val_dataset, batch_size=64, learning_rate=1e-3, num_epochs=2, criterion = "crossEntropy", optimizer_type = "adam", save=""):
+    def __init__(self, model, train_dataset, val_dataset, batch_size=64, learning_rate=1e-3, num_epochs=1, criterion = "crossEntropy", optimizer_type = "adam", save=""):
         self.model = model
         self.train_dataset = train_dataset
         self.val_dataset = val_dataset
@@ -99,6 +99,7 @@ class Trainer:
     def save_model(self, fileName, train_loss, train_accuracy,val_loss, val_accuracy):
         # Save the trained model
         path = os.path.join("models", fileName)
+        print(path)
         torch.save(self.model.state_dict(), path)
         print(f"Model saved to {path}")
         with open("models/modelStats.txt", 'a') as file:

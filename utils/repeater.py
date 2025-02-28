@@ -9,184 +9,107 @@ import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
 from torchvision.models import resnet18
-from condensation.random import random_condense_dataset
-from condensation.softmax import condense_dataset, condense_dataset1,condense_dataset1,condense_dataset2,condense_dataset3,condense_dataset4
+from condensation.select import random_selection,balanced_by_label,balanced_by_score
+from condensation.sort_entropy import sort_by_log_percentage_entropy,sort_by_predictive_entropy
+from condensation.sort_evidence import sort_by_total_evidence,sort_by_label_evidence, sort_by_label_uncertainty,sort_by_total_uncertainty
 from utils.trainer_standard import Trainer
+from utils.trainer_Evidence import Trainer as TrainerE
+from typing import List, Optional
+from utils.initiate import initiate_dataset,initiate_model
+from typing import List, Optional
 
-def repeat(rates):
+# Assume these dictionaries and functions are defined elsewhere:
+scoring_methods = {
+    "log_percentage_entropy": sort_by_log_percentage_entropy,
+    "predictive_entropy": sort_by_predictive_entropy,
+    "evidence_total": sort_by_total_evidence,
+    "evidence_label": sort_by_label_evidence,
+    "uncertainty_total": sort_by_total_uncertainty,
+    "uncertainty_label": sort_by_label_uncertainty,
+}
+selection_methods = {
+    "random": random_selection,  # should be a function: selection_func(sorted_scores, keep_fraction)
+    "balanced_by_label": balanced_by_label,
+    "balanced_by_score": balanced_by_score
+}
 
-    transform = transforms.Compose([
-        transforms.Resize((32, 32)),
-        transforms.ToTensor(),
-    ])
+def repeat(
+    dataset_name: str,
+    model_name: str,
+    rates: List[float],
+    scoring_method: Optional[str],
+    selection_method: str,
+    pretrained: Optional[str],
+):
+    # Pick the scoring and selection functions from the dictionaries.
+    score_func = scoring_methods[scoring_method] if scoring_method else None
+    selection_func = selection_methods[selection_method]
+    
+    # Load pretrained model if provided (for scoring purposes).
+    model1 = initiate_model(model_name, dataset_name, pretrained) if pretrained else None
 
-    trainset = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-    testset = torchvision.datasets.MNIST(root='./data', train=False, download=True, transform=transform)
-
+    # Load the dataset (and test set) using your initiation function.
+    trainset, testset = initiate_dataset(dataset_name, model_name)
+ 
+    # For each condensation rate, create a new training model and condense the training set.
     for rate in rates:
-        model = resnet18(weights=None) #"IMAGENET1K_V1")
-        model.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
-        num_ftrs = model.fc.in_features
-        model.fc = nn.Linear(num_ftrs, 10)
-        trainset_softmaxCond = random_condense_dataset(trainset, rate)
-        trainer2 = Trainer(
+        model = initiate_model(model_name, dataset_name)  # new untrained model for training
+        sorted_scores=None
+        if rate <= 0:
+            trainset_condensed = trainset
+        else:
+            if score_func and model1:
+                # Score the training set using the pretrained model.
+                sorted_scores = score_func(model1, trainset)
+            trainset_condensed = selection_func(trainset, 1 - rate,sorted_scores)
+        
+        parts = [model_name, dataset_name, scoring_method, selection_method, rate]
+        filename = "-".join(str(p) for p in parts if p is not None)
+        print(filename)
+        trainer = Trainer(
             model,
-            trainset_softmaxCond, 
-            testset ,   
-            save=f"resnet18_MNIST_randCond_{rate}"
+            trainset_condensed,
+            testset,
+            save=filename
         )
-        trainer2.train(verbose=True)
-    return
+        trainer.train(verbose=True)
 
+def repeat1(
+    dataset_name: str,
+    model_name: str,
+    rates: List[float],
+    scoring_method: Optional[str],
+    selection_method: str,
+    pretrained: Optional[str],
+):
+    # Pick the scoring and selection functions from the dictionaries.
+    score_func = scoring_methods[scoring_method] if scoring_method else None
+    selection_func = selection_methods[selection_method]
+    
+    # Load pretrained model if provided (for scoring purposes).
+    model1 = initiate_model(model_name, dataset_name, pretrained) if pretrained else None
 
-def repeat1(rates):
-    model1 = resnet18(weights=None) #"IMAGENET1K_V1")
-    model1.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
-    num_ftrs = model1.fc.in_features
-    model1.fc = nn.Linear(num_ftrs, 10)
-    model1.load_state_dict(torch.load("models/resnet18_MNIST", weights_only=True))
-
-    transform = transforms.Compose([
-        transforms.Resize((32, 32)),
-        transforms.ToTensor(),
-    ])
-
-    trainset = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-    testset = torchvision.datasets.MNIST(root='./data', train=False, download=True, transform=transform)
-
+    # Load the dataset (and test set) using your initiation function.
+    trainset, testset = initiate_dataset(dataset_name, model_name)
+ 
+    # For each condensation rate, create a new training model and condense the training set.
     for rate in rates:
-        model = resnet18(weights=None) #"IMAGENET1K_V1")
-        model.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
-        num_ftrs = model.fc.in_features
-        model.fc = nn.Linear(num_ftrs, 10)
-        trainset_softmaxCond = condense_dataset(model1,trainset,'predictive_entropy', rate)
-        trainer2 = Trainer(
+        model = initiate_model(model_name, dataset_name)  # new untrained model for training
+        sorted_scores=None
+        if rate <= 0:
+            trainset_condensed = trainset
+        else:
+            if score_func and model1:
+                # Score the training set using the pretrained model.
+                sorted_scores = score_func(model1, trainset)
+            trainset_condensed = selection_func(trainset,1 - rate,sorted_scores)
+        modelStr = model_name+"-EvidenceLoss"
+        parts = [modelStr, dataset_name, scoring_method, selection_method, rate]
+        filename = "-".join(str(p) for p in parts if p is not None)
+        trainer = TrainerE(
             model,
-            trainset_softmaxCond, 
-            testset ,   
-            save=f"resnet18_MNIST_softMaxCondPE_{rate}"
+            trainset_condensed,
+            testset,
+            save=filename
         )
-        trainer2.train(verbose=True)
-    return
-
-
-def repeat2(rates):
-    model1 = resnet18(weights=None) #"IMAGENET1K_V1")
-    model1.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
-    num_ftrs = model1.fc.in_features
-    model1.fc = nn.Linear(num_ftrs, 10)
-    model1.load_state_dict(torch.load("models/resnet18_MNIST", weights_only=True))
-
-    transform = transforms.Compose([
-        transforms.Resize((32, 32)),
-        transforms.ToTensor(),
-    ])
-
-    trainset = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-    testset = torchvision.datasets.MNIST(root='./data', train=False, download=True, transform=transform)
-
-    for rate in rates:
-        model = resnet18(weights=None) #"IMAGENET1K_V1")
-        model.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
-        num_ftrs = model.fc.in_features
-        model.fc = nn.Linear(num_ftrs, 10)
-        trainset_softmaxCond = condense_dataset1(model1,trainset,'predictive_entropy', rate)
-        trainer2 = Trainer(
-            model,
-            trainset_softmaxCond, 
-            testset ,   
-            save=f"resnet18_MNIST_softMaxCondPE__mostANDleast_{rate}"
-        )
-        trainer2.train(verbose=True)
-    return
-
-
-def repeat3(rates):
-    model1 = resnet18(weights=None) #"IMAGENET1K_V1")
-    model1.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
-    num_ftrs = model1.fc.in_features
-    model1.fc = nn.Linear(num_ftrs, 10)
-    model1.load_state_dict(torch.load("models/resnet18_MNIST", weights_only=True))
-
-    transform = transforms.Compose([
-        transforms.Resize((32, 32)),
-        transforms.ToTensor(),
-    ])
-
-    trainset = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-    testset = torchvision.datasets.MNIST(root='./data', train=False, download=True, transform=transform)
-
-    for rate in rates:
-        model = resnet18(weights=None) #"IMAGENET1K_V1")
-        model.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
-        num_ftrs = model.fc.in_features
-        model.fc = nn.Linear(num_ftrs, 10)
-        trainset_softmaxCond = condense_dataset2(model1,trainset,'predictive_entropy', rate)
-        trainer2 = Trainer(
-            model,
-            trainset_softmaxCond, 
-            testset ,   
-            save=f"resnet18_MNIST_softMaxCondPE_equal_{rate}"
-        )
-        trainer2.train(verbose=True)
-    return
-
-def repeat4(rates):
-    model1 = resnet18(weights=None) #"IMAGENET1K_V1")
-    model1.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
-    num_ftrs = model1.fc.in_features
-    model1.fc = nn.Linear(num_ftrs, 10)
-    model1.load_state_dict(torch.load("models/resnet18_MNIST", weights_only=True))
-
-    transform = transforms.Compose([
-        transforms.Resize((32, 32)),
-        transforms.ToTensor(),
-    ])
-
-    trainset = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-    testset = torchvision.datasets.MNIST(root='./data', train=False, download=True, transform=transform)
-
-    for rate in rates:
-        model = resnet18(weights=None) #"IMAGENET1K_V1")
-        model.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
-        num_ftrs = model.fc.in_features
-        model.fc = nn.Linear(num_ftrs, 10)
-        trainset_softmaxCond = condense_dataset3(model1,trainset,'predictive_entropy', rate)
-        trainer2 = Trainer(
-            model,
-            trainset_softmaxCond, 
-            testset ,   
-            save=f"resnet18_MNIST_softMaxCondPE_equal_mostANDleast{rate}"
-        )
-        trainer2.train(verbose=True)
-    return
-
-def repeat5(rates):
-    model1 = resnet18(weights=None) #"IMAGENET1K_V1")
-    model1.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
-    num_ftrs = model1.fc.in_features
-    model1.fc = nn.Linear(num_ftrs, 10)
-    model1.load_state_dict(torch.load("models/resnet18_MNIST", weights_only=True))
-
-    transform = transforms.Compose([
-        transforms.Resize((32, 32)),
-        transforms.ToTensor(),
-    ])
-
-    trainset = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-    testset = torchvision.datasets.MNIST(root='./data', train=False, download=True, transform=transform)
-
-    for rate in rates:
-        model = resnet18(weights=None) #"IMAGENET1K_V1")
-        model.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)
-        num_ftrs = model.fc.in_features
-        model.fc = nn.Linear(num_ftrs, 10)
-        trainset_softmaxCond = condense_dataset4(model1,trainset,'predictive_entropy', rate)
-        trainer2 = Trainer(
-            model,
-            trainset_softmaxCond, 
-            testset ,   
-            save=f"resnet18_MNIST_softMaxCondPE_CCS{rate}"
-        )
-        trainer2.train(verbose=True)
-    return
+        trainer.train(verbose=True)
