@@ -1,0 +1,2 @@
+ssh fxq992@hendrixgate04fl.unicph.domain
+\\sshfs\fxq992@hendrixgate04fl.unicph.domain
