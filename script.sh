@@ -11,6 +11,4 @@
 #SBATCH --time=2-00:00:00
 #Skipping many options! see man sbatch
 # From here on, we can start our program
-
-./my_program option1 option2 option3
-./some_post_processing
+python3 main.py

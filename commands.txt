@@ -1,2 +1,16 @@
+activate remote (on cmd):
 ssh fxq992@hendrixgate04fl.unicph.domain
+
+remote network folder thing (in files):
 \\sshfs\fxq992@hendrixgate04fl.unicph.domain
+
+activate python env
+source my_project_env/bin/activate
+
+run script
+sbatch script.sh
+
+
+
+website:
+https://diku-dk.github.io/wiki/slurm-cluster#support
