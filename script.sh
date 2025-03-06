@@ -1,6 +1,6 @@
 #!/bin/bash
 #The partition is the queue you want to run on. standard is gpu and can be ommitted.
-#SBATCH -p gpu
+#SBATCH -p gpu --gres=gpu:titanrtx:4
 #SBATCH --job-name=MyJob
 #number of independent tasks we are going to start in this script
 #SBATCH --ntasks=1

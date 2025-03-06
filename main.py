@@ -53,7 +53,6 @@ if __name__ == '__main__':
    # )
     #trainer2.train(verbose=True)
     """
-    """
     model = initiate_model("resnet18", "MNIST")
     trainset, testset = initiate_dataset("MNIST", "resnet18")
     trainer = TrainerE(
@@ -73,11 +72,9 @@ if __name__ == '__main__':
         save="resnet18_MNIST"
     )
     trainer1.train(verbose=True)
-    
     repeat("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],None,"random",None)
     repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],None,"random",None)
     repeat("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"predictive_entropy","balanced_by_score","models/resnet18_MNIST")
-    """
     repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"evidence_label","balanced_by_score","models/resnet18_MNIST_Evidence")
     repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"evidence_total","balanced_by_score","models/resnet18_MNIST_Evidence")
     repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_label","balanced_by_score","models/resnet18_MNIST_Evidence")

@@ -4,13 +4,18 @@ ssh fxq992@hendrixgate04fl.unicph.domain
 remote network folder thing (in files):
 \\sshfs\fxq992@hendrixgate04fl.unicph.domain
 
-activate python env
-source my_project_env/bin/activate
+# To activate this environment, use
+#
+#     $ conda activate my_project_env
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
 
 run script
 sbatch script.sh
-
-
+ squeue --job 9536
+ cat slurm-9538.out
 
 website:
 https://diku-dk.github.io/wiki/slurm-cluster#support
