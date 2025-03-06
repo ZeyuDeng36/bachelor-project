@@ -40,6 +40,7 @@ def repeat(
     scoring_method: Optional[str],
     selection_method: str,
     pretrained: Optional[str],
+    suffix:Optional[str]
 ):
     # Pick the scoring and selection functions from the dictionaries.
     score_func = scoring_methods[scoring_method] if scoring_method else None
@@ -63,7 +64,7 @@ def repeat(
                 sorted_scores = score_func(model1, trainset)
             trainset_condensed = selection_func(trainset, 1 - rate,sorted_scores)
         
-        parts = [model_name, dataset_name, scoring_method, selection_method, rate]
+        parts = [model_name, dataset_name, scoring_method, selection_method, rate,suffix]
         filename = "-".join(str(p) for p in parts if p is not None)
         print(filename)
         trainer = Trainer(
@@ -81,6 +82,7 @@ def repeat1(
     scoring_method: Optional[str],
     selection_method: str,
     pretrained: Optional[str],
+    suffix:Optional[str]
 ):
     # Pick the scoring and selection functions from the dictionaries.
     score_func = scoring_methods[scoring_method] if scoring_method else None
@@ -104,7 +106,7 @@ def repeat1(
                 sorted_scores = score_func(model1, trainset)
             trainset_condensed = selection_func(trainset,1 - rate,sorted_scores)
         modelStr = model_name+"-EvidenceLoss"
-        parts = [modelStr, dataset_name, scoring_method, selection_method, rate]
+        parts = [modelStr, dataset_name, scoring_method, selection_method, rate,suffix]
         filename = "-".join(str(p) for p in parts if p is not None)
         trainer = TrainerE(
             model,

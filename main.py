@@ -51,7 +51,10 @@ if __name__ == '__main__':
        # testset ,   
        # save="resnet18_MNIST_softmaxCond_5000"
    # )
-    #trainer2.train(verbose=True)
+    #trainer2.train(verbose=True)"
+    """
+
+
     """
     model = initiate_model("resnet18", "MNIST")
     trainset, testset = initiate_dataset("MNIST", "resnet18")
@@ -79,3 +82,44 @@ if __name__ == '__main__':
     repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"evidence_total","balanced_by_score","models/resnet18_MNIST_Evidence")
     repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_label","balanced_by_score","models/resnet18_MNIST_Evidence")
     repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_total","balanced_by_score","models/resnet18_MNIST_Evidence")
+    repeat("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"predictive_entropy","balanced_by_score","models/resnet18_MNIST")
+    """
+    
+    models = ["resnet18"]
+    datasets = ["MNIST", "CIFAR10"]
+    rates = [0, 0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
+    methods = ["random", "predictive_entropy", "evidence_label", "evidence_total", "uncertainty_label", "uncertainty_total"]
+
+    for model_name in models:
+        for dataset_name in datasets:
+            for suffix in [1,2,3]:
+                # Initial training
+                model = initiate_model(model_name, dataset_name)
+                trainset, testset = initiate_dataset(dataset_name, model_name)
+                trainer = TrainerE(
+                    model,
+                    trainset, 
+                    testset,   
+                    save=f"{model_name}_{dataset_name}_Evidence_{suffix}"
+                )
+                trainer.train(verbose=True)
+
+                # Second training with different save path
+                model1 = initiate_model(model_name, dataset_name)
+                trainset1, testset1 = initiate_dataset(dataset_name, model_name)
+                trainer1 = Trainer(
+                    model1,
+                    trainset1, 
+                    testset1,   
+                    save=f"{model_name}_{dataset_name}_{suffix}"
+                )
+                trainer1.train(verbose=True)
+
+                # Repeat experiments with random sampling
+                repeat(dataset_name, model_name, rates, None, "random", None,suffix)
+                repeat1(dataset_name, model_name, rates, None, "random", None,suffix)
+
+                # Repeat experiments with different methods
+                for method in methods:
+                    repeat(dataset_name, model_name, rates, method, "balanced_by_score", f"models/{model_name}_{dataset_name}_{suffix}",suffix)
+                    repeat1(dataset_name, model_name, rates, method, "balanced_by_score", f"models/{model_name}_{dataset_name}_Evidence_{suffix}",suffix)

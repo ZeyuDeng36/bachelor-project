@@ -1,4 +1,5 @@
 import random
+import time
 
 def random_selection(dataset, rate, scores=None):
     """
@@ -21,6 +22,7 @@ def random_selection(dataset, rate, scores=None):
 def balanced_by_score(dataset, rate, scores, num_groups=100):
     """
     Selects a fraction of the dataset while ensuring balance across score groups.
+    This version prints the execution time of the function.
 
     Args:
         dataset (torch.utils.data.Dataset): Dataset to sample from.
@@ -31,8 +33,12 @@ def balanced_by_score(dataset, rate, scores, num_groups=100):
     Returns:
         list: A subset of the dataset.
     """
+    start_time = time.time()  # Start the timer
+
     if rate >= 1.0:
-        return dataset
+        print("Execution time: 0.0 seconds")
+        return dataset  # If no selection, return immediately with 0 time
+
     total = len(scores)
     group_size = max(1, total // num_groups)
     groups = [scores[i * group_size: (i + 1) * group_size] for i in range(num_groups)]
@@ -43,6 +49,10 @@ def balanced_by_score(dataset, rate, scores, num_groups=100):
         sampled = random.sample(group, num_to_keep) if num_to_keep < len(group) else group
         selected_indices.extend(idx for _, idx in sampled)
     
+    end_time = time.time()  # End the timer
+    elapsed_time = end_time - start_time  # Calculate elapsed time
+
+    print(f"Execution time: {elapsed_time:.4f} seconds")
     return [dataset[i] for i in selected_indices]
 
 def balanced_by_label(dataset, rate, scores):
