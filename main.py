@@ -88,7 +88,7 @@ if __name__ == '__main__':
     models = ["resnet18"]
     datasets = ["MNIST", "CIFAR10"]
     rates = [0, 0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
-    methods = ["random", "predictive_entropy", "evidence_label", "evidence_total", "uncertainty_label", "uncertainty_total"]
+    methods = ["predictive_entropy", "evidence_label", "evidence_total", "uncertainty_label", "uncertainty_total"]
 
     for model_name in models:
         for dataset_name in datasets:
