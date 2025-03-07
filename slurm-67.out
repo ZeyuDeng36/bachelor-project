@@ -1,0 +1,28 @@
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Traceback (most recent call last):
+  File "/home/fxq992/bachelor-project/main.py", line 127, in <module>
+    repeat("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"predictive_entropy","balanced_by_score","models/resnet18_MNIST",None) 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fxq992/bachelor-project/utils/repeater.py", line 50, in repeat
+    model1 = initiate_model(model_name, dataset_name, pretrained) if pretrained else None
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fxq992/bachelor-project/utils/initiate.py", line 173, in initiate_model
+    model = model_constructor(weights=weights)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fxq992/miniconda3/envs/my_project_env/lib/python3.12/site-packages/torchvision/models/_utils.py", line 142, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/fxq992/miniconda3/envs/my_project_env/lib/python3.12/site-packages/torchvision/models/_utils.py", line 228, in inner_wrapper
+    return builder(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fxq992/miniconda3/envs/my_project_env/lib/python3.12/site-packages/torchvision/models/resnet.py", line 703, in resnet18
+    weights = ResNet18_Weights.verify(weights)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fxq992/miniconda3/envs/my_project_env/lib/python3.12/site-packages/torchvision/models/_api.py", line 82, in verify
+    obj = cls[obj.replace(cls.__name__ + ".", "")]
+          ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fxq992/miniconda3/envs/my_project_env/lib/python3.12/enum.py", line 808, in __getitem__
+    return cls._member_map_[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'models/resnet18_MNIST'

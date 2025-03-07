@@ -84,11 +84,11 @@ if __name__ == '__main__':
     repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_total","balanced_by_score","models/resnet18_MNIST_Evidence")
     repeat("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"predictive_entropy","balanced_by_score","models/resnet18_MNIST")
     """
-    
+    """
     models = ["resnet18"]
     datasets = ["MNIST", "CIFAR10"]
     rates = [0, 0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
-    methods = ["predictive_entropy", "evidence_label", "evidence_total", "uncertainty_label", "uncertainty_total"]
+    methods = ["evidence_total","uncertainty_total"]
 
     for model_name in models:
         for dataset_name in datasets:
@@ -119,7 +119,18 @@ if __name__ == '__main__':
                 repeat(dataset_name, model_name, rates, None, "random", None,suffix)
                 repeat1(dataset_name, model_name, rates, None, "random", None,suffix)
 
-                # Repeat experiments with different methods
+                # Repeat experiments with different methods 
+                # repeat(dataset_name, model_name, rates, "predictive_entropy", "balanced_by_score", f"models/{model_name}_{dataset_name}_{suffix}",suffix)
                 for method in methods:
-                    repeat(dataset_name, model_name, rates, method, "balanced_by_score", f"models/{model_name}_{dataset_name}_{suffix}",suffix)
                     repeat1(dataset_name, model_name, rates, method, "balanced_by_score", f"models/{model_name}_{dataset_name}_Evidence_{suffix}",suffix)
+   """
+    model1 = initiate_model("resnet18", "MNIST")
+    trainset1, testset1 = initiate_dataset("MNIST", "resnet18")
+    trainer1 = Trainer(
+        model1,
+        trainset1, 
+        testset1 ,   
+        save="resnet18_MNIST"
+    )
+    trainer1.train(verbose=True)
+    repeat("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"predictive_entropy","balanced_by_score","models/resnet18_MNIST",1) 

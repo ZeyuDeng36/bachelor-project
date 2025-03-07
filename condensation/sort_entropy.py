@@ -78,6 +78,7 @@ def sort_by_entropy_batched(model, dataset, entropy_func, batch_size=128):
             scores.extend(zip(batch_entropies, batch_indices))
             index_offset += len(batch_entropies)
     sorted_scores = sorted(scores, key=lambda x: x[0], reverse=True)
+    print(sorted_scores)
     return sorted_scores
 
 # Convenience functions calling our batched version:
