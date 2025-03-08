@@ -10,7 +10,7 @@ import torchvision
 import torchvision.transforms as transforms
 from torchvision.models import resnet18
 from condensation.select import random_selection,balanced_by_label,balanced_by_score
-from condensation.sort_entropy import sort_by_log_percentage_entropy,sort_by_predictive_entropy
+from condensation.sort_entropy import sort_by_log_percentage_entropy,sort_by_predictive_entropy1
 from condensation.sort_evidence import sort_by_total_evidence,sort_by_label_evidence, sort_by_label_uncertainty,sort_by_total_uncertainty
 from utils.trainer_standard import Trainer
 from utils.trainer_Evidence import Trainer as TrainerE
@@ -21,7 +21,7 @@ from typing import List, Optional
 # Assume these dictionaries and functions are defined elsewhere:
 scoring_methods = {
     "log_percentage_entropy": sort_by_log_percentage_entropy,
-    "predictive_entropy": sort_by_predictive_entropy,
+    "predictive_entropy": sort_by_predictive_entropy1,
     "evidence_total": sort_by_total_evidence,
     "evidence_label": sort_by_label_evidence,
     "uncertainty_total": sort_by_total_uncertainty,

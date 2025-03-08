@@ -1,7 +1,3 @@
-from utils.initiate import initiate_dataset, initiate_model
-from utils.trainer_Evidence import Trainer
-
-
 if __name__ == '__main__':    
     import torch
     import torch.nn as nn
@@ -11,6 +7,8 @@ if __name__ == '__main__':
     from torchvision.models import resnet18
     from utils.repeater import repeat,repeat1
     from utils.trainer_Evidence import Trainer as TrainerE
+    from utils.initiate import initiate_dataset, initiate_model
+    from utils.trainer_standard import Trainer as TrainerS
     #model,(trainset, testset) = initiate_model_and_dataset("resnet18","cifar10")
     """
     transform = transforms.Compose([
@@ -126,7 +124,7 @@ if __name__ == '__main__':
    """
     model1 = initiate_model("resnet18", "MNIST")
     trainset1, testset1 = initiate_dataset("MNIST", "resnet18")
-    trainer1 = Trainer(
+    trainer1 = TrainerS(
         model1,
         trainset1, 
         testset1 ,   
