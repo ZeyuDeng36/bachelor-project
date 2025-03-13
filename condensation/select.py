@@ -1,6 +1,6 @@
 import random
 import time
-
+import numpy as np
 def random_selection(dataset, rate, scores=None):
     """
     Randomly selects a fraction of the dataset.
@@ -33,7 +33,6 @@ def balanced_by_score(dataset, rate, scores, num_groups=100):
     Returns:
         list: A subset of the dataset.
     """
-    start_time = time.time()  # Start the timer
 
     if rate >= 1.0:
         print("Execution time: 0.0 seconds")
@@ -49,9 +48,113 @@ def balanced_by_score(dataset, rate, scores, num_groups=100):
         sampled = random.sample(group, num_to_keep) if num_to_keep < len(group) else group
         selected_indices.extend(idx for _, idx in sampled)
     
-    end_time = time.time()  # End the timer
-    elapsed_time = end_time - start_time  # Calculate elapsed time
+    return [dataset[i] for i in selected_indices]
 
+
+def balanced_by_score1(dataset, rate, scores, num_groups=100):
+    """
+    Selects a fraction of the dataset while ensuring balance across score groups
+    using quantile binning.
+    
+    Args:
+        dataset (torch.utils.data.Dataset): Dataset to sample from.
+        rate (float): Fraction of samples to keep.
+        scores (list of tuples): List of (score, index) tuples.
+        num_groups (int): Number of groups to divide the dataset into.
+    
+    Returns:
+        list: A subset of the dataset.
+    """
+    if rate >= 1.0:
+        print("Execution time: 0.0 seconds")
+        return dataset
+
+    start_time = time.time()
+    print(scores[:5]) 
+    # Convert scores to NumPy array: shape (N, 2)
+    scores_array = np.array(scores)
+    total = scores_array.shape[0]
+
+    # Split the array into `num_groups` groups (each group is roughly equal-sized)
+    groups = np.array_split(scores_array, num_groups)
+
+    selected_indices = []
+    # Loop over groups (only ~100 iterations)
+    for group in groups:
+        group_len = group.shape[0]
+        num_to_keep = max(1, int(group_len * rate))
+        if group_len > num_to_keep:
+            # Randomly select indices from the group
+            chosen = np.random.choice(group_len, num_to_keep, replace=False)
+            selected_indices.extend(group[chosen, 1].tolist())
+        else:
+            selected_indices.extend(group[:, 1].tolist())
+
+    elapsed_time = time.time() - start_time
+    print(f"Execution time: {elapsed_time:.4f} seconds")
+    return [dataset[int(i)] for i in selected_indices]
+
+def balanced_by_range(dataset, rate, scores, num_bins=100):
+    """
+    Selects a fraction of the dataset while ensuring balance across uncertainty intervals.
+    The method computes the minimum and maximum uncertainty scores, divides the range into
+    `num_bins` equal-width intervals, and then samples n = (total/num_bins * rate) datapoints 
+    from each interval.
+    
+    Args:
+        dataset (torch.utils.data.Dataset): Dataset to sample from.
+        rate (float): Fraction of samples to keep overall.
+        scores (list of tuples): List of (score, index) tuples, where score is the uncertainty.
+        num_bins (int): Number of intervals to divide the uncertainty range into.
+    
+    Returns:
+        list: A subset of the dataset.
+    """
+    if rate >= 1.0:
+        print("Execution time: 0.0 seconds")
+        return dataset
+
+    start_time = time.time()
+
+    # Convert scores to a NumPy array of shape (N, 2)
+    scores_array = np.array(scores)
+    total = scores_array.shape[0]
+    
+    # Determine the number of samples to select per bin (ensuring overall rate)
+    n_per_bin = max(1, int((total / num_bins) * rate))
+    
+    # Extract uncertainty values and indices
+    score_values = scores_array[:, 0]
+    indices_all = scores_array[:, 1].astype(int)
+
+    # Compute min, max, and interval width of the uncertainty scores
+    min_score = score_values.min()
+    max_score = score_values.max()
+    interval_width = (max_score - min_score) / num_bins if num_bins > 0 else 0
+
+    # Vectorized assignment of bin indices
+    if interval_width > 0:
+        bin_indices = np.floor((score_values - min_score) / interval_width).astype(int)
+        # Ensure scores equal to max_score fall into the last bin
+        bin_indices = np.clip(bin_indices, 0, num_bins - 1)
+    else:
+        bin_indices = np.zeros_like(score_values, dtype=int)
+
+    selected_indices = []
+    # Loop over each bin (only 100 iterations)
+    for b in range(num_bins):
+        # Get indices of datapoints in bin b using vectorized filtering
+        bin_mask = (bin_indices == b)
+        bin_group = indices_all[bin_mask]
+        bin_count = bin_group.shape[0]
+        if bin_count > 0:
+            if bin_count > n_per_bin:
+                chosen = np.random.choice(bin_group, n_per_bin, replace=False)
+            else:
+                chosen = bin_group
+            selected_indices.extend(chosen.tolist())
+
+    elapsed_time = time.time() - start_time
     print(f"Execution time: {elapsed_time:.4f} seconds")
     return [dataset[i] for i in selected_indices]
 
@@ -109,4 +212,23 @@ def select_top(dataset, rate, scores):
         return dataset
     num_to_keep = int(len(scores) * rate)
     selected_indices = [idx for _, idx in scores[:num_to_keep]]
+    return [dataset[i] for i in selected_indices]
+
+def select_bottom(dataset, rate, scores):
+    """
+    Selects the bottom fraction of samples based on their scores.
+
+    Args:
+        dataset (torch.utils.data.Dataset): Dataset to sample from.
+        rate (float): Fraction of samples to keep.
+        scores (list of tuples): List of (score, index) tuples, assumed sorted in descending order.
+
+    Returns:
+        list: A subset of the dataset containing the bottom fraction of samples.
+    """
+    if rate >= 1.0:
+        return dataset
+    num_to_keep = int(len(scores) * rate)
+    # Select the last num_to_keep items from the scores list
+    selected_indices = [idx for _, idx in scores[-num_to_keep:]]
     return [dataset[i] for i in selected_indices]

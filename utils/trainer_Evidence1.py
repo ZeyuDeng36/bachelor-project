@@ -6,54 +6,110 @@ from torch import nn
 import torch.nn.functional as F
 
 # -------------------------
-# Define the evidential classification loss
+# Helper functions for evidential loss components
 # -------------------------
-import torch
-import torch.nn.functional as F
-
-
-def evidential_classification_loss(y_true, evidence):
+def calc_error(y_true, p):
     """
-    Computes the evidential classification loss.
+    Computes the squared error between the one-hot true labels and the expected probabilities.
     
     Args:
-        y_true: Tensor containing class indices, shape [batch,] where each element is an integer.
-        evidence: Predicted evidence for each class (nonnegative), shape [batch, num_classes]. 
-                  The model's output should be raw evidence (not probabilities), which will be transformed into Dirichlet parameters.
+        y_true: One-hot encoded tensor of true labels, shape [batch, num_classes].
+        p: Expected probabilities, shape [batch, num_classes].
     
     Returns:
-        Scalar loss that models the aleatoric uncertainty.
+        Tensor of shape [batch] containing the error per sample.
     """
-    # Apply Softplus to ensure non-negative evidence
-    evidence1 = F.softplus(evidence)
+    return torch.sum((y_true - p) ** 2, dim=1)
 
+
+def calc_variance(alpha, S):
+    """
+    Computes the uncertainty (variance) term derived from the Dirichlet distribution.
+    For Dirichlet, Var[p_c] = (alpha_c * (S - alpha_c)) / (S^2 * (S+1)).
+    
+    Args:
+        alpha: Dirichlet parameters, shape [batch, num_classes].
+        S: Total evidence per sample, shape [batch, 1].
+    
+    Returns:
+        Tensor of shape [batch] containing the variance per sample.
+    """
+    return torch.sum(alpha * (S - alpha) / (S * S * (S + 1)), dim=1)
+
+
+def calc_kl_divergence(alpha):
+    """
+    Computes the KL divergence between the predicted Dirichlet distribution 
+    (with parameters alpha) and a uniform Dirichlet prior (with parameters 1).
+    
+    The formula used is:
+    KL(Dir(alpha) || Dir(1)) = log(Γ(S)) - log(Γ(K)) - sum(log(Γ(alpha_i)))
+                                 + sum((alpha_i - 1) * (ψ(alpha_i) - ψ(S)))
+    where S = sum(alpha) and K is the number of classes.
+    
+    Args:
+        alpha: Dirichlet parameters, shape [batch, num_classes].
+    
+    Returns:
+        Tensor of shape [batch] containing the KL divergence per sample.
+    """
+    # Sum of Dirichlet parameters for each sample: shape [batch]
+    S = torch.sum(alpha, dim=1)
+    K = alpha.size(1)
+    
+    # Compute each term using torch.lgamma (for log-gamma) and torch.digamma (for psi)
+    kl = torch.lgamma(S) - torch.lgamma(torch.tensor(K, dtype=S.dtype, device=S.device))
+    kl -= torch.sum(torch.lgamma(alpha), dim=1)
+    # Since lgamma(1)=0, we omit the term sum(log(Γ(1)))
+    kl += torch.sum((alpha - 1) * (torch.digamma(alpha) - torch.digamma(S).unsqueeze(1)), dim=1)
+    return kl
+
+
+# -------------------------
+# Define the evidential classification loss with KL divergence
+# -------------------------
+def evidential_classification_loss(y_true, evidence, kl_weight=0.1):
+    """
+    Computes the evidential classification loss, which includes the data-fit term, 
+    the uncertainty (variance) term, and the KL divergence regularization term.
+    
+    Args:
+        y_true: Tensor containing class indices or one-hot encoded labels.
+        evidence: Raw model outputs representing evidence for each class, shape [batch, num_classes].
+        kl_weight: Weighting factor for the KL divergence term.
+    
+    Returns:
+        Scalar loss value.
+    """
+    # Ensure non-negative evidence using softplus
+    evidence_pos = F.softplus(evidence)
+    
     # Convert evidence to Dirichlet parameters: alpha = evidence + 1
-    alpha = evidence1 + 1.0
-    S = torch.sum(alpha, dim=1, keepdim=True)  # total evidence per sample
+    alpha = evidence_pos + 1.0
+    S = torch.sum(alpha, dim=1, keepdim=True)  # shape [batch, 1]
+    
     # Expected probability per class: p = alpha / S
     p = alpha / S
-
-    # If y_true is not one-hot encoded (i.e., it contains class indices), convert to one-hot encoding
-    if y_true.dim() == 1:  # If y_true is a tensor of class indices
+    
+    # Convert y_true to one-hot encoding if needed.
+    if y_true.dim() == 1:  # y_true contains class indices
         y_true = F.one_hot(y_true, num_classes=p.size(1)).float()
-
-    # Data-fit term: squared error between one-hot labels and expected probability
-    error = torch.sum((y_true - p) ** 2, dim=1)
     
-    # Uncertainty term: derived from the Dirichlet variance.
-    # For Dirichlet, Var[p_c] = (alpha_c*(S - alpha_c))/(S^2*(S+1)).
-    uncertainty = torch.sum(alpha * (S - alpha) / (S * S * (S + 1)), dim=1)
+    # Calculate each component of the loss using helper functions.
+    error = calc_error(y_true, p)          # Data-fit term
+    variance = calc_variance(alpha, S)       # Uncertainty term (Dirichlet variance)
+    kl = calc_kl_divergence(alpha)           # KL divergence regularization term
     
-    loss = error + uncertainty
-    #print(f"TOTUNCERTAINTY: {uncertainty}")
+    # Combine the terms. Note: error and variance are per sample, as is KL.
+    loss = error + variance + kl_weight * kl
     return torch.mean(loss)
 
 
 # -------------------------
-# Trainer class modified to support evidential loss
+# Trainer class modified to support evidential loss with KL divergence
 # -------------------------
 class Trainer:
-    def __init__(self, model, train_dataset, val_dataset, batch_size=64, learning_rate=1e-3, num_epochs=5,
+    def __init__(self, model, train_dataset, val_dataset, batch_size=64, learning_rate=5e-4, num_epochs=20,
                  criterion="evidential", optimizer_type="adam", save=""):
         self.model = model
         self.train_dataset = train_dataset
@@ -80,7 +136,7 @@ class Trainer:
         if criterion == "crossEntropy":
             self.criterion = nn.CrossEntropyLoss()
         elif criterion == "evidential":
-            # Use the custom evidential loss function.
+            # Use the custom evidential loss function that includes KL divergence.
             self.criterion = evidential_classification_loss
         else:
             raise ValueError(f"Invalid criterion: {criterion}. Valid criteria: 'crossEntropy', 'evidential'")
@@ -103,9 +159,11 @@ class Trainer:
             # Forward pass: if using evidential loss, model should output evidence.
             outputs = self.model(inputs)
             
-            # For evidential loss, assume model returns evidence (for all classes).
-            # If using evidential loss, we assume that labels are one-hot encoded.
-            loss = self.criterion(labels, outputs) if self.criterion == evidential_classification_loss else self.criterion(outputs, labels)
+            # Compute loss
+            if self.criterion == evidential_classification_loss:
+                loss = self.criterion(labels, outputs)
+            else:
+                loss = self.criterion(outputs, labels)
             
             # Backward pass and optimize
             loss.backward()
@@ -114,7 +172,6 @@ class Trainer:
             running_loss += loss.item()
             
             # For evaluation of accuracy (if applicable), use argmax over the expected probabilities.
-            # For evidential loss, convert evidence to probabilities: p = (evidence + 1) / sum(evidence + 1)
             if self.criterion == evidential_classification_loss:
                 evidence = outputs
                 evidence = F.softplus(evidence)  # Apply softplus here as well
@@ -126,7 +183,7 @@ class Trainer:
                 _, predicted = torch.max(outputs, 1)
             
             total += labels.size(0)
-            # If labels are one-hot, convert to indices:
+            # Convert one-hot labels to indices if needed.
             if labels.dim() > 1:
                 labels_indices = labels.argmax(dim=1)
             else:
@@ -147,19 +204,22 @@ class Trainer:
         correct = 0
         total = 0
         
-        with torch.no_grad():  # Don't compute gradients during evaluation
+        with torch.no_grad():  # No gradients during evaluation
             for inputs, labels in self.val_loader:
                 inputs, labels = inputs.to(self.device), labels.to(self.device)
                 
                 outputs = self.model(inputs)
                 
-                loss = self.criterion(labels, outputs) if self.criterion == evidential_classification_loss else self.criterion(outputs, labels)
+                if self.criterion == evidential_classification_loss:
+                    loss = self.criterion(labels, outputs)
+                else:
+                    loss = self.criterion(outputs, labels)
                 
                 running_loss += loss.item()
                 
                 if self.criterion == evidential_classification_loss:
                     evidence = outputs
-                    evidence = F.softplus(evidence)  # Apply softplus here as well
+                    evidence = F.softplus(evidence)
                     alpha = evidence + 1.0
                     S = torch.sum(alpha, dim=1, keepdim=True)
                     probs = alpha / S
@@ -179,11 +239,12 @@ class Trainer:
         return val_loss, accuracy
     
     def save_model(self, fileName, train_loss, train_accuracy, val_loss, val_accuracy):
-        #path = os.path.join("models", fileName)
-        #torch.save(self.model.state_dict(), path)
-        #print(f"Model saved to {path}")
+        path = os.path.join("models", fileName)
+        torch.save(self.model.state_dict(), path)
+        print(f"Model saved to {path}")
         with open("models/modelStats.txt", 'a') as file:
-            file.write(f"MODEL:{fileName} , Train Loss: {train_loss:.4f}, Train Accuracy: {train_accuracy:.2f}, Validation Loss: {val_loss:.4f}, Validation Accuracy: {val_accuracy:.2f}%" + "\n")
+            file.write(f"MODEL:{fileName} , Train Loss: {train_loss:.4f}, Train Accuracy: {train_accuracy:.2f}, "
+                       f"Validation Loss: {val_loss:.4f}, Validation Accuracy: {val_accuracy:.2f}%\n")
 
     def train(self, verbose=False):
         for epoch in range(self.num_epochs):
