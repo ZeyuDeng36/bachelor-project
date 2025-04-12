@@ -1,16 +1,68 @@
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torchvision
+import torchvision.transforms as transforms
+from torchvision.models import resnet18
+from utils.repeater import repeat,repeat1,repeat2
+from utils.trainer_Evidence import Trainer as TrainerE
+from utils.trainer_Evidence1 import Trainer as TrainerE1
+from utils.initiate import initiate_dataset, initiate_model
+from utils.trainer_standard import Trainer as TrainerS
+def run_experiment1():
+    models = ["resnet18"]
+    datasets = ["MNIST"]
+    rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
+    uncertainty_metrics = ["predictive_entropy"]
+    selection_methods = ["balanced_by_score","top","bottom"]
+    for model_name in models:
+        for dataset_name in datasets:
+            for suffix in [1,2,3]:
+                # Second training with different save path
+                model = initiate_model(model_name, dataset_name)
+                trainset, testset = initiate_dataset(dataset_name, model_name)
+                trainer = TrainerS(
+                    model,
+                    trainset, 
+                    testset,   
+                    save<=f"{model_name}_{dataset_name}_{suffix}"
+                )
+                trainer.train(verbose=True)
+
+                repeat(dataset_name, model_name, rates, None, "random", f"models/{model_name}_{dataset_name}_{suffix}",suffix)
+                for uncertainty_metric in uncertainty_metrics:
+                    for selection_method in selection_methods:
+                        repeat(dataset_name, model_name, rates, uncertainty_metric, selection_method, f"models/{model_name}_{dataset_name}_{suffix}",suffix)
+
+def run_experiment2():
+    models = ["resnet18"]
+    datasets = ["CIFAR10"]
+    rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
+    uncertainty_metrics = ["EVIDENCE","BELIEF"]
+    selection_methods = ["balanced_by_score"]
+    for model_name in models:
+        for dataset_name in datasets:
+            for suffix in [1,2,3]:
+
+                # Second training with different save path
+                model = initiate_model(model_name, dataset_name)
+                trainset, testset = initiate_dataset(dataset_name, model_name)
+                trainer = TrainerE1(
+                    model,
+                    trainset, 
+                    testset,   
+                    save=f"{model_name}_{dataset_name}_E1_{suffix}"
+                )
+                trainer.train(verbose=True)
+
+                repeat2(dataset_name, model_name, rates, None, "random", f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
+                for uncertainty_metric in uncertainty_metrics:
+                    for selection_method in selection_methods:
+                        repeat2(dataset_name, model_name, rates, uncertainty_metric, selection_method, f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
 if __name__ == '__main__':    
-    import torch
-    import torch.nn as nn
-    import torch.optim as optim
-    import torchvision
-    import torchvision.transforms as transforms
-    from torchvision.models import resnet18
-    from utils.repeater import repeat,repeat1,repeat2
-    from utils.trainer_Evidence import Trainer as TrainerE
-    from utils.trainer_Evidence1 import Trainer as TrainerE1
-    from utils.initiate import initiate_dataset, initiate_model
-    from utils.trainer_standard import Trainer as TrainerS
     #model,(trainset, testset) = initiate_model_and_dataset("resnet18","cifar10")
+    #run_experiment1()
+    run_experiment2()
     """
     transform = transforms.Compose([
         transforms.ToTensor(),
@@ -52,8 +104,6 @@ if __name__ == '__main__':
    # )
     #trainer2.train(verbose=True)"
     """
-
-
     """
     model = initiate_model("resnet18", "MNIST")
     trainset, testset = initiate_dataset("MNIST", "resnet18")
@@ -84,29 +134,6 @@ if __name__ == '__main__':
     repeat("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"predictive_entropy","balanced_by_score","models/resnet18_MNIST")
     """
 
-    models = ["resnet18"]
-    datasets = ["CIFAR10"]
-    rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
-    methods = ["EVIDENCE","BELIEF"]
-
-    for model_name in models:
-        for dataset_name in datasets:
-            for suffix in [1,2,3]:
-
-                # Second training with different save path
-                model = initiate_model(model_name, dataset_name)
-                trainset, testset = initiate_dataset(dataset_name, model_name)
-                trainer = TrainerE1(
-                    model,
-                    trainset, 
-                    testset,   
-                    save=f"{model_name}_{dataset_name}_E1_{suffix}"
-                )
-                trainer.train(verbose=True)
-
-                repeat(dataset_name, model_name, rates, None, "random", f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
-                for method in methods:
-                    repeat2(dataset_name, model_name, rates, method, "balanced_by_score", f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
     
     """    
     repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_total","balanced_by_score","models/resnet18_MNIST_Evidence","")
