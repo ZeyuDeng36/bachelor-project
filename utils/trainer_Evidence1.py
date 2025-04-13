@@ -68,7 +68,7 @@ def calc_kl_divergence(alpha):
 # -------------------------
 # Define the evidential classification loss with KL divergence
 # -------------------------
-def evidential_classification_loss(y_true, evidence, kl_weight=0.1):
+def evidential_classification_loss(y_true, evidence, epoch):
     """
     Computes the evidential classification loss, which includes the data-fit term, 
     the uncertainty (variance) term, and the KL divergence regularization term.
@@ -91,17 +91,21 @@ def evidential_classification_loss(y_true, evidence, kl_weight=0.1):
     # Expected probability per class: p = alpha / S
     p = alpha / S
     
-    # Convert y_true to one-hot encoding if needed.
-    if y_true.dim() == 1:  # y_true contains class indices
-        y_true = F.one_hot(y_true, num_classes=p.size(1)).float()
+    # Convert y_true to one-hot encoding 
+    y_true = F.one_hot(y_true, num_classes=p.size(1)).float()
     
     # Calculate each component of the loss using helper functions.
     error = calc_error(y_true, p)          # Data-fit term
     variance = calc_variance(alpha, S)       # Uncertainty term (Dirichlet variance)
     kl = calc_kl_divergence(alpha)           # KL divergence regularization term
     
+    # Calculate annealing_coef:
+    annealing_coef = torch.min(
+        torch.tensor(1.0, dtype=torch.float32),
+        torch.tensor(epoch / 10, dtype=torch.float32),
+    )
     # Combine the terms. Note: error and variance are per sample, as is KL.
-    loss = error + variance + kl_weight * kl
+    loss = error + variance + annealing_coef * kl
     return torch.mean(loss)
 
 
@@ -161,7 +165,7 @@ class Trainer:
             
             # Compute loss
             if self.criterion == evidential_classification_loss:
-                loss = self.criterion(labels, outputs)
+                loss = self.criterion(labels, outputs,epoch)
             else:
                 loss = self.criterion(outputs, labels)
             
@@ -211,7 +215,7 @@ class Trainer:
                 outputs = self.model(inputs)
                 
                 if self.criterion == evidential_classification_loss:
-                    loss = self.criterion(labels, outputs)
+                    loss = self.criterion(labels, outputs,0) #0, because annealing step should be 1
                 else:
                     loss = self.criterion(outputs, labels)
                 

@@ -25,7 +25,7 @@ def run_experiment1():
                     model,
                     trainset, 
                     testset,   
-                    save<=f"{model_name}_{dataset_name}_{suffix}"
+                    save=f"{model_name}_{dataset_name}_{suffix}"
                 )
                 trainer.train(verbose=True)
 
@@ -48,6 +48,31 @@ def run_experiment2():
                 model = initiate_model(model_name, dataset_name)
                 trainset, testset = initiate_dataset(dataset_name, model_name)
                 trainer = TrainerE1(
+                    model,
+                    trainset, 
+                    testset,   
+                    save=f"{model_name}_{dataset_name}_E1_{suffix}"
+                )
+                trainer.train(verbose=True)
+
+                repeat2(dataset_name, model_name, rates, None, "random", f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
+                for uncertainty_metric in uncertainty_metrics:
+                    for selection_method in selection_methods:
+                        repeat2(dataset_name, model_name, rates, uncertainty_metric, selection_method, f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
+def run_experiment3():
+    models = ["resnet18"]
+    datasets = ["CIFAR10"]
+    rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
+    uncertainty_metrics = ["GRADIENT"]
+    selection_methods = ["balanced_by_score"]
+    for model_name in models:
+        for dataset_name in datasets:
+            for suffix in [1,2,3]:
+
+                # Second training with different save path
+                model = initiate_model(model_name, dataset_name)
+                trainset, testset = initiate_dataset(dataset_name, model_name)
+                trainer = TrainerS(
                     model,
                     trainset, 
                     testset,   

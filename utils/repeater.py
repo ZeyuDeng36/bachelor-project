@@ -12,7 +12,7 @@ from torchvision.models import resnet18
 from condensation.select import random_selection,balanced_by_label,balanced_by_score,select_top,select_bottom,balanced_by_score1,balanced_by_range
 from condensation.sort_entropy import sort_by_log_percentage_entropy,sort_by_predictive_entropy
 from condensation.sort_evidence import sort_by_total_evidence,sort_by_label_evidence, sort_by_label_uncertainty,sort_by_total_uncertainty,sort_by_combined_loss
-from condensation.sort_evidence1 import sort_by_total_evidence_dirichlet,sort_by_label_belief
+from condensation.sort_evidence1 import sort_by_total_evidence_dirichlet,sort_by_label_belief,compute_input_gradient_norm
 from utils.trainer_standard import Trainer
 from utils.trainer_Evidence import Trainer as TrainerE
 from utils.trainer_Evidence1 import Trainer as TrainerE1
@@ -31,6 +31,7 @@ scoring_methods = {
     "combined_loss": sort_by_combined_loss,
     "EVIDENCE":sort_by_total_evidence_dirichlet,
     "BELIEF":sort_by_label_belief,
+    "GRADIENT":compute_input_gradient_norm
 }
 selection_methods = {
     "random": random_selection,  # should be a function: selection_func(sorted_scores, keep_fraction)
