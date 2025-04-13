@@ -88,6 +88,7 @@ if __name__ == '__main__':
     #model,(trainset, testset) = initiate_model_and_dataset("resnet18","cifar10")
     #run_experiment1()
     run_experiment2()
+    run_experiment3()
     """
     transform = transforms.Compose([
         transforms.ToTensor(),
