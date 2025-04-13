@@ -19,6 +19,13 @@ from utils.trainer_Evidence1 import Trainer as TrainerE1
 from typing import List, Optional
 from utils.initiate import initiate_dataset,initiate_model
 from typing import List, Optional
+from condensation.sort_distance import (
+    compute_class_centroids,
+    compute_class_geometric_medians,
+    compute_distance_to_centroids,
+    normalized_distance_sample,
+    compute_normalized_distance_scores
+)
 
 # Assume these dictionaries and functions are defined elsewhere:
 scoring_methods = {
@@ -160,6 +167,45 @@ def repeat2(
 
         modelStr = model_name+"-EvidenceLoss"
         parts = [modelStr, dataset_name, scoring_method, selection_method, rate,suffix]
+        filename = "-".join(str(p) for p in parts if p is not None)
+        trainer = TrainerE1(
+            model,
+            trainset_condensed,
+            testset,
+            save=filename
+        )
+        trainer.train(verbose=True)
+
+def repeat3(
+    dataset_name: str,
+    model_name: str,
+    rates: List[float],
+    selection_method: str,
+    suffix:Optional[str]
+):
+    selection_func = selection_methods[selection_method]
+    
+    # Load the dataset (and test set) using your initiation function.
+    trainset, testset = initiate_dataset(dataset_name, model_name)
+    
+    print("Computing arithmetic centroids...")
+    arith_centroids = compute_class_centroids(trainset, batch_size=128)
+    print("Arithmetic centroid for class 0 (first 5 values):", arith_centroids[0][:5])
+
+    # 2. Compute Euclidean distances to arithmetic centroids
+    print("Computing Euclidean distances to arithmetic centroids...")
+    sorted_scores = compute_distance_to_centroids(trainset, arith_centroids, batch_size=128)
+
+    # For each condensation rate, create a new training model and condense the training set.
+    for rate in rates:
+        model = initiate_model(model_name, dataset_name)  # new untrained model for training
+        if rate <= 0:
+            trainset_condensed = trainset
+        else:
+            trainset_condensed = selection_func(trainset,1 - rate,sorted_scores)
+
+        modelStr = model_name+"-EvidenceLoss"
+        parts = [modelStr, dataset_name, "EUDISTANCE", selection_method, rate,suffix]
         filename = "-".join(str(p) for p in parts if p is not None)
         trainer = TrainerE1(
             model,

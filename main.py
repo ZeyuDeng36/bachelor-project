@@ -4,7 +4,7 @@ import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
 from torchvision.models import resnet18
-from utils.repeater import repeat,repeat1,repeat2
+from utils.repeater import repeat,repeat1,repeat2,repeat3
 from utils.trainer_Evidence import Trainer as TrainerE
 from utils.trainer_Evidence1 import Trainer as TrainerE1
 from utils.initiate import initiate_dataset, initiate_model
@@ -84,11 +84,27 @@ def run_experiment3():
                 for uncertainty_metric in uncertainty_metrics:
                     for selection_method in selection_methods:
                         repeat2(dataset_name, model_name, rates, uncertainty_metric, selection_method, f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
+def run_experiment4():
+    models = ["resnet18"]
+    datasets = ["MNIST","CIFAR10"]
+    rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
+    uncertainty_metrics = ["DISTANCE"]
+    selection_methods = ["balanced_by_score"]
+    for model_name in models:
+        for dataset_name in datasets:
+            for suffix in [1,2,3]:
+
+                repeat3(dataset_name, model_name, rates, "random", suffix)
+                for uncertainty_metric in uncertainty_metrics:
+                    for selection_method in selection_methods:
+                        repeat3(dataset_name, model_name, rates, uncertainty_metric, selection_method, suffix)
+
 if __name__ == '__main__':    
     #model,(trainset, testset) = initiate_model_and_dataset("resnet18","cifar10")
     #run_experiment1()
-    run_experiment2()
-    run_experiment3()
+    #run_experiment2()
+    #run_experiment3()
+    run_experiment4()
     """
     transform = transforms.Compose([
         transforms.ToTensor(),
