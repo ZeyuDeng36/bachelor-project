@@ -86,18 +86,26 @@ def run_experiment3():
                         repeat2(dataset_name, model_name, rates, uncertainty_metric, selection_method, f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
 def run_experiment4():
     models = ["resnet18"]
-    datasets = ["MNIST","CIFAR10"]
+    datasets = ["CIFAR10"]
     rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
     uncertainty_metrics = ["DISTANCE"]
-    selection_methods = ["balanced_by_score"]
+    selection_methods = ["median"]
     for model_name in models:
         for dataset_name in datasets:
             for suffix in [1,2,3]:
-
-                repeat3(dataset_name, model_name, rates, "random", suffix)
-                for uncertainty_metric in uncertainty_metrics:
-                    for selection_method in selection_methods:
-                        repeat3(dataset_name, model_name, rates, uncertainty_metric, selection_method, suffix)
+                # Second training with different save path
+                model = initiate_model(model_name, dataset_name)
+                trainset, testset = initiate_dataset(dataset_name, model_name)
+                trainer = TrainerE1(
+                    model,
+                    trainset, 
+                    testset,   
+                    save=f"{model_name}_{dataset_name}_E1_{suffix}"
+                )
+                trainer.train(verbose=True)
+                repeat3(dataset_name, model_name, rates, "random", f"models/{model_name}_{dataset_name}_E1_{suffix}", suffix)
+                for selection_method in selection_methods:
+                    repeat3(dataset_name, model_name, rates, selection_method, f"models/{model_name}_{dataset_name}_E1_{suffix}", suffix)
 
 if __name__ == '__main__':    
     #model,(trainset, testset) = initiate_model_and_dataset("resnet18","cifar10")

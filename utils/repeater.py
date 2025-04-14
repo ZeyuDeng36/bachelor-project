@@ -9,7 +9,7 @@ import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
 from torchvision.models import resnet18
-from condensation.select import random_selection,balanced_by_label,balanced_by_score,select_top,select_bottom,balanced_by_score1,balanced_by_range
+from condensation.select import random_selection,balanced_by_label,balanced_by_score,select_top,select_bottom,balanced_by_score1,balanced_by_range,select_median_centered
 from condensation.sort_entropy import sort_by_log_percentage_entropy,sort_by_predictive_entropy
 from condensation.sort_evidence import sort_by_total_evidence,sort_by_label_evidence, sort_by_label_uncertainty,sort_by_total_uncertainty,sort_by_combined_loss
 from condensation.sort_evidence1 import sort_by_total_evidence_dirichlet,sort_by_label_belief,compute_input_gradient_norm
@@ -19,13 +19,14 @@ from utils.trainer_Evidence1 import Trainer as TrainerE1
 from typing import List, Optional
 from utils.initiate import initiate_dataset,initiate_model
 from typing import List, Optional
-from condensation.sort_distance import (
+from condensation.sort_distance1 import (
     compute_class_centroids,
     compute_class_geometric_medians,
     compute_distance_to_centroids,
     normalized_distance_sample,
     compute_normalized_distance_scores
 )
+
 
 # Assume these dictionaries and functions are defined elsewhere:
 scoring_methods = {
@@ -47,7 +48,8 @@ selection_methods = {
     "balanced_by_score1": balanced_by_score1,
     "balanced_by_range": balanced_by_range,
     "top":select_top,
-    "bottom":select_bottom
+    "bottom":select_bottom,
+    "median":select_median_centered
 }
 
 def repeat(
@@ -181,20 +183,20 @@ def repeat3(
     model_name: str,
     rates: List[float],
     selection_method: str,
+    pretrained: Optional[str],
     suffix:Optional[str]
 ):
     selection_func = selection_methods[selection_method]
     
+    # Load pretrained model if provided (for scoring purposes).
+    model1 = initiate_model(model_name, dataset_name, pretrained) if pretrained else None
+
     # Load the dataset (and test set) using your initiation function.
     trainset, testset = initiate_dataset(dataset_name, model_name)
+    sorted_scores=None
     
-    print("Computing arithmetic centroids...")
-    arith_centroids = compute_class_centroids(trainset, batch_size=128)
-    print("Arithmetic centroid for class 0 (first 5 values):", arith_centroids[0][:5])
-
-    # 2. Compute Euclidean distances to arithmetic centroids
     print("Computing Euclidean distances to arithmetic centroids...")
-    sorted_scores = compute_distance_to_centroids(trainset, arith_centroids, batch_size=128)
+    sorted_scores = compute_distance_to_centroids(model1, trainset, batch_size=128)
 
     # For each condensation rate, create a new training model and condense the training set.
     for rate in rates:

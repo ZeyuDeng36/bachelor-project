@@ -232,3 +232,41 @@ def select_bottom(dataset, rate, scores):
     # Select the last num_to_keep items from the scores list
     selected_indices = [idx for _, idx in scores[-num_to_keep:]]
     return [dataset[i] for i in selected_indices]
+
+def select_median_centered(dataset, rate, scores):
+    """
+    Selects a fraction of the dataset by taking a contiguous block of samples 
+    centered around the median score. This method simply divides the number 
+    of samples to take by two and takes that many from each side of the median.
+
+    Args:
+        dataset (torch.utils.data.Dataset): Dataset to sample from.
+        rate (float): Fraction of samples to keep.
+        scores (list of tuples): List of (score, index) tuples, assumed to be sorted 
+                                 (either ascending or descending).
+
+    Returns:
+        list: A subset of the dataset containing the samples around the median score.
+    """
+    if rate >= 1.0:
+        return dataset
+
+    total = len(scores)
+    num_to_keep = int(total * rate)
+    if num_to_keep < 1:
+        num_to_keep = 1
+
+    # Find the median index
+    median_index = total // 2
+
+    # Compute how many to take from each side.
+    left_count = num_to_keep // 2
+    right_count = num_to_keep - left_count
+
+    # Make sure we don't exceed the boundaries of the scores list.
+    start_index = max(0, median_index - left_count)
+    end_index = min(total, median_index + right_count)
+
+    # The selected block of indices (from the sorted list)
+    selected_indices = [scores[i][1] for i in range(start_index, end_index)]
+    return [dataset[i] for i in selected_indices]
