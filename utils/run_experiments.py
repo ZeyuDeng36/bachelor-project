@@ -52,7 +52,7 @@ selection_methods = {
     "median":select_median_centered
 }
 
-def repeat(
+def run_experiments(
     dataset_name: str,
     model_name: str,
     rates: List[float],
@@ -94,7 +94,7 @@ def repeat(
         )
         trainer.train(verbose=True)
 
-def repeat1(
+def run_experiments1(
     dataset_name: str,
     model_name: str,
     rates: List[float],
@@ -136,7 +136,7 @@ def repeat1(
         )
         trainer.train(verbose=True)
 
-def repeat2(
+def run_experiments2(
     dataset_name: str,
     model_name: str,
     rates: List[float],
@@ -178,7 +178,7 @@ def repeat2(
         )
         trainer.train(verbose=True)
 
-def repeat3(
+def run_experiments3(
     dataset_name: str,
     model_name: str,
     rates: List[float],

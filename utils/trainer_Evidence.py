@@ -63,8 +63,8 @@ class Trainer:
         self.num_epochs = num_epochs
         self.save = save
         # Initialize the data loaders
-        self.train_loader = DataLoader(train_dataset, batch_size=self.batch_size, shuffle=True)
-        self.val_loader = DataLoader(val_dataset, batch_size=self.batch_size, shuffle=False)
+        self.train_loader = DataLoader(train_dataset, batch_size=self.batch_size, shuffle=True,  drop_last=True)
+        self.val_loader = DataLoader(val_dataset, batch_size=self.batch_size, shuffle=False,  drop_last=True)
 
         # Optimizer
         if optimizer_type == "adam":
@@ -179,9 +179,9 @@ class Trainer:
         return val_loss, accuracy
     
     def save_model(self, fileName, train_loss, train_accuracy, val_loss, val_accuracy):
-        #path = os.path.join("models", fileName)
-        #torch.save(self.model.state_dict(), path)
-        #print(f"Model saved to {path}")
+        path = os.path.join("models", fileName)
+        torch.save(self.model.state_dict(), path)
+        print(f"Model saved to {path}")
         with open("models/modelStats.txt", 'a') as file:
             file.write(f"MODEL:{fileName} , Train Loss: {train_loss:.4f}, Train Accuracy: {train_accuracy:.2f}, Validation Loss: {val_loss:.4f}, Validation Accuracy: {val_accuracy:.2f}%" + "\n")
 

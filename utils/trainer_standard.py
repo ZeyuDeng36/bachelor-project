@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader
 from torch import nn
 
 class Trainer:
-    def __init__(self, model, train_dataset, val_dataset, batch_size=64, learning_rate=1e-3, num_epochs=5, criterion = "crossEntropy", optimizer_type = "adam", save=""):
+    def __init__(self, model, train_dataset, val_dataset, batch_size=64, learning_rate=1e-3, num_epochs=20, criterion = "crossEntropy", optimizer_type = "adam", save=""):
         self.model = model
         self.train_dataset = train_dataset
         self.val_dataset = val_dataset
@@ -14,8 +14,8 @@ class Trainer:
         self.num_epochs = num_epochs
         self.save=save
         # Initialize the data loaders
-        self.train_loader = DataLoader(train_dataset, batch_size=self.batch_size, shuffle=True)
-        self.val_loader = DataLoader(val_dataset, batch_size=self.batch_size, shuffle=False)
+        self.train_loader = DataLoader(train_dataset, batch_size=self.batch_size, shuffle=True,  drop_last=True)
+        self.val_loader = DataLoader(val_dataset, batch_size=self.batch_size, shuffle=False,  drop_last=True)
 
         # Optimizer
         if optimizer_type == "adam":

@@ -66,11 +66,11 @@ def balanced_by_score1(dataset, rate, scores, num_groups=100):
         list: A subset of the dataset.
     """
     if rate >= 1.0:
-        print("Execution time: 0.0 seconds")
+        #print("Execution time: 0.0 seconds")
         return dataset
 
-    start_time = time.time()
-    print(scores[:5]) 
+    #start_time = time.time()
+    #print(scores[:5]) 
     # Convert scores to NumPy array: shape (N, 2)
     scores_array = np.array(scores)
     total = scores_array.shape[0]
@@ -90,8 +90,8 @@ def balanced_by_score1(dataset, rate, scores, num_groups=100):
         else:
             selected_indices.extend(group[:, 1].tolist())
 
-    elapsed_time = time.time() - start_time
-    print(f"Execution time: {elapsed_time:.4f} seconds")
+    #elapsed_time = time.time() - start_time
+    #print(f"Execution time: {elapsed_time:.4f} seconds")
     return [dataset[int(i)] for i in selected_indices]
 
 def balanced_by_range(dataset, rate, scores, num_bins=100):

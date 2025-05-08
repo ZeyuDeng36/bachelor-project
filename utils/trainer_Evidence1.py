@@ -123,8 +123,8 @@ class Trainer:
         self.num_epochs = num_epochs
         self.save = save
         # Initialize the data loaders
-        self.train_loader = DataLoader(train_dataset, batch_size=self.batch_size, shuffle=True)
-        self.val_loader = DataLoader(val_dataset, batch_size=self.batch_size, shuffle=False)
+        self.train_loader = DataLoader(train_dataset, batch_size=self.batch_size, shuffle=True,  drop_last=True)
+        self.val_loader = DataLoader(val_dataset, batch_size=self.batch_size, shuffle=False,  drop_last=True)
 
         # Optimizer
         if optimizer_type == "adam":

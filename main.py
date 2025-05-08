@@ -4,7 +4,7 @@ import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
 from torchvision.models import resnet18
-from utils.repeater import repeat,repeat1,repeat2,repeat3
+from utils.run_experiments import run_experiments,run_experiments1,run_experiments2,run_experiments3
 from utils.trainer_Evidence import Trainer as TrainerE
 from utils.trainer_Evidence1 import Trainer as TrainerE1
 from utils.initiate import initiate_dataset, initiate_model
@@ -14,7 +14,7 @@ def run_experiment1():
     datasets = ["MNIST"]
     rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
     uncertainty_metrics = ["predictive_entropy"]
-    selection_methods = ["balanced_by_score","top","bottom"]
+    selection_methods = ["balanced_by_score","top","bottom","median","balanced_by_score1","balanced_by_range"]
     for model_name in models:
         for dataset_name in datasets:
             for suffix in [1,2,3]:
@@ -29,21 +29,19 @@ def run_experiment1():
                 )
                 trainer.train(verbose=True)
 
-                repeat(dataset_name, model_name, rates, None, "random", f"models/{model_name}_{dataset_name}_{suffix}",suffix)
+                run_experiments(dataset_name, model_name, rates, None, "random", f"models/{model_name}_{dataset_name}_{suffix}",suffix)
                 for uncertainty_metric in uncertainty_metrics:
                     for selection_method in selection_methods:
-                        repeat(dataset_name, model_name, rates, uncertainty_metric, selection_method, f"models/{model_name}_{dataset_name}_{suffix}",suffix)
-
+                        run_experiments(dataset_name, model_name, rates, uncertainty_metric, selection_method, f"models/{model_name}_{dataset_name}_{suffix}",suffix)
 def run_experiment2():
     models = ["resnet18"]
-    datasets = ["CIFAR10"]
+    datasets = ["MNIST"]
     rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
     uncertainty_metrics = ["EVIDENCE","BELIEF"]
-    selection_methods = ["balanced_by_score"]
+    selection_methods = ["balanced_by_score","median","balanced_by_score1"]
     for model_name in models:
         for dataset_name in datasets:
             for suffix in [1,2,3]:
-
                 # Second training with different save path
                 model = initiate_model(model_name, dataset_name)
                 trainset, testset = initiate_dataset(dataset_name, model_name)
@@ -55,11 +53,59 @@ def run_experiment2():
                 )
                 trainer.train(verbose=True)
 
-                repeat2(dataset_name, model_name, rates, None, "random", f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
+                run_experiments(dataset_name, model_name, rates, None, "random", f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
                 for uncertainty_metric in uncertainty_metrics:
                     for selection_method in selection_methods:
-                        repeat2(dataset_name, model_name, rates, uncertainty_metric, selection_method, f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
+                        run_experiments(dataset_name, model_name, rates, uncertainty_metric, selection_method, f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
 def run_experiment3():
+    models = ["resnet18"]
+    datasets = ["CIFAR10"]
+    rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
+    uncertainty_metrics = ["predictive_entropy"]
+    selection_methods = ["balanced_by_score","median","balanced_by_score1"]
+    for model_name in models:
+        for dataset_name in datasets:
+            for suffix in [1,2,3]:
+                # Second training with different save path
+                model = initiate_model(model_name, dataset_name)
+                trainset, testset = initiate_dataset(dataset_name, model_name)
+                trainer = TrainerS(
+                    model,
+                    trainset, 
+                    testset,   
+                    save=f"{model_name}_{dataset_name}_{suffix}"
+                )
+                trainer.train(verbose=True)
+
+                run_experiments(dataset_name, model_name, rates, None, "random", f"models/{model_name}_{dataset_name}_{suffix}",suffix)
+                for uncertainty_metric in uncertainty_metrics:
+                    for selection_method in selection_methods:
+                        run_experiments(dataset_name, model_name, rates, uncertainty_metric, selection_method, f"models/{model_name}_{dataset_name}_{suffix}",suffix)
+def run_experiment4():
+    models = ["resnet18"]
+    datasets = ["CIFAR10"]
+    rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
+    uncertainty_metrics = ["EVIDENCE","BELIEF"]
+    selection_methods = ["balanced_by_score","median","balanced_by_score1"]
+    for model_name in models:
+        for dataset_name in datasets:
+            for suffix in [1,2,3]:
+                # Second training with different save path
+                model = initiate_model(model_name, dataset_name)
+                trainset, testset = initiate_dataset(dataset_name, model_name)
+                trainer = TrainerE1(
+                    model,
+                    trainset, 
+                    testset,   
+                    save=f"{model_name}_{dataset_name}_E1_{suffix}"
+                )
+                trainer.train(verbose=True)
+
+                run_experiments(dataset_name, model_name, rates, None, "random", f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
+                for uncertainty_metric in uncertainty_metrics:
+                    for selection_method in selection_methods:
+                        run_experiments(dataset_name, model_name, rates, uncertainty_metric, selection_method, f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
+def run_experiment5():
     models = ["resnet18"]
     datasets = ["CIFAR10"]
     rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
@@ -80,11 +126,11 @@ def run_experiment3():
                 )
                 trainer.train(verbose=True)
 
-                repeat2(dataset_name, model_name, rates, None, "random", f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
+                run_experiments2(dataset_name, model_name, rates, None, "random", f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
                 for uncertainty_metric in uncertainty_metrics:
                     for selection_method in selection_methods:
-                        repeat2(dataset_name, model_name, rates, uncertainty_metric, selection_method, f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
-def run_experiment4():
+                        run_experiments2(dataset_name, model_name, rates, uncertainty_metric, selection_method, f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
+def run_experiment6():
     models = ["resnet18"]
     datasets = ["CIFAR10"]
     rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
@@ -103,15 +149,15 @@ def run_experiment4():
                     save=f"{model_name}_{dataset_name}_E1_{suffix}"
                 )
                 trainer.train(verbose=True)
-                repeat3(dataset_name, model_name, rates, "random", f"models/{model_name}_{dataset_name}_E1_{suffix}", suffix)
+                run_experiments3(dataset_name, model_name, rates, "random", f"models/{model_name}_{dataset_name}_E1_{suffix}", suffix)
                 for selection_method in selection_methods:
-                    repeat3(dataset_name, model_name, rates, selection_method, f"models/{model_name}_{dataset_name}_E1_{suffix}", suffix)
+                    run_experiments3(dataset_name, model_name, rates, selection_method, f"models/{model_name}_{dataset_name}_E1_{suffix}", suffix)
 
 if __name__ == '__main__':    
     #model,(trainset, testset) = initiate_model_and_dataset("resnet18","cifar10")
-    #run_experiment1()
-    #run_experiment2()
-    #run_experiment3()
+    run_experiment1()
+    run_experiment2()
+    run_experiment3()
     run_experiment4()
     """
     transform = transforms.Compose([
@@ -174,21 +220,21 @@ if __name__ == '__main__':
         save="resnet18_MNIST"
     )
     trainer1.train(verbose=True)
-    repeat("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],None,"random",None)
-    repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],None,"random",None)
-    repeat("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"predictive_entropy","balanced_by_score","models/resnet18_MNIST")
-    repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"evidence_label","balanced_by_score","models/resnet18_MNIST_Evidence")
-    repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"evidence_total","balanced_by_score","models/resnet18_MNIST_Evidence")
-    repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_label","balanced_by_score","models/resnet18_MNIST_Evidence")
-    repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_total","balanced_by_score","models/resnet18_MNIST_Evidence")
-    repeat("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"predictive_entropy","balanced_by_score","models/resnet18_MNIST")
+    run_experiments("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],None,"random",None)
+    run_experiments1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],None,"random",None)
+    run_experiments("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"predictive_entropy","balanced_by_score","models/resnet18_MNIST")
+    run_experiments1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"evidence_label","balanced_by_score","models/resnet18_MNIST_Evidence")
+    run_experiments1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"evidence_total","balanced_by_score","models/resnet18_MNIST_Evidence")
+    run_experiments1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_label","balanced_by_score","models/resnet18_MNIST_Evidence")
+    run_experiments1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_total","balanced_by_score","models/resnet18_MNIST_Evidence")
+    run_experiments("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"predictive_entropy","balanced_by_score","models/resnet18_MNIST")
     """
 
     
     """    
-    repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_total","balanced_by_score","models/resnet18_MNIST_Evidence","")
-    repeat1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_total","balanced_by_label","models/resnet18_MNIST_Evidence","")
-    repeat("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_total","balanced_by_score","models/resnet18_MNIST_Evidence","")
-    repeat("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_total","balanced_by_score1","models/resnet18_MNIST_Evidence","")"
+    run_experiments1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_total","balanced_by_score","models/resnet18_MNIST_Evidence","")
+    run_experiments1("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_total","balanced_by_label","models/resnet18_MNIST_Evidence","")
+    run_experiments("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_total","balanced_by_score","models/resnet18_MNIST_Evidence","")
+    run_experiments("MNIST","resnet18",[0,0.3,0.5,0.7,0.8,0.9,0.95],"uncertainty_total","balanced_by_score1","models/resnet18_MNIST_Evidence","")"
 
     """
