@@ -1,5 +1,7 @@
 import torch
 import torch.nn.functional as F
+import torch
+from torch.special import digamma
 from torch.utils.data import DataLoader
 
 def get_scores_batched(model, dataset, func, batch_size=128):
@@ -58,7 +60,30 @@ def compute_total_evidence_dirichlet(evidence: torch.Tensor, labels) -> torch.Te
     num_classes = evidence.size(1)
     S = num_classes/torch.sum(alpha, dim=1)
     return S
+def compute_total_uncertainty(evidence: torch.Tensor, labels=None):
+    """
+    Given nonnegative evidence e_k for each of K classes, compute:
+      - epistemic uncertainty (vacuity): u = K / S
+      - aleatoric uncertainty: E_p[ -sum_k p_k log p_k ], where p~Dir(alpha)
+    Returns two tensors of shape (batch_size,).
+    """
+    # 1) Dirichlet parameters
+    alpha = evidence + 1.0              # shape (B, K)
+    S = alpha.sum(dim=1, keepdim=True)  # shape (B, 1)
+    K = evidence.size(1)
 
+    # 2) Epistemic vacuity u = K / S
+    u = K / S.squeeze(1)                # shape (B,)
+
+    # 3) Aleatoric = E_p~Dir(alpha)[H(p)]
+    #    E[H(p)] = sum_k (alpha_k / S) * (psi(S + 1) - psi(alpha_k + 1))
+    digamma_Sp1   = digamma(S + 1)      # shape (B, 1)
+    digamma_ap1   = digamma(alpha + 1)  # shape (B, K)
+    probs_mean    = alpha / S           # shape (B, K)
+
+    aleatoric = (probs_mean * (digamma_Sp1 - digamma_ap1)).sum(dim=1)  # shape (B,)
+
+    return u + aleatoric
 def sort_by_total_evidence_dirichlet(model, dataset, batch_size=128):
     return get_scores_batched(model, dataset, compute_total_evidence_dirichlet, batch_size)
 

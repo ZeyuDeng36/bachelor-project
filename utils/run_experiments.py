@@ -1,4 +1,5 @@
 import os
+import pickle
 import torch
 import torch.optim as optim
 from torch.utils.data import DataLoader
@@ -15,7 +16,7 @@ from condensation.sort_evidence import sort_by_total_evidence,sort_by_label_evid
 from condensation.sort_evidence1 import sort_by_total_evidence_dirichlet,sort_by_label_belief,compute_input_gradient_norm
 from utils.trainer_standard import Trainer
 from utils.trainer_Evidence import Trainer as TrainerE
-from utils.trainer_Evidence1 import Trainer as TrainerE1
+from utils.trainer_Evidence_kl import Trainer as TrainerE1
 from typing import List, Optional
 from utils.initiate import initiate_dataset,initiate_model
 from typing import List, Optional
@@ -82,6 +83,15 @@ def run_experiments(
             trainset_condensed = trainset
         else:
             trainset_condensed = selection_func(trainset,1 - rate,sorted_scores)
+
+            # save condensed dataset
+            parts = [model_name, dataset_name, scoring_method, selection_method, rate, suffix]
+            filename_base = "-".join(str(p) for p in parts if p is not None)
+            dataset_filename = f"{filename_base}.pkl"
+            dataset_path = os.path.join("datasets", dataset_filename)
+            with open(dataset_path, 'wb') as f:
+                pickle.dump(trainset_condensed, f)
+            print(f"Saved condensed dataset to: {dataset_path}")
         
         parts = [model_name, dataset_name, scoring_method, selection_method, rate,suffix]
         filename = "-".join(str(p) for p in parts if p is not None)

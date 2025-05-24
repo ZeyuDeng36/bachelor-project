@@ -53,7 +53,7 @@ def evidential_classification_loss(y_true, evidence):
 # Trainer class modified to support evidential loss
 # -------------------------
 class Trainer:
-    def __init__(self, model, train_dataset, val_dataset, batch_size=64, learning_rate=1e-3, num_epochs=5,
+    def __init__(self, model, train_dataset, val_dataset, batch_size=64, learning_rate=1e-3, num_epochs=20,
                  criterion="evidential", optimizer_type="adam", save=""):
         self.model = model
         self.train_dataset = train_dataset
