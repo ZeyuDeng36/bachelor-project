@@ -36,7 +36,7 @@ def balanced_by_score(dataset, rate, scores, num_groups=100):
 
     if rate >= 1.0:
         print("Execution time: 0.0 seconds")
-        return dataset  # If no selection, return immediately with 0 time
+        return [idx for _, idx in scores]  # If no selection, return immediately with 0 time
 
     total = len(scores)
     group_size = max(1, total // num_groups)
@@ -67,7 +67,7 @@ def balanced_by_score1(dataset, rate, scores, num_groups=100):
     """
     if rate >= 1.0:
         #print("Execution time: 0.0 seconds")
-        return dataset
+        return [idx for _, idx in scores]
 
     #start_time = time.time()
     #print(scores[:5]) 
@@ -86,13 +86,13 @@ def balanced_by_score1(dataset, rate, scores, num_groups=100):
         if group_len > num_to_keep:
             # Randomly select indices from the group
             chosen = np.random.choice(group_len, num_to_keep, replace=False)
-            selected_indices.extend(group[chosen, 1].tolist())
+            selected_indices.extend(group[chosen, 1].astype(int).tolist())
         else:
-            selected_indices.extend(group[:, 1].tolist())
+            selected_indices.extend(group[:, 1].astype(int).tolist())
 
     #elapsed_time = time.time() - start_time
     #print(f"Execution time: {elapsed_time:.4f} seconds")
-    return [dataset[int(i)] for i in selected_indices]
+    return selected_indices
 
 def balanced_by_range(dataset, rate, scores, num_bins=100):
     """
@@ -112,7 +112,7 @@ def balanced_by_range(dataset, rate, scores, num_bins=100):
     """
     if rate >= 1.0:
         print("Execution time: 0.0 seconds")
-        return dataset
+        return [idx for _, idx in scores]
 
     start_time = time.time()
 
@@ -158,41 +158,78 @@ def balanced_by_range(dataset, rate, scores, num_bins=100):
     print(f"Execution time: {elapsed_time:.4f} seconds")
     return selected_indices
 
-def balanced_by_label(dataset, rate, scores):
+def balanced_by_label(dataset, rate, scores, num_groups=100):
     """
-    Selects a fraction of the dataset while ensuring balance across labels.
+    Selects a fraction of the dataset while ensuring balance across labels,
+    using quantile‐based (score1) sampling within each label.
 
     Args:
         dataset (torch.utils.data.Dataset): Dataset to sample from.
         rate (float): Fraction of samples to keep.
         scores (list of tuples): List of (score, index) tuples.
+        num_groups (int): Number of quantile groups per label.
 
     Returns:
         list: selected indices of a subset of the dataset.
     """
     if rate >= 1.0:
         return [idx for _, idx in scores]
-    total_to_select = int(len(dataset) * rate)
-    
-    # Group indices by label
+
+    total = len(scores)
+    total_to_select = int(total * rate)
+
+    # 1) Group indices by label
     label_groups = {}
     for score, idx in scores:
         _, label = dataset[idx]
         label = label.item() if hasattr(label, 'item') else label
         label_groups.setdefault(label, []).append((score, idx))
-    
+
     num_classes = len(label_groups)
     per_class = total_to_select // num_classes
+
     selected_indices = []
-
     for label, group in label_groups.items():
-        group_sorted = sorted(group, key=lambda x: x[0], reverse=True)
-        selected_indices.extend(idx for _, idx in group_sorted[:per_class])
+        # Convert group to numpy array for quantile splitting
+        arr = np.array(group, dtype=float)  # shape (N,2): [score, idx]
+        N = arr.shape[0]
 
-    # Fill remaining slots if rounding left out some samples
+        # Compute the per-label keep-rate so that
+        # len(sel) ≈ per_class
+        class_rate = per_class / N
+
+        # Split into quantile bins
+        subgroups = np.array_split(arr, min(num_groups, N))
+        class_sel = []
+
+        # Within each bin, pick roughly class_rate fraction
+        for sub in subgroups:
+            k = max(1, int(len(sub) * class_rate))
+            if len(sub) > k:
+                # sample without replacement
+                chosen = np.random.choice(sub[:,1].astype(int), k, replace=False)
+            else:
+                chosen = sub[:,1].astype(int)
+            class_sel.extend(chosen.tolist())
+
+        # If we under‐shot (due to rounding), fill from top scores
+        if len(class_sel) < per_class:
+            remaining = sorted(
+                [(s, i) for s, i in group if i not in class_sel],
+                key=lambda x: x[0], reverse=True
+            )
+            needed = per_class - len(class_sel)
+            class_sel.extend(i for _, i in remaining[:needed])
+
+        # If we over‐shot (rare), truncate
+        selected_indices.extend(class_sel[:per_class])
+
+    # If we still have slots left (due to rounding down), fill from overall top
     if len(selected_indices) < total_to_select:
-        overall = [idx for _, idx in scores if idx not in selected_indices]
-        selected_indices.extend(overall[:(total_to_select - len(selected_indices))])
+        used = set(selected_indices)
+        remaining = [idx for _, idx in scores if idx not in used]
+        needed = total_to_select - len(selected_indices)
+        selected_indices.extend(remaining[:needed])
 
     return selected_indices
 
