@@ -11,13 +11,13 @@ def random_selection(dataset, rate, scores=None):
         scores (None): Unused, but included for consistent function calls.
 
     Returns:
-        list: A subset of the dataset.
+        list: selected indices of a subset of the dataset.
     """
     if rate >= 1.0:
-        return dataset
+        return [idx for _, idx in scores]
     num_to_keep = int(len(dataset) * rate)
     selected_indices = random.sample(range(len(dataset)), num_to_keep)
-    return [dataset[i] for i in selected_indices]
+    return selected_indices
 
 def balanced_by_score(dataset, rate, scores, num_groups=100):
     """
@@ -31,7 +31,7 @@ def balanced_by_score(dataset, rate, scores, num_groups=100):
         num_groups (int): Number of groups to divide the dataset into.
 
     Returns:
-        list: A subset of the dataset.
+        list: selected indices of a subset of the dataset.
     """
 
     if rate >= 1.0:
@@ -48,7 +48,7 @@ def balanced_by_score(dataset, rate, scores, num_groups=100):
         sampled = random.sample(group, num_to_keep) if num_to_keep < len(group) else group
         selected_indices.extend(idx for _, idx in sampled)
     
-    return [dataset[i] for i in selected_indices]
+    return selected_indices
 
 
 def balanced_by_score1(dataset, rate, scores, num_groups=100):
@@ -63,7 +63,7 @@ def balanced_by_score1(dataset, rate, scores, num_groups=100):
         num_groups (int): Number of groups to divide the dataset into.
     
     Returns:
-        list: A subset of the dataset.
+        list: selected indices of a subset of the dataset.
     """
     if rate >= 1.0:
         #print("Execution time: 0.0 seconds")
@@ -108,7 +108,7 @@ def balanced_by_range(dataset, rate, scores, num_bins=100):
         num_bins (int): Number of intervals to divide the uncertainty range into.
     
     Returns:
-        list: A subset of the dataset.
+        list: selected indices of a subset of the dataset.
     """
     if rate >= 1.0:
         print("Execution time: 0.0 seconds")
@@ -156,7 +156,7 @@ def balanced_by_range(dataset, rate, scores, num_bins=100):
 
     elapsed_time = time.time() - start_time
     print(f"Execution time: {elapsed_time:.4f} seconds")
-    return [dataset[i] for i in selected_indices]
+    return selected_indices
 
 def balanced_by_label(dataset, rate, scores):
     """
@@ -168,10 +168,10 @@ def balanced_by_label(dataset, rate, scores):
         scores (list of tuples): List of (score, index) tuples.
 
     Returns:
-        list: A subset of the dataset.
+        list: selected indices of a subset of the dataset.
     """
     if rate >= 1.0:
-        return dataset
+        return [idx for _, idx in scores]
     total_to_select = int(len(dataset) * rate)
     
     # Group indices by label
@@ -194,7 +194,7 @@ def balanced_by_label(dataset, rate, scores):
         overall = [idx for _, idx in scores if idx not in selected_indices]
         selected_indices.extend(overall[:(total_to_select - len(selected_indices))])
 
-    return [dataset[i] for i in selected_indices]
+    return selected_indices
 
 def select_top(dataset, rate, scores):
     """
@@ -206,13 +206,13 @@ def select_top(dataset, rate, scores):
         scores (list of tuples): List of (score, index) tuples.
 
     Returns:
-        list: A subset of the dataset.
+        list: selected indices of a subset of the dataset.
     """
     if rate >= 1.0:
-        return dataset
+        return [idx for _, idx in scores]
     num_to_keep = int(len(scores) * rate)
     selected_indices = [idx for _, idx in scores[:num_to_keep]]
-    return [dataset[i] for i in selected_indices]
+    return selected_indices
 
 def select_bottom(dataset, rate, scores):
     """
@@ -227,11 +227,11 @@ def select_bottom(dataset, rate, scores):
         list: A subset of the dataset containing the bottom fraction of samples.
     """
     if rate >= 1.0:
-        return dataset
+        return [idx for _, idx in scores]
     num_to_keep = int(len(scores) * rate)
     # Select the last num_to_keep items from the scores list
     selected_indices = [idx for _, idx in scores[-num_to_keep:]]
-    return [dataset[i] for i in selected_indices]
+    return selected_indices
 
 def select_median_centered(dataset, rate, scores):
     """
@@ -249,7 +249,7 @@ def select_median_centered(dataset, rate, scores):
         list: A subset of the dataset containing the samples around the median score.
     """
     if rate >= 1.0:
-        return dataset
+        return [idx for _, idx in scores]
 
     total = len(scores)
     num_to_keep = int(total * rate)
@@ -269,4 +269,4 @@ def select_median_centered(dataset, rate, scores):
 
     # The selected block of indices (from the sorted list)
     selected_indices = [scores[i][1] for i in range(start_index, end_index)]
-    return [dataset[i] for i in selected_indices]
+    return selected_indices

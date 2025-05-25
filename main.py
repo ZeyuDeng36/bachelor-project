@@ -12,9 +12,9 @@ from utils.trainer_standard import Trainer as TrainerS
 def run_experiment1():
     models = ["resnet18"]
     datasets = ["MNIST"]
-    rates = [0.95, ] #0.5, 0.7, 0.8, 0.9, 0.95]
+    rates = [0.95, 0.5, 0.7, 0.8, 0.9, 0.95]
     uncertainty_metrics = ["predictive_entropy"]
-    selection_methods = ["top",]#"bottom","median","balanced_by_score1","balanced_by_range"]
+    selection_methods = ["top","bottom","median","balanced_by_score1","balanced_by_range"]
     for model_name in models:
         for dataset_name in datasets:
             for suffix in [1,2,3]:
@@ -156,6 +156,6 @@ def run_experiment6():
 if __name__ == '__main__':    
     #model,(trainset, testset) = initiate_model_and_dataset("resnet18","cifar10")
     run_experiment1()
-    #run_experiment2()
-    #run_experiment3()
-    #run_experiment4()
+    run_experiment2()
+    run_experiment3()
+    run_experiment4()

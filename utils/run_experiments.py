@@ -82,15 +82,16 @@ def run_experiments(
         if rate <= 0:
             trainset_condensed = trainset
         else:
-            trainset_condensed = selection_func(trainset,1 - rate,sorted_scores)
+            trainset_condensed_indices = selection_func(trainset,1 - rate,sorted_scores)
+            trainset_condensed = [trainset[i] for i in trainset_condensed_indices]
 
             # save condensed dataset
             parts = [model_name, dataset_name, scoring_method, selection_method, rate, suffix]
             filename_base = "-".join(str(p) for p in parts if p is not None)
             dataset_filename = f"{filename_base}.pkl"
-            dataset_path = os.path.join("datasets", dataset_filename)
+            dataset_path = os.path.join("subsets", dataset_filename)
             with open(dataset_path, 'wb') as f:
-                pickle.dump(trainset_condensed, f)
+                pickle.dump(trainset_condensed_indices, f)
             print(f"Saved condensed dataset to: {dataset_path}")
         
         parts = [model_name, dataset_name, scoring_method, selection_method, rate,suffix]
@@ -133,7 +134,8 @@ def run_experiments1(
         if rate <= 0:
             trainset_condensed = trainset
         else:
-            trainset_condensed = selection_func(trainset,1 - rate,sorted_scores)
+            trainset_condensed_indices = selection_func(trainset,1 - rate,sorted_scores)
+            trainset_condensed = [trainset[i] for i in trainset_condensed_indices]
 
         modelStr = model_name+"-EvidenceLoss"
         parts = [modelStr, dataset_name, scoring_method, selection_method, rate,suffix]
@@ -175,7 +177,8 @@ def run_experiments2(
         if rate <= 0:
             trainset_condensed = trainset
         else:
-            trainset_condensed = selection_func(trainset,1 - rate,sorted_scores)
+            trainset_condensed_indices = selection_func(trainset,1 - rate,sorted_scores)
+            trainset_condensed = [trainset[i] for i in trainset_condensed_indices]
 
         modelStr = model_name+"-EvidenceLoss"
         parts = [modelStr, dataset_name, scoring_method, selection_method, rate,suffix]
@@ -214,7 +217,8 @@ def run_experiments3(
         if rate <= 0:
             trainset_condensed = trainset
         else:
-            trainset_condensed = selection_func(trainset,1 - rate,sorted_scores)
+            trainset_condensed_indices = selection_func(trainset,1 - rate,sorted_scores)
+            trainset_condensed = [trainset[i] for i in trainset_condensed_indices]
 
         modelStr = model_name+"-EvidenceLoss"
         parts = [modelStr, dataset_name, "EUDISTANCE", selection_method, rate,suffix]
