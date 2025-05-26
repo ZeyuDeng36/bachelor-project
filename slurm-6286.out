@@ -1,0 +1,2849 @@
+/home/fxq992/miniconda3/envs/my_project_env/lib/python3.12/site-packages/torch/cuda/__init__.py:129: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+Files already downloaded and verified
+Files already downloaded and verified
+[Epoch 1, Batch   100] loss: 0.968
+[Epoch 1, Batch   200] loss: 0.949
+[Epoch 1, Batch   300] loss: 0.939
+[Epoch 1, Batch   400] loss: 0.927
+[Epoch 1, Batch   500] loss: 0.921
+[Epoch 1, Batch   600] loss: 0.915
+[Epoch 1, Batch   700] loss: 0.912
+Epoch 1/20:
+Train Loss: 0.0949, Train Accuracy: 47.09%
+Validation Loss: 0.9137, Validation Accuracy: 53.03%
+[Epoch 2, Batch   100] loss: 0.900
+[Epoch 2, Batch   200] loss: 0.895
+[Epoch 2, Batch   300] loss: 0.894
+[Epoch 2, Batch   400] loss: 0.886
+[Epoch 2, Batch   500] loss: 0.885
+[Epoch 2, Batch   600] loss: 0.883
+[Epoch 2, Batch   700] loss: 0.885
+Epoch 2/20:
+Train Loss: 0.0924, Train Accuracy: 61.41%
+Validation Loss: 0.9007, Validation Accuracy: 57.23%
+[Epoch 3, Batch   100] loss: 0.874
+[Epoch 3, Batch   200] loss: 0.872
+[Epoch 3, Batch   300] loss: 0.873
+[Epoch 3, Batch   400] loss: 0.866
+[Epoch 3, Batch   500] loss: 0.868
+[Epoch 3, Batch   600] loss: 0.864
+[Epoch 3, Batch   700] loss: 0.862
+Epoch 3/20:
+Train Loss: 0.0906, Train Accuracy: 67.28%
+Validation Loss: 0.8708, Validation Accuracy: 66.62%
+[Epoch 4, Batch   100] loss: 0.853
+[Epoch 4, Batch   200] loss: 0.856
+[Epoch 4, Batch   300] loss: 0.855
+[Epoch 4, Batch   400] loss: 0.855
+[Epoch 4, Batch   500] loss: 0.852
+[Epoch 4, Batch   600] loss: 0.852
+[Epoch 4, Batch   700] loss: 0.852
+Epoch 4/20:
+Train Loss: 0.0894, Train Accuracy: 71.22%
+Validation Loss: 0.8665, Validation Accuracy: 68.10%
+[Epoch 5, Batch   100] loss: 0.838
+[Epoch 5, Batch   200] loss: 0.842
+[Epoch 5, Batch   300] loss: 0.843
+[Epoch 5, Batch   400] loss: 0.845
+[Epoch 5, Batch   500] loss: 0.845
+[Epoch 5, Batch   600] loss: 0.842
+[Epoch 5, Batch   700] loss: 0.840
+Epoch 5/20:
+Train Loss: 0.0883, Train Accuracy: 73.99%
+Validation Loss: 0.8745, Validation Accuracy: 66.42%
+[Epoch 6, Batch   100] loss: 0.825
+[Epoch 6, Batch   200] loss: 0.834
+[Epoch 6, Batch   300] loss: 0.832
+[Epoch 6, Batch   400] loss: 0.832
+[Epoch 6, Batch   500] loss: 0.835
+[Epoch 6, Batch   600] loss: 0.833
+[Epoch 6, Batch   700] loss: 0.831
+Epoch 6/20:
+Train Loss: 0.0876, Train Accuracy: 76.71%
+Validation Loss: 0.8565, Validation Accuracy: 70.38%
+[Epoch 7, Batch   100] loss: 0.823
+[Epoch 7, Batch   200] loss: 0.824
+[Epoch 7, Batch   300] loss: 0.820
+[Epoch 7, Batch   400] loss: 0.823
+[Epoch 7, Batch   500] loss: 0.824
+[Epoch 7, Batch   600] loss: 0.827
+[Epoch 7, Batch   700] loss: 0.823
+Epoch 7/20:
+Train Loss: 0.0863, Train Accuracy: 78.66%
+Validation Loss: 0.8532, Validation Accuracy: 71.88%
+[Epoch 8, Batch   100] loss: 0.811
+[Epoch 8, Batch   200] loss: 0.816
+[Epoch 8, Batch   300] loss: 0.812
+[Epoch 8, Batch   400] loss: 0.815
+[Epoch 8, Batch   500] loss: 0.817
+[Epoch 8, Batch   600] loss: 0.819
+[Epoch 8, Batch   700] loss: 0.824
+Epoch 8/20:
+Train Loss: 0.0856, Train Accuracy: 80.51%
+Validation Loss: 0.8493, Validation Accuracy: 72.47%
+[Epoch 9, Batch   100] loss: 0.804
+[Epoch 9, Batch   200] loss: 0.805
+[Epoch 9, Batch   300] loss: 0.808
+[Epoch 9, Batch   400] loss: 0.809
+[Epoch 9, Batch   500] loss: 0.811
+[Epoch 9, Batch   600] loss: 0.809
+[Epoch 9, Batch   700] loss: 0.812
+Epoch 9/20:
+Train Loss: 0.0854, Train Accuracy: 82.22%
+Validation Loss: 0.8600, Validation Accuracy: 70.72%
+[Epoch 10, Batch   100] loss: 0.801
+[Epoch 10, Batch   200] loss: 0.796
+[Epoch 10, Batch   300] loss: 0.800
+[Epoch 10, Batch   400] loss: 0.802
+[Epoch 10, Batch   500] loss: 0.806
+[Epoch 10, Batch   600] loss: 0.804
+[Epoch 10, Batch   700] loss: 0.804
+Epoch 10/20:
+Train Loss: 0.0848, Train Accuracy: 83.63%
+Validation Loss: 0.8543, Validation Accuracy: 72.47%
+[Epoch 11, Batch   100] loss: 0.792
+[Epoch 11, Batch   200] loss: 0.793
+[Epoch 11, Batch   300] loss: 0.793
+[Epoch 11, Batch   400] loss: 0.792
+[Epoch 11, Batch   500] loss: 0.798
+[Epoch 11, Batch   600] loss: 0.800
+[Epoch 11, Batch   700] loss: 0.801
+Epoch 11/20:
+Train Loss: 0.0841, Train Accuracy: 85.14%
+Validation Loss: 0.8559, Validation Accuracy: 72.48%
+[Epoch 12, Batch   100] loss: 0.785
+[Epoch 12, Batch   200] loss: 0.788
+[Epoch 12, Batch   300] loss: 0.789
+[Epoch 12, Batch   400] loss: 0.791
+[Epoch 12, Batch   500] loss: 0.792
+[Epoch 12, Batch   600] loss: 0.794
+[Epoch 12, Batch   700] loss: 0.798
+Epoch 12/20:
+Train Loss: 0.0831, Train Accuracy: 86.27%
+Validation Loss: 0.8467, Validation Accuracy: 74.36%
+[Epoch 13, Batch   100] loss: 0.781
+[Epoch 13, Batch   200] loss: 0.782
+[Epoch 13, Batch   300] loss: 0.785
+[Epoch 13, Batch   400] loss: 0.788
+[Epoch 13, Batch   500] loss: 0.790
+[Epoch 13, Batch   600] loss: 0.791
+[Epoch 13, Batch   700] loss: 0.791
+Epoch 13/20:
+Train Loss: 0.0831, Train Accuracy: 87.19%
+Validation Loss: 0.8585, Validation Accuracy: 71.61%
+[Epoch 14, Batch   100] loss: 0.777
+[Epoch 14, Batch   200] loss: 0.778
+[Epoch 14, Batch   300] loss: 0.783
+[Epoch 14, Batch   400] loss: 0.785
+[Epoch 14, Batch   500] loss: 0.787
+[Epoch 14, Batch   600] loss: 0.786
+[Epoch 14, Batch   700] loss: 0.784
+Epoch 14/20:
+Train Loss: 0.0823, Train Accuracy: 88.13%
+Validation Loss: 0.8595, Validation Accuracy: 72.27%
+[Epoch 15, Batch   100] loss: 0.774
+[Epoch 15, Batch   200] loss: 0.777
+[Epoch 15, Batch   300] loss: 0.777
+[Epoch 15, Batch   400] loss: 0.780
+[Epoch 15, Batch   500] loss: 0.780
+[Epoch 15, Batch   600] loss: 0.782
+[Epoch 15, Batch   700] loss: 0.782
+Epoch 15/20:
+Train Loss: 0.0820, Train Accuracy: 89.00%
+Validation Loss: 0.8475, Validation Accuracy: 74.62%
+[Epoch 16, Batch   100] loss: 0.775
+[Epoch 16, Batch   200] loss: 0.774
+[Epoch 16, Batch   300] loss: 0.774
+[Epoch 16, Batch   400] loss: 0.779
+[Epoch 16, Batch   500] loss: 0.777
+[Epoch 16, Batch   600] loss: 0.778
+[Epoch 16, Batch   700] loss: 0.781
+Epoch 16/20:
+Train Loss: 0.0820, Train Accuracy: 89.46%
+Validation Loss: 0.8454, Validation Accuracy: 75.13%
+[Epoch 17, Batch   100] loss: 0.770
+[Epoch 17, Batch   200] loss: 0.768
+[Epoch 17, Batch   300] loss: 0.773
+[Epoch 17, Batch   400] loss: 0.780
+[Epoch 17, Batch   500] loss: 0.773
+[Epoch 17, Batch   600] loss: 0.776
+[Epoch 17, Batch   700] loss: 0.773
+Epoch 17/20:
+Train Loss: 0.0819, Train Accuracy: 90.19%
+Validation Loss: 0.8456, Validation Accuracy: 75.01%
+[Epoch 18, Batch   100] loss: 0.764
+[Epoch 18, Batch   200] loss: 0.766
+[Epoch 18, Batch   300] loss: 0.771
+[Epoch 18, Batch   400] loss: 0.771
+[Epoch 18, Batch   500] loss: 0.774
+[Epoch 18, Batch   600] loss: 0.775
+[Epoch 18, Batch   700] loss: 0.772
+Epoch 18/20:
+Train Loss: 0.0813, Train Accuracy: 90.82%
+Validation Loss: 0.8537, Validation Accuracy: 73.40%
+[Epoch 19, Batch   100] loss: 0.764
+[Epoch 19, Batch   200] loss: 0.767
+[Epoch 19, Batch   300] loss: 0.766
+[Epoch 19, Batch   400] loss: 0.768
+[Epoch 19, Batch   500] loss: 0.771
+[Epoch 19, Batch   600] loss: 0.773
+[Epoch 19, Batch   700] loss: 0.775
+Epoch 19/20:
+Train Loss: 0.0813, Train Accuracy: 91.13%
+Validation Loss: 0.8503, Validation Accuracy: 74.80%
+[Epoch 20, Batch   100] loss: 0.762
+[Epoch 20, Batch   200] loss: 0.763
+[Epoch 20, Batch   300] loss: 0.765
+[Epoch 20, Batch   400] loss: 0.769
+[Epoch 20, Batch   500] loss: 0.772
+[Epoch 20, Batch   600] loss: 0.771
+[Epoch 20, Batch   700] loss: 0.770
+Epoch 20/20:
+Train Loss: 0.0809, Train Accuracy: 91.53%
+Validation Loss: 0.8557, Validation Accuracy: 73.64%
+Model saved to models/resnet18_CIFAR10_E1_1
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_CIFAR10_E1_1
+Files already downloaded and verified
+Files already downloaded and verified
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.966
+[Epoch 1, Batch   200] loss: 0.945
+[Epoch 1, Batch   300] loss: 0.938
+[Epoch 1, Batch   400] loss: 0.926
+[Epoch 1, Batch   500] loss: 0.920
+Epoch 1/20:
+Train Loss: 0.0784, Train Accuracy: 44.61%
+Validation Loss: 0.9226, Validation Accuracy: 49.33%
+[Epoch 2, Batch   100] loss: 0.905
+[Epoch 2, Batch   200] loss: 0.903
+[Epoch 2, Batch   300] loss: 0.898
+[Epoch 2, Batch   400] loss: 0.897
+[Epoch 2, Batch   500] loss: 0.895
+Epoch 2/20:
+Train Loss: 0.0766, Train Accuracy: 58.32%
+Validation Loss: 0.9089, Validation Accuracy: 54.97%
+[Epoch 3, Batch   100] loss: 0.879
+[Epoch 3, Batch   200] loss: 0.882
+[Epoch 3, Batch   300] loss: 0.880
+[Epoch 3, Batch   400] loss: 0.877
+[Epoch 3, Batch   500] loss: 0.880
+Epoch 3/20:
+Train Loss: 0.0752, Train Accuracy: 64.11%
+Validation Loss: 0.9186, Validation Accuracy: 51.37%
+[Epoch 4, Batch   100] loss: 0.860
+[Epoch 4, Batch   200] loss: 0.863
+[Epoch 4, Batch   300] loss: 0.864
+[Epoch 4, Batch   400] loss: 0.865
+[Epoch 4, Batch   500] loss: 0.864
+Epoch 4/20:
+Train Loss: 0.0741, Train Accuracy: 68.69%
+Validation Loss: 0.8862, Validation Accuracy: 61.44%
+[Epoch 5, Batch   100] loss: 0.848
+[Epoch 5, Batch   200] loss: 0.850
+[Epoch 5, Batch   300] loss: 0.855
+[Epoch 5, Batch   400] loss: 0.851
+[Epoch 5, Batch   500] loss: 0.854
+Epoch 5/20:
+Train Loss: 0.0735, Train Accuracy: 71.61%
+Validation Loss: 0.8819, Validation Accuracy: 64.68%
+[Epoch 6, Batch   100] loss: 0.838
+[Epoch 6, Batch   200] loss: 0.840
+[Epoch 6, Batch   300] loss: 0.845
+[Epoch 6, Batch   400] loss: 0.842
+[Epoch 6, Batch   500] loss: 0.843
+Epoch 6/20:
+Train Loss: 0.0725, Train Accuracy: 73.99%
+Validation Loss: 0.8780, Validation Accuracy: 65.54%
+[Epoch 7, Batch   100] loss: 0.829
+[Epoch 7, Batch   200] loss: 0.829
+[Epoch 7, Batch   300] loss: 0.829
+[Epoch 7, Batch   400] loss: 0.836
+[Epoch 7, Batch   500] loss: 0.831
+Epoch 7/20:
+Train Loss: 0.0721, Train Accuracy: 76.70%
+Validation Loss: 0.8850, Validation Accuracy: 61.95%
+[Epoch 8, Batch   100] loss: 0.820
+[Epoch 8, Batch   200] loss: 0.821
+[Epoch 8, Batch   300] loss: 0.827
+[Epoch 8, Batch   400] loss: 0.823
+[Epoch 8, Batch   500] loss: 0.823
+Epoch 8/20:
+Train Loss: 0.0708, Train Accuracy: 78.92%
+Validation Loss: 0.8897, Validation Accuracy: 62.94%
+[Epoch 9, Batch   100] loss: 0.807
+[Epoch 9, Batch   200] loss: 0.814
+[Epoch 9, Batch   300] loss: 0.818
+[Epoch 9, Batch   400] loss: 0.814
+[Epoch 9, Batch   500] loss: 0.820
+Epoch 9/20:
+Train Loss: 0.0707, Train Accuracy: 80.73%
+Validation Loss: 0.8765, Validation Accuracy: 66.81%
+[Epoch 10, Batch   100] loss: 0.801
+[Epoch 10, Batch   200] loss: 0.802
+[Epoch 10, Batch   300] loss: 0.812
+[Epoch 10, Batch   400] loss: 0.810
+[Epoch 10, Batch   500] loss: 0.812
+Epoch 10/20:
+Train Loss: 0.0702, Train Accuracy: 82.27%
+Validation Loss: 0.8589, Validation Accuracy: 71.08%
+[Epoch 11, Batch   100] loss: 0.793
+[Epoch 11, Batch   200] loss: 0.800
+[Epoch 11, Batch   300] loss: 0.799
+[Epoch 11, Batch   400] loss: 0.806
+[Epoch 11, Batch   500] loss: 0.807
+Epoch 11/20:
+Train Loss: 0.0691, Train Accuracy: 84.08%
+Validation Loss: 0.8592, Validation Accuracy: 71.03%
+[Epoch 12, Batch   100] loss: 0.787
+[Epoch 12, Batch   200] loss: 0.792
+[Epoch 12, Batch   300] loss: 0.797
+[Epoch 12, Batch   400] loss: 0.799
+[Epoch 12, Batch   500] loss: 0.800
+Epoch 12/20:
+Train Loss: 0.0686, Train Accuracy: 85.59%
+Validation Loss: 0.8549, Validation Accuracy: 71.73%
+[Epoch 13, Batch   100] loss: 0.780
+[Epoch 13, Batch   200] loss: 0.784
+[Epoch 13, Batch   300] loss: 0.792
+[Epoch 13, Batch   400] loss: 0.789
+[Epoch 13, Batch   500] loss: 0.795
+Epoch 13/20:
+Train Loss: 0.0682, Train Accuracy: 87.10%
+Validation Loss: 0.8599, Validation Accuracy: 71.34%
+[Epoch 14, Batch   100] loss: 0.780
+[Epoch 14, Batch   200] loss: 0.782
+[Epoch 14, Batch   300] loss: 0.789
+[Epoch 14, Batch   400] loss: 0.790
+[Epoch 14, Batch   500] loss: 0.786
+Epoch 14/20:
+Train Loss: 0.0679, Train Accuracy: 87.59%
+Validation Loss: 0.8616, Validation Accuracy: 71.40%
+[Epoch 15, Batch   100] loss: 0.774
+[Epoch 15, Batch   200] loss: 0.777
+[Epoch 15, Batch   300] loss: 0.780
+[Epoch 15, Batch   400] loss: 0.782
+[Epoch 15, Batch   500] loss: 0.783
+Epoch 15/20:
+Train Loss: 0.0680, Train Accuracy: 88.84%
+Validation Loss: 0.8646, Validation Accuracy: 70.19%
+[Epoch 16, Batch   100] loss: 0.771
+[Epoch 16, Batch   200] loss: 0.776
+[Epoch 16, Batch   300] loss: 0.773
+[Epoch 16, Batch   400] loss: 0.779
+[Epoch 16, Batch   500] loss: 0.778
+Epoch 16/20:
+Train Loss: 0.0675, Train Accuracy: 89.80%
+Validation Loss: 0.8805, Validation Accuracy: 67.58%
+[Epoch 17, Batch   100] loss: 0.768
+[Epoch 17, Batch   200] loss: 0.770
+[Epoch 17, Batch   300] loss: 0.774
+[Epoch 17, Batch   400] loss: 0.776
+[Epoch 17, Batch   500] loss: 0.777
+Epoch 17/20:
+Train Loss: 0.0667, Train Accuracy: 90.38%
+Validation Loss: 0.8816, Validation Accuracy: 68.29%
+[Epoch 18, Batch   100] loss: 0.766
+[Epoch 18, Batch   200] loss: 0.768
+[Epoch 18, Batch   300] loss: 0.773
+[Epoch 18, Batch   400] loss: 0.773
+[Epoch 18, Batch   500] loss: 0.771
+Epoch 18/20:
+Train Loss: 0.0669, Train Accuracy: 90.91%
+Validation Loss: 0.8611, Validation Accuracy: 72.26%
+[Epoch 19, Batch   100] loss: 0.765
+[Epoch 19, Batch   200] loss: 0.761
+[Epoch 19, Batch   300] loss: 0.764
+[Epoch 19, Batch   400] loss: 0.770
+[Epoch 19, Batch   500] loss: 0.772
+Epoch 19/20:
+Train Loss: 0.0659, Train Accuracy: 91.79%
+Validation Loss: 0.8718, Validation Accuracy: 70.00%
+[Epoch 20, Batch   100] loss: 0.763
+[Epoch 20, Batch   200] loss: 0.764
+[Epoch 20, Batch   300] loss: 0.766
+[Epoch 20, Batch   400] loss: 0.767
+[Epoch 20, Batch   500] loss: 0.770
+Epoch 20/20:
+Train Loss: 0.0664, Train Accuracy: 91.98%
+Validation Loss: 0.8596, Validation Accuracy: 72.88%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-random-0.3-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.964
+[Epoch 1, Batch   200] loss: 0.947
+[Epoch 1, Batch   300] loss: 0.935
+Epoch 1/20:
+Train Loss: 0.2156, Train Accuracy: 41.96%
+Validation Loss: 0.9415, Validation Accuracy: 43.61%
+[Epoch 2, Batch   100] loss: 0.915
+[Epoch 2, Batch   200] loss: 0.914
+[Epoch 2, Batch   300] loss: 0.907
+Epoch 2/20:
+Train Loss: 0.2094, Train Accuracy: 54.94%
+Validation Loss: 0.9411, Validation Accuracy: 48.80%
+[Epoch 3, Batch   100] loss: 0.891
+[Epoch 3, Batch   200] loss: 0.891
+[Epoch 3, Batch   300] loss: 0.889
+Epoch 3/20:
+Train Loss: 0.2055, Train Accuracy: 61.39%
+Validation Loss: 0.8982, Validation Accuracy: 58.75%
+[Epoch 4, Batch   100] loss: 0.874
+[Epoch 4, Batch   200] loss: 0.874
+[Epoch 4, Batch   300] loss: 0.875
+Epoch 4/20:
+Train Loss: 0.2027, Train Accuracy: 65.45%
+Validation Loss: 0.9018, Validation Accuracy: 58.17%
+[Epoch 5, Batch   100] loss: 0.859
+[Epoch 5, Batch   200] loss: 0.861
+[Epoch 5, Batch   300] loss: 0.862
+Epoch 5/20:
+Train Loss: 0.2003, Train Accuracy: 68.93%
+Validation Loss: 0.8849, Validation Accuracy: 62.68%
+[Epoch 6, Batch   100] loss: 0.848
+[Epoch 6, Batch   200] loss: 0.849
+[Epoch 6, Batch   300] loss: 0.853
+Epoch 6/20:
+Train Loss: 0.1974, Train Accuracy: 71.94%
+Validation Loss: 0.8740, Validation Accuracy: 66.52%
+[Epoch 7, Batch   100] loss: 0.834
+[Epoch 7, Batch   200] loss: 0.838
+[Epoch 7, Batch   300] loss: 0.844
+Epoch 7/20:
+Train Loss: 0.1958, Train Accuracy: 74.60%
+Validation Loss: 0.8998, Validation Accuracy: 60.82%
+[Epoch 8, Batch   100] loss: 0.824
+[Epoch 8, Batch   200] loss: 0.828
+[Epoch 8, Batch   300] loss: 0.834
+Epoch 8/20:
+Train Loss: 0.1936, Train Accuracy: 77.17%
+Validation Loss: 0.8685, Validation Accuracy: 67.36%
+[Epoch 9, Batch   100] loss: 0.815
+[Epoch 9, Batch   200] loss: 0.824
+[Epoch 9, Batch   300] loss: 0.821
+Epoch 9/20:
+Train Loss: 0.1913, Train Accuracy: 79.48%
+Validation Loss: 0.8749, Validation Accuracy: 66.41%
+[Epoch 10, Batch   100] loss: 0.808
+[Epoch 10, Batch   200] loss: 0.813
+[Epoch 10, Batch   300] loss: 0.816
+Epoch 10/20:
+Train Loss: 0.1894, Train Accuracy: 81.19%
+Validation Loss: 0.8966, Validation Accuracy: 61.63%
+[Epoch 11, Batch   100] loss: 0.799
+[Epoch 11, Batch   200] loss: 0.806
+[Epoch 11, Batch   300] loss: 0.805
+Epoch 11/20:
+Train Loss: 0.1879, Train Accuracy: 83.42%
+Validation Loss: 0.8804, Validation Accuracy: 65.74%
+[Epoch 12, Batch   100] loss: 0.795
+[Epoch 12, Batch   200] loss: 0.796
+[Epoch 12, Batch   300] loss: 0.800
+Epoch 12/20:
+Train Loss: 0.1863, Train Accuracy: 84.78%
+Validation Loss: 0.8804, Validation Accuracy: 67.30%
+[Epoch 13, Batch   100] loss: 0.787
+[Epoch 13, Batch   200] loss: 0.790
+[Epoch 13, Batch   300] loss: 0.794
+Epoch 13/20:
+Train Loss: 0.1859, Train Accuracy: 86.23%
+Validation Loss: 0.8730, Validation Accuracy: 67.60%
+[Epoch 14, Batch   100] loss: 0.780
+[Epoch 14, Batch   200] loss: 0.784
+[Epoch 14, Batch   300] loss: 0.790
+Epoch 14/20:
+Train Loss: 0.1847, Train Accuracy: 87.37%
+Validation Loss: 0.8698, Validation Accuracy: 68.89%
+[Epoch 15, Batch   100] loss: 0.777
+[Epoch 15, Batch   200] loss: 0.779
+[Epoch 15, Batch   300] loss: 0.781
+Epoch 15/20:
+Train Loss: 0.1832, Train Accuracy: 88.59%
+Validation Loss: 0.8713, Validation Accuracy: 68.83%
+[Epoch 16, Batch   100] loss: 0.770
+[Epoch 16, Batch   200] loss: 0.778
+[Epoch 16, Batch   300] loss: 0.777
+Epoch 16/20:
+Train Loss: 0.1826, Train Accuracy: 89.56%
+Validation Loss: 0.8815, Validation Accuracy: 67.19%
+[Epoch 17, Batch   100] loss: 0.771
+[Epoch 17, Batch   200] loss: 0.774
+[Epoch 17, Batch   300] loss: 0.774
+Epoch 17/20:
+Train Loss: 0.1818, Train Accuracy: 90.04%
+Validation Loss: 0.8775, Validation Accuracy: 68.27%
+[Epoch 18, Batch   100] loss: 0.766
+[Epoch 18, Batch   200] loss: 0.767
+[Epoch 18, Batch   300] loss: 0.772
+Epoch 18/20:
+Train Loss: 0.1804, Train Accuracy: 91.27%
+Validation Loss: 0.8788, Validation Accuracy: 68.63%
+[Epoch 19, Batch   100] loss: 0.763
+[Epoch 19, Batch   200] loss: 0.767
+[Epoch 19, Batch   300] loss: 0.768
+Epoch 19/20:
+Train Loss: 0.1800, Train Accuracy: 91.48%
+Validation Loss: 0.8734, Validation Accuracy: 69.72%
+[Epoch 20, Batch   100] loss: 0.760
+[Epoch 20, Batch   200] loss: 0.760
+[Epoch 20, Batch   300] loss: 0.765
+Epoch 20/20:
+Train Loss: 0.1789, Train Accuracy: 92.55%
+Validation Loss: 0.8785, Validation Accuracy: 68.40%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-random-0.5-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.967
+[Epoch 1, Batch   200] loss: 0.950
+Epoch 1/20:
+Train Loss: 0.1406, Train Accuracy: 36.38%
+Validation Loss: 0.9463, Validation Accuracy: 41.27%
+[Epoch 2, Batch   100] loss: 0.929
+[Epoch 2, Batch   200] loss: 0.924
+Epoch 2/20:
+Train Loss: 0.1371, Train Accuracy: 49.51%
+Validation Loss: 0.9195, Validation Accuracy: 51.76%
+[Epoch 3, Batch   100] loss: 0.909
+[Epoch 3, Batch   200] loss: 0.905
+Epoch 3/20:
+Train Loss: 0.1334, Train Accuracy: 56.00%
+Validation Loss: 0.9518, Validation Accuracy: 44.64%
+[Epoch 4, Batch   100] loss: 0.890
+[Epoch 4, Batch   200] loss: 0.889
+Epoch 4/20:
+Train Loss: 0.1321, Train Accuracy: 61.23%
+Validation Loss: 0.9414, Validation Accuracy: 49.86%
+[Epoch 5, Batch   100] loss: 0.874
+[Epoch 5, Batch   200] loss: 0.874
+Epoch 5/20:
+Train Loss: 0.1297, Train Accuracy: 65.93%
+Validation Loss: 0.9542, Validation Accuracy: 45.76%
+[Epoch 6, Batch   100] loss: 0.858
+[Epoch 6, Batch   200] loss: 0.865
+Epoch 6/20:
+Train Loss: 0.1289, Train Accuracy: 68.78%
+Validation Loss: 0.8914, Validation Accuracy: 60.10%
+[Epoch 7, Batch   100] loss: 0.843
+[Epoch 7, Batch   200] loss: 0.853
+Epoch 7/20:
+Train Loss: 0.1275, Train Accuracy: 72.05%
+Validation Loss: 0.8951, Validation Accuracy: 60.06%
+[Epoch 8, Batch   100] loss: 0.834
+[Epoch 8, Batch   200] loss: 0.838
+Epoch 8/20:
+Train Loss: 0.1253, Train Accuracy: 75.17%
+Validation Loss: 0.9084, Validation Accuracy: 57.85%
+[Epoch 9, Batch   100] loss: 0.822
+[Epoch 9, Batch   200] loss: 0.829
+Epoch 9/20:
+Train Loss: 0.1248, Train Accuracy: 77.58%
+Validation Loss: 0.8946, Validation Accuracy: 61.03%
+[Epoch 10, Batch   100] loss: 0.814
+[Epoch 10, Batch   200] loss: 0.818
+Epoch 10/20:
+Train Loss: 0.1233, Train Accuracy: 79.89%
+Validation Loss: 0.8989, Validation Accuracy: 60.86%
+[Epoch 11, Batch   100] loss: 0.805
+[Epoch 11, Batch   200] loss: 0.807
+Epoch 11/20:
+Train Loss: 0.1227, Train Accuracy: 81.95%
+Validation Loss: 0.8951, Validation Accuracy: 61.74%
+[Epoch 12, Batch   100] loss: 0.801
+[Epoch 12, Batch   200] loss: 0.802
+Epoch 12/20:
+Train Loss: 0.1204, Train Accuracy: 83.67%
+Validation Loss: 0.8920, Validation Accuracy: 64.26%
+[Epoch 13, Batch   100] loss: 0.790
+[Epoch 13, Batch   200] loss: 0.796
+Epoch 13/20:
+Train Loss: 0.1184, Train Accuracy: 86.01%
+Validation Loss: 0.8981, Validation Accuracy: 62.47%
+[Epoch 14, Batch   100] loss: 0.781
+[Epoch 14, Batch   200] loss: 0.794
+Epoch 14/20:
+Train Loss: 0.1180, Train Accuracy: 87.19%
+Validation Loss: 0.9053, Validation Accuracy: 61.30%
+[Epoch 15, Batch   100] loss: 0.779
+[Epoch 15, Batch   200] loss: 0.787
+Epoch 15/20:
+Train Loss: 0.1164, Train Accuracy: 88.18%
+Validation Loss: 0.9079, Validation Accuracy: 60.49%
+[Epoch 16, Batch   100] loss: 0.777
+[Epoch 16, Batch   200] loss: 0.778
+Epoch 16/20:
+Train Loss: 0.1167, Train Accuracy: 89.37%
+Validation Loss: 0.9004, Validation Accuracy: 62.83%
+[Epoch 17, Batch   100] loss: 0.771
+[Epoch 17, Batch   200] loss: 0.776
+Epoch 17/20:
+Train Loss: 0.1152, Train Accuracy: 90.26%
+Validation Loss: 0.8922, Validation Accuracy: 64.96%
+[Epoch 18, Batch   100] loss: 0.765
+[Epoch 18, Batch   200] loss: 0.774
+Epoch 18/20:
+Train Loss: 0.1152, Train Accuracy: 91.11%
+Validation Loss: 0.9000, Validation Accuracy: 63.71%
+[Epoch 19, Batch   100] loss: 0.761
+[Epoch 19, Batch   200] loss: 0.770
+Epoch 19/20:
+Train Loss: 0.1154, Train Accuracy: 91.86%
+Validation Loss: 0.9143, Validation Accuracy: 60.54%
+[Epoch 20, Batch   100] loss: 0.762
+[Epoch 20, Batch   200] loss: 0.765
+Epoch 20/20:
+Train Loss: 0.1149, Train Accuracy: 92.29%
+Validation Loss: 0.9169, Validation Accuracy: 60.16%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-random-0.7-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.967
+Epoch 1/20:
+Train Loss: 0.3451, Train Accuracy: 33.83%
+Validation Loss: 0.9582, Validation Accuracy: 35.50%
+[Epoch 2, Batch   100] loss: 0.937
+Epoch 2/20:
+Train Loss: 0.3364, Train Accuracy: 46.55%
+Validation Loss: 0.9359, Validation Accuracy: 45.83%
+[Epoch 3, Batch   100] loss: 0.916
+Epoch 3/20:
+Train Loss: 0.3320, Train Accuracy: 52.97%
+Validation Loss: 0.9317, Validation Accuracy: 46.94%
+[Epoch 4, Batch   100] loss: 0.895
+Epoch 4/20:
+Train Loss: 0.3274, Train Accuracy: 58.56%
+Validation Loss: 0.9574, Validation Accuracy: 41.10%
+[Epoch 5, Batch   100] loss: 0.880
+Epoch 5/20:
+Train Loss: 0.3228, Train Accuracy: 62.59%
+Validation Loss: 0.9304, Validation Accuracy: 48.88%
+[Epoch 6, Batch   100] loss: 0.868
+Epoch 6/20:
+Train Loss: 0.3157, Train Accuracy: 66.84%
+Validation Loss: 0.9504, Validation Accuracy: 47.75%
+[Epoch 7, Batch   100] loss: 0.855
+Epoch 7/20:
+Train Loss: 0.3120, Train Accuracy: 70.16%
+Validation Loss: 0.9088, Validation Accuracy: 57.35%
+[Epoch 8, Batch   100] loss: 0.842
+Epoch 8/20:
+Train Loss: 0.3084, Train Accuracy: 73.87%
+Validation Loss: 0.9222, Validation Accuracy: 54.02%
+[Epoch 9, Batch   100] loss: 0.828
+Epoch 9/20:
+Train Loss: 0.3039, Train Accuracy: 76.78%
+Validation Loss: 0.9375, Validation Accuracy: 51.95%
+[Epoch 10, Batch   100] loss: 0.818
+Epoch 10/20:
+Train Loss: 0.2992, Train Accuracy: 79.80%
+Validation Loss: 0.9224, Validation Accuracy: 54.61%
+[Epoch 11, Batch   100] loss: 0.806
+Epoch 11/20:
+Train Loss: 0.2983, Train Accuracy: 81.93%
+Validation Loss: 0.9156, Validation Accuracy: 57.24%
+[Epoch 12, Batch   100] loss: 0.800
+Epoch 12/20:
+Train Loss: 0.2911, Train Accuracy: 84.26%
+Validation Loss: 0.9098, Validation Accuracy: 59.28%
+[Epoch 13, Batch   100] loss: 0.790
+Epoch 13/20:
+Train Loss: 0.2890, Train Accuracy: 86.19%
+Validation Loss: 0.9432, Validation Accuracy: 52.55%
+[Epoch 14, Batch   100] loss: 0.789
+Epoch 14/20:
+Train Loss: 0.2868, Train Accuracy: 86.96%
+Validation Loss: 0.9310, Validation Accuracy: 55.69%
+[Epoch 15, Batch   100] loss: 0.787
+Epoch 15/20:
+Train Loss: 0.2855, Train Accuracy: 87.48%
+Validation Loss: 0.9135, Validation Accuracy: 59.96%
+[Epoch 16, Batch   100] loss: 0.781
+Epoch 16/20:
+Train Loss: 0.2831, Train Accuracy: 88.84%
+Validation Loss: 0.9187, Validation Accuracy: 58.68%
+[Epoch 17, Batch   100] loss: 0.770
+Epoch 17/20:
+Train Loss: 0.2812, Train Accuracy: 90.73%
+Validation Loss: 0.9502, Validation Accuracy: 54.09%
+[Epoch 18, Batch   100] loss: 0.768
+Epoch 18/20:
+Train Loss: 0.2785, Train Accuracy: 91.61%
+Validation Loss: 0.9171, Validation Accuracy: 59.98%
+[Epoch 19, Batch   100] loss: 0.761
+Epoch 19/20:
+Train Loss: 0.2802, Train Accuracy: 92.53%
+Validation Loss: 0.9233, Validation Accuracy: 58.27%
+[Epoch 20, Batch   100] loss: 0.764
+Epoch 20/20:
+Train Loss: 0.2787, Train Accuracy: 92.49%
+Validation Loss: 0.9283, Validation Accuracy: 58.46%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-random-0.8-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+Epoch 1/20:
+Train Loss: 0.9688, Train Accuracy: 29.57%
+Validation Loss: 1.0687, Validation Accuracy: 23.06%
+Epoch 2/20:
+Train Loss: 0.9495, Train Accuracy: 40.45%
+Validation Loss: 0.9511, Validation Accuracy: 38.85%
+Epoch 3/20:
+Train Loss: 0.9302, Train Accuracy: 47.25%
+Validation Loss: 0.9591, Validation Accuracy: 36.23%
+Epoch 4/20:
+Train Loss: 0.9171, Train Accuracy: 52.17%
+Validation Loss: 0.9520, Validation Accuracy: 41.71%
+Epoch 5/20:
+Train Loss: 0.8996, Train Accuracy: 57.47%
+Validation Loss: 0.9476, Validation Accuracy: 43.39%
+Epoch 6/20:
+Train Loss: 0.8792, Train Accuracy: 63.37%
+Validation Loss: 0.9601, Validation Accuracy: 39.00%
+Epoch 7/20:
+Train Loss: 0.8659, Train Accuracy: 67.47%
+Validation Loss: 0.9462, Validation Accuracy: 44.36%
+Epoch 8/20:
+Train Loss: 0.8559, Train Accuracy: 69.55%
+Validation Loss: 0.9439, Validation Accuracy: 48.01%
+Epoch 9/20:
+Train Loss: 0.8399, Train Accuracy: 74.13%
+Validation Loss: 0.9639, Validation Accuracy: 44.20%
+Epoch 10/20:
+Train Loss: 0.8244, Train Accuracy: 78.10%
+Validation Loss: 0.9524, Validation Accuracy: 48.19%
+Epoch 11/20:
+Train Loss: 0.8229, Train Accuracy: 78.90%
+Validation Loss: 0.9560, Validation Accuracy: 48.93%
+Epoch 12/20:
+Train Loss: 0.8209, Train Accuracy: 79.04%
+Validation Loss: 0.9489, Validation Accuracy: 48.87%
+Epoch 13/20:
+Train Loss: 0.7950, Train Accuracy: 85.54%
+Validation Loss: 0.9506, Validation Accuracy: 49.38%
+Epoch 14/20:
+Train Loss: 0.7904, Train Accuracy: 86.44%
+Validation Loss: 0.9487, Validation Accuracy: 50.79%
+Epoch 15/20:
+Train Loss: 0.7786, Train Accuracy: 89.10%
+Validation Loss: 0.9640, Validation Accuracy: 49.18%
+Epoch 16/20:
+Train Loss: 0.7725, Train Accuracy: 90.46%
+Validation Loss: 0.9630, Validation Accuracy: 47.35%
+Epoch 17/20:
+Train Loss: 0.7884, Train Accuracy: 87.64%
+Validation Loss: 0.9611, Validation Accuracy: 49.72%
+Epoch 18/20:
+Train Loss: 0.7712, Train Accuracy: 90.80%
+Validation Loss: 0.9671, Validation Accuracy: 48.64%
+Epoch 19/20:
+Train Loss: 0.7630, Train Accuracy: 92.96%
+Validation Loss: 0.9743, Validation Accuracy: 47.58%
+Epoch 20/20:
+Train Loss: 0.7664, Train Accuracy: 91.84%
+Validation Loss: 0.9642, Validation Accuracy: 49.52%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-random-0.9-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+Epoch 1/20:
+Train Loss: 0.9745, Train Accuracy: 27.32%
+Validation Loss: 1.0011, Validation Accuracy: 12.67%
+Epoch 2/20:
+Train Loss: 0.9493, Train Accuracy: 41.24%
+Validation Loss: 0.9605, Validation Accuracy: 34.89%
+Epoch 3/20:
+Train Loss: 0.9322, Train Accuracy: 46.16%
+Validation Loss: 1.0387, Validation Accuracy: 27.94%
+Epoch 4/20:
+Train Loss: 0.9130, Train Accuracy: 53.08%
+Validation Loss: 0.9777, Validation Accuracy: 35.20%
+Epoch 5/20:
+Train Loss: 0.9104, Train Accuracy: 55.12%
+Validation Loss: 0.9630, Validation Accuracy: 40.97%
+Epoch 6/20:
+Train Loss: 0.8943, Train Accuracy: 59.00%
+Validation Loss: 0.9602, Validation Accuracy: 39.57%
+Epoch 7/20:
+Train Loss: 0.8659, Train Accuracy: 66.56%
+Validation Loss: 0.9602, Validation Accuracy: 41.82%
+Epoch 8/20:
+Train Loss: 0.8432, Train Accuracy: 73.64%
+Validation Loss: 0.9697, Validation Accuracy: 41.71%
+Epoch 9/20:
+Train Loss: 0.8495, Train Accuracy: 72.16%
+Validation Loss: 0.9671, Validation Accuracy: 41.68%
+Epoch 10/20:
+Train Loss: 0.8290, Train Accuracy: 78.08%
+Validation Loss: 0.9760, Validation Accuracy: 42.34%
+Epoch 11/20:
+Train Loss: 0.8150, Train Accuracy: 81.32%
+Validation Loss: 0.9749, Validation Accuracy: 41.43%
+Epoch 12/20:
+Train Loss: 0.8134, Train Accuracy: 82.04%
+Validation Loss: 0.9677, Validation Accuracy: 42.82%
+Epoch 13/20:
+Train Loss: 0.8033, Train Accuracy: 84.24%
+Validation Loss: 0.9834, Validation Accuracy: 40.41%
+Epoch 14/20:
+Train Loss: 0.8051, Train Accuracy: 84.08%
+Validation Loss: 0.9713, Validation Accuracy: 45.51%
+Epoch 15/20:
+Train Loss: 0.8037, Train Accuracy: 85.44%
+Validation Loss: 0.9660, Validation Accuracy: 45.67%
+Epoch 16/20:
+Train Loss: 0.8000, Train Accuracy: 86.28%
+Validation Loss: 1.0290, Validation Accuracy: 33.10%
+Epoch 17/20:
+Train Loss: 0.8354, Train Accuracy: 76.76%
+Validation Loss: 0.9828, Validation Accuracy: 43.41%
+Epoch 18/20:
+Train Loss: 0.7884, Train Accuracy: 87.28%
+Validation Loss: 0.9667, Validation Accuracy: 46.34%
+Epoch 19/20:
+Train Loss: 0.7650, Train Accuracy: 92.64%
+Validation Loss: 0.9625, Validation Accuracy: 47.12%
+Epoch 20/20:
+Train Loss: 0.7538, Train Accuracy: 94.68%
+Validation Loss: 0.9630, Validation Accuracy: 47.42%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-random-0.95-1
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_CIFAR10_E1_1
+Files already downloaded and verified
+Files already downloaded and verified
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.963
+[Epoch 1, Batch   200] loss: 0.947
+[Epoch 1, Batch   300] loss: 0.936
+[Epoch 1, Batch   400] loss: 0.930
+[Epoch 1, Batch   500] loss: 0.922
+Epoch 1/20:
+Train Loss: 0.0787, Train Accuracy: 44.78%
+Validation Loss: 0.9276, Validation Accuracy: 47.68%
+[Epoch 2, Batch   100] loss: 0.907
+[Epoch 2, Batch   200] loss: 0.907
+[Epoch 2, Batch   300] loss: 0.901
+[Epoch 2, Batch   400] loss: 0.897
+[Epoch 2, Batch   500] loss: 0.894
+Epoch 2/20:
+Train Loss: 0.0763, Train Accuracy: 57.79%
+Validation Loss: 0.9180, Validation Accuracy: 52.77%
+[Epoch 3, Batch   100] loss: 0.882
+[Epoch 3, Batch   200] loss: 0.884
+[Epoch 3, Batch   300] loss: 0.879
+[Epoch 3, Batch   400] loss: 0.880
+[Epoch 3, Batch   500] loss: 0.876
+Epoch 3/20:
+Train Loss: 0.0753, Train Accuracy: 63.63%
+Validation Loss: 0.8815, Validation Accuracy: 64.35%
+[Epoch 4, Batch   100] loss: 0.865
+[Epoch 4, Batch   200] loss: 0.869
+[Epoch 4, Batch   300] loss: 0.864
+[Epoch 4, Batch   400] loss: 0.866
+[Epoch 4, Batch   500] loss: 0.864
+Epoch 4/20:
+Train Loss: 0.0744, Train Accuracy: 67.79%
+Validation Loss: 0.8762, Validation Accuracy: 65.09%
+[Epoch 5, Batch   100] loss: 0.850
+[Epoch 5, Batch   200] loss: 0.856
+[Epoch 5, Batch   300] loss: 0.857
+[Epoch 5, Batch   400] loss: 0.854
+[Epoch 5, Batch   500] loss: 0.854
+Epoch 5/20:
+Train Loss: 0.0741, Train Accuracy: 70.67%
+Validation Loss: 0.8723, Validation Accuracy: 65.60%
+[Epoch 6, Batch   100] loss: 0.840
+[Epoch 6, Batch   200] loss: 0.844
+[Epoch 6, Batch   300] loss: 0.842
+[Epoch 6, Batch   400] loss: 0.845
+[Epoch 6, Batch   500] loss: 0.847
+Epoch 6/20:
+Train Loss: 0.0726, Train Accuracy: 73.66%
+Validation Loss: 0.8715, Validation Accuracy: 66.20%
+[Epoch 7, Batch   100] loss: 0.830
+[Epoch 7, Batch   200] loss: 0.834
+[Epoch 7, Batch   300] loss: 0.835
+[Epoch 7, Batch   400] loss: 0.838
+[Epoch 7, Batch   500] loss: 0.835
+Epoch 7/20:
+Train Loss: 0.0722, Train Accuracy: 75.80%
+Validation Loss: 0.8569, Validation Accuracy: 70.34%
+[Epoch 8, Batch   100] loss: 0.821
+[Epoch 8, Batch   200] loss: 0.824
+[Epoch 8, Batch   300] loss: 0.825
+[Epoch 8, Batch   400] loss: 0.826
+[Epoch 8, Batch   500] loss: 0.831
+Epoch 8/20:
+Train Loss: 0.0715, Train Accuracy: 78.09%
+Validation Loss: 0.8609, Validation Accuracy: 69.56%
+[Epoch 9, Batch   100] loss: 0.812
+[Epoch 9, Batch   200] loss: 0.812
+[Epoch 9, Batch   300] loss: 0.816
+[Epoch 9, Batch   400] loss: 0.821
+[Epoch 9, Batch   500] loss: 0.821
+Epoch 9/20:
+Train Loss: 0.0703, Train Accuracy: 80.21%
+Validation Loss: 0.8594, Validation Accuracy: 70.01%
+[Epoch 10, Batch   100] loss: 0.804
+[Epoch 10, Batch   200] loss: 0.807
+[Epoch 10, Batch   300] loss: 0.808
+[Epoch 10, Batch   400] loss: 0.814
+[Epoch 10, Batch   500] loss: 0.810
+Epoch 10/20:
+Train Loss: 0.0703, Train Accuracy: 82.10%
+Validation Loss: 0.8623, Validation Accuracy: 69.58%
+[Epoch 11, Batch   100] loss: 0.798
+[Epoch 11, Batch   200] loss: 0.803
+[Epoch 11, Batch   300] loss: 0.804
+[Epoch 11, Batch   400] loss: 0.804
+[Epoch 11, Batch   500] loss: 0.804
+Epoch 11/20:
+Train Loss: 0.0699, Train Accuracy: 83.43%
+Validation Loss: 0.8620, Validation Accuracy: 70.47%
+[Epoch 12, Batch   100] loss: 0.792
+[Epoch 12, Batch   200] loss: 0.795
+[Epoch 12, Batch   300] loss: 0.799
+[Epoch 12, Batch   400] loss: 0.799
+[Epoch 12, Batch   500] loss: 0.802
+Epoch 12/20:
+Train Loss: 0.0691, Train Accuracy: 84.84%
+Validation Loss: 0.8985, Validation Accuracy: 62.51%
+[Epoch 13, Batch   100] loss: 0.785
+[Epoch 13, Batch   200] loss: 0.792
+[Epoch 13, Batch   300] loss: 0.797
+[Epoch 13, Batch   400] loss: 0.790
+[Epoch 13, Batch   500] loss: 0.795
+Epoch 13/20:
+Train Loss: 0.0686, Train Accuracy: 86.08%
+Validation Loss: 0.8564, Validation Accuracy: 71.42%
+[Epoch 14, Batch   100] loss: 0.779
+[Epoch 14, Batch   200] loss: 0.782
+[Epoch 14, Batch   300] loss: 0.785
+[Epoch 14, Batch   400] loss: 0.790
+[Epoch 14, Batch   500] loss: 0.788
+Epoch 14/20:
+Train Loss: 0.0680, Train Accuracy: 87.63%
+Validation Loss: 0.8606, Validation Accuracy: 71.81%
+[Epoch 15, Batch   100] loss: 0.779
+[Epoch 15, Batch   200] loss: 0.779
+[Epoch 15, Batch   300] loss: 0.781
+[Epoch 15, Batch   400] loss: 0.786
+[Epoch 15, Batch   500] loss: 0.788
+Epoch 15/20:
+Train Loss: 0.0677, Train Accuracy: 88.19%
+Validation Loss: 0.8627, Validation Accuracy: 70.96%
+[Epoch 16, Batch   100] loss: 0.771
+[Epoch 16, Batch   200] loss: 0.778
+[Epoch 16, Batch   300] loss: 0.776
+[Epoch 16, Batch   400] loss: 0.782
+[Epoch 16, Batch   500] loss: 0.782
+Epoch 16/20:
+Train Loss: 0.0673, Train Accuracy: 89.22%
+Validation Loss: 0.8869, Validation Accuracy: 66.51%
+[Epoch 17, Batch   100] loss: 0.769
+[Epoch 17, Batch   200] loss: 0.771
+[Epoch 17, Batch   300] loss: 0.776
+[Epoch 17, Batch   400] loss: 0.778
+[Epoch 17, Batch   500] loss: 0.781
+Epoch 17/20:
+Train Loss: 0.0670, Train Accuracy: 89.94%
+Validation Loss: 0.8754, Validation Accuracy: 69.29%
+[Epoch 18, Batch   100] loss: 0.768
+[Epoch 18, Batch   200] loss: 0.765
+[Epoch 18, Batch   300] loss: 0.769
+[Epoch 18, Batch   400] loss: 0.775
+[Epoch 18, Batch   500] loss: 0.777
+Epoch 18/20:
+Train Loss: 0.0667, Train Accuracy: 90.75%
+Validation Loss: 0.8667, Validation Accuracy: 70.90%
+[Epoch 19, Batch   100] loss: 0.765
+[Epoch 19, Batch   200] loss: 0.767
+[Epoch 19, Batch   300] loss: 0.766
+[Epoch 19, Batch   400] loss: 0.772
+[Epoch 19, Batch   500] loss: 0.775
+Epoch 19/20:
+Train Loss: 0.0666, Train Accuracy: 91.17%
+Validation Loss: 0.8636, Validation Accuracy: 71.49%
+[Epoch 20, Batch   100] loss: 0.762
+[Epoch 20, Batch   200] loss: 0.764
+[Epoch 20, Batch   300] loss: 0.766
+[Epoch 20, Batch   400] loss: 0.768
+[Epoch 20, Batch   500] loss: 0.773
+Epoch 20/20:
+Train Loss: 0.0661, Train Accuracy: 91.80%
+Validation Loss: 0.8661, Validation Accuracy: 71.71%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-EVIDENCE-balanced_by_score-0.3-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.968
+[Epoch 1, Batch   200] loss: 0.947
+[Epoch 1, Batch   300] loss: 0.934
+Epoch 1/20:
+Train Loss: 0.2161, Train Accuracy: 41.74%
+Validation Loss: 0.9363, Validation Accuracy: 46.03%
+[Epoch 2, Batch   100] loss: 0.914
+[Epoch 2, Batch   200] loss: 0.912
+[Epoch 2, Batch   300] loss: 0.906
+Epoch 2/20:
+Train Loss: 0.2107, Train Accuracy: 55.00%
+Validation Loss: 0.9092, Validation Accuracy: 55.47%
+[Epoch 3, Batch   100] loss: 0.888
+[Epoch 3, Batch   200] loss: 0.889
+[Epoch 3, Batch   300] loss: 0.888
+Epoch 3/20:
+Train Loss: 0.2064, Train Accuracy: 61.39%
+Validation Loss: 0.9157, Validation Accuracy: 54.38%
+[Epoch 4, Batch   100] loss: 0.873
+[Epoch 4, Batch   200] loss: 0.874
+[Epoch 4, Batch   300] loss: 0.872
+Epoch 4/20:
+Train Loss: 0.2028, Train Accuracy: 65.78%
+Validation Loss: 0.8950, Validation Accuracy: 60.89%
+[Epoch 5, Batch   100] loss: 0.856
+[Epoch 5, Batch   200] loss: 0.861
+[Epoch 5, Batch   300] loss: 0.863
+Epoch 5/20:
+Train Loss: 0.2008, Train Accuracy: 69.01%
+Validation Loss: 0.8965, Validation Accuracy: 60.03%
+[Epoch 6, Batch   100] loss: 0.844
+[Epoch 6, Batch   200] loss: 0.849
+[Epoch 6, Batch   300] loss: 0.851
+Epoch 6/20:
+Train Loss: 0.1978, Train Accuracy: 72.21%
+Validation Loss: 0.8778, Validation Accuracy: 64.35%
+[Epoch 7, Batch   100] loss: 0.834
+[Epoch 7, Batch   200] loss: 0.837
+[Epoch 7, Batch   300] loss: 0.839
+Epoch 7/20:
+Train Loss: 0.1962, Train Accuracy: 75.04%
+Validation Loss: 0.8737, Validation Accuracy: 66.00%
+[Epoch 8, Batch   100] loss: 0.823
+[Epoch 8, Batch   200] loss: 0.830
+[Epoch 8, Batch   300] loss: 0.830
+Epoch 8/20:
+Train Loss: 0.1943, Train Accuracy: 77.16%
+Validation Loss: 0.9336, Validation Accuracy: 54.67%
+[Epoch 9, Batch   100] loss: 0.812
+[Epoch 9, Batch   200] loss: 0.816
+[Epoch 9, Batch   300] loss: 0.822
+Epoch 9/20:
+Train Loss: 0.1917, Train Accuracy: 79.84%
+Validation Loss: 0.8753, Validation Accuracy: 66.68%
+[Epoch 10, Batch   100] loss: 0.807
+[Epoch 10, Batch   200] loss: 0.812
+[Epoch 10, Batch   300] loss: 0.817
+Epoch 10/20:
+Train Loss: 0.1892, Train Accuracy: 81.22%
+Validation Loss: 0.8736, Validation Accuracy: 66.76%
+[Epoch 11, Batch   100] loss: 0.801
+[Epoch 11, Batch   200] loss: 0.803
+[Epoch 11, Batch   300] loss: 0.803
+Epoch 11/20:
+Train Loss: 0.1879, Train Accuracy: 83.38%
+Validation Loss: 0.8880, Validation Accuracy: 64.19%
+[Epoch 12, Batch   100] loss: 0.790
+[Epoch 12, Batch   200] loss: 0.797
+[Epoch 12, Batch   300] loss: 0.802
+Epoch 12/20:
+Train Loss: 0.1867, Train Accuracy: 84.71%
+Validation Loss: 0.8708, Validation Accuracy: 68.24%
+[Epoch 13, Batch   100] loss: 0.784
+[Epoch 13, Batch   200] loss: 0.791
+[Epoch 13, Batch   300] loss: 0.794
+Epoch 13/20:
+Train Loss: 0.1848, Train Accuracy: 86.56%
+Validation Loss: 0.8864, Validation Accuracy: 66.31%
+[Epoch 14, Batch   100] loss: 0.779
+[Epoch 14, Batch   200] loss: 0.782
+[Epoch 14, Batch   300] loss: 0.787
+Epoch 14/20:
+Train Loss: 0.1838, Train Accuracy: 87.96%
+Validation Loss: 0.8758, Validation Accuracy: 68.17%
+[Epoch 15, Batch   100] loss: 0.777
+[Epoch 15, Batch   200] loss: 0.779
+[Epoch 15, Batch   300] loss: 0.782
+Epoch 15/20:
+Train Loss: 0.1818, Train Accuracy: 88.78%
+Validation Loss: 0.8845, Validation Accuracy: 67.19%
+[Epoch 16, Batch   100] loss: 0.770
+[Epoch 16, Batch   200] loss: 0.776
+[Epoch 16, Batch   300] loss: 0.779
+Epoch 16/20:
+Train Loss: 0.1824, Train Accuracy: 89.53%
+Validation Loss: 0.8864, Validation Accuracy: 65.82%
+[Epoch 17, Batch   100] loss: 0.770
+[Epoch 17, Batch   200] loss: 0.770
+[Epoch 17, Batch   300] loss: 0.773
+Epoch 17/20:
+Train Loss: 0.1799, Train Accuracy: 90.82%
+Validation Loss: 0.8743, Validation Accuracy: 68.87%
+[Epoch 18, Batch   100] loss: 0.766
+[Epoch 18, Batch   200] loss: 0.767
+[Epoch 18, Batch   300] loss: 0.772
+Epoch 18/20:
+Train Loss: 0.1801, Train Accuracy: 91.10%
+Validation Loss: 0.8722, Validation Accuracy: 69.29%
+[Epoch 19, Batch   100] loss: 0.764
+[Epoch 19, Batch   200] loss: 0.768
+[Epoch 19, Batch   300] loss: 0.766
+Epoch 19/20:
+Train Loss: 0.1793, Train Accuracy: 91.92%
+Validation Loss: 0.8741, Validation Accuracy: 69.68%
+[Epoch 20, Batch   100] loss: 0.759
+[Epoch 20, Batch   200] loss: 0.765
+[Epoch 20, Batch   300] loss: 0.765
+Epoch 20/20:
+Train Loss: 0.1785, Train Accuracy: 92.38%
+Validation Loss: 0.8919, Validation Accuracy: 65.98%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-EVIDENCE-balanced_by_score-0.5-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.966
+[Epoch 1, Batch   200] loss: 0.949
+Epoch 1/20:
+Train Loss: 0.1404, Train Accuracy: 36.94%
+Validation Loss: 0.9435, Validation Accuracy: 40.99%
+[Epoch 2, Batch   100] loss: 0.928
+[Epoch 2, Batch   200] loss: 0.922
+Epoch 2/20:
+Train Loss: 0.1371, Train Accuracy: 49.80%
+Validation Loss: 0.9238, Validation Accuracy: 49.98%
+[Epoch 3, Batch   100] loss: 0.902
+[Epoch 3, Batch   200] loss: 0.900
+Epoch 3/20:
+Train Loss: 0.1339, Train Accuracy: 57.91%
+Validation Loss: 0.9128, Validation Accuracy: 53.53%
+[Epoch 4, Batch   100] loss: 0.883
+[Epoch 4, Batch   200] loss: 0.886
+Epoch 4/20:
+Train Loss: 0.1319, Train Accuracy: 62.65%
+Validation Loss: 0.9097, Validation Accuracy: 55.00%
+[Epoch 5, Batch   100] loss: 0.870
+[Epoch 5, Batch   200] loss: 0.873
+Epoch 5/20:
+Train Loss: 0.1300, Train Accuracy: 65.97%
+Validation Loss: 0.9062, Validation Accuracy: 55.74%
+[Epoch 6, Batch   100] loss: 0.852
+[Epoch 6, Batch   200] loss: 0.863
+Epoch 6/20:
+Train Loss: 0.1287, Train Accuracy: 69.87%
+Validation Loss: 0.9208, Validation Accuracy: 52.46%
+[Epoch 7, Batch   100] loss: 0.841
+[Epoch 7, Batch   200] loss: 0.850
+Epoch 7/20:
+Train Loss: 0.1268, Train Accuracy: 72.90%
+Validation Loss: 0.9000, Validation Accuracy: 59.10%
+[Epoch 8, Batch   100] loss: 0.838
+[Epoch 8, Batch   200] loss: 0.836
+Epoch 8/20:
+Train Loss: 0.1239, Train Accuracy: 75.39%
+Validation Loss: 0.9257, Validation Accuracy: 56.41%
+[Epoch 9, Batch   100] loss: 0.822
+[Epoch 9, Batch   200] loss: 0.829
+Epoch 9/20:
+Train Loss: 0.1238, Train Accuracy: 77.84%
+Validation Loss: 0.8951, Validation Accuracy: 61.76%
+[Epoch 10, Batch   100] loss: 0.809
+[Epoch 10, Batch   200] loss: 0.819
+Epoch 10/20:
+Train Loss: 0.1224, Train Accuracy: 80.84%
+Validation Loss: 0.8993, Validation Accuracy: 61.34%
+[Epoch 11, Batch   100] loss: 0.803
+[Epoch 11, Batch   200] loss: 0.807
+Epoch 11/20:
+Train Loss: 0.1212, Train Accuracy: 82.75%
+Validation Loss: 0.9094, Validation Accuracy: 57.92%
+[Epoch 12, Batch   100] loss: 0.794
+[Epoch 12, Batch   200] loss: 0.799
+Epoch 12/20:
+Train Loss: 0.1199, Train Accuracy: 84.82%
+Validation Loss: 0.9089, Validation Accuracy: 59.72%
+[Epoch 13, Batch   100] loss: 0.788
+[Epoch 13, Batch   200] loss: 0.795
+Epoch 13/20:
+Train Loss: 0.1187, Train Accuracy: 86.11%
+Validation Loss: 0.8986, Validation Accuracy: 61.92%
+[Epoch 14, Batch   100] loss: 0.786
+[Epoch 14, Batch   200] loss: 0.787
+Epoch 14/20:
+Train Loss: 0.1178, Train Accuracy: 87.41%
+Validation Loss: 0.8941, Validation Accuracy: 63.88%
+[Epoch 15, Batch   100] loss: 0.775
+[Epoch 15, Batch   200] loss: 0.783
+Epoch 15/20:
+Train Loss: 0.1178, Train Accuracy: 88.75%
+Validation Loss: 0.8974, Validation Accuracy: 63.04%
+[Epoch 16, Batch   100] loss: 0.773
+[Epoch 16, Batch   200] loss: 0.775
+Epoch 16/20:
+Train Loss: 0.1166, Train Accuracy: 90.00%
+Validation Loss: 0.9076, Validation Accuracy: 61.87%
+[Epoch 17, Batch   100] loss: 0.770
+[Epoch 17, Batch   200] loss: 0.776
+Epoch 17/20:
+Train Loss: 0.1154, Train Accuracy: 90.56%
+Validation Loss: 0.8900, Validation Accuracy: 65.77%
+[Epoch 18, Batch   100] loss: 0.764
+[Epoch 18, Batch   200] loss: 0.770
+Epoch 18/20:
+Train Loss: 0.1152, Train Accuracy: 91.73%
+Validation Loss: 0.9036, Validation Accuracy: 62.59%
+[Epoch 19, Batch   100] loss: 0.768
+[Epoch 19, Batch   200] loss: 0.771
+Epoch 19/20:
+Train Loss: 0.1148, Train Accuracy: 91.22%
+Validation Loss: 0.8995, Validation Accuracy: 63.63%
+[Epoch 20, Batch   100] loss: 0.762
+[Epoch 20, Batch   200] loss: 0.764
+Epoch 20/20:
+Train Loss: 0.1149, Train Accuracy: 92.35%
+Validation Loss: 0.9065, Validation Accuracy: 62.54%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-EVIDENCE-balanced_by_score-0.7-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.965
+Epoch 1/20:
+Train Loss: 0.3368, Train Accuracy: 35.24%
+Validation Loss: 0.9657, Validation Accuracy: 33.65%
+[Epoch 2, Batch   100] loss: 0.935
+Epoch 2/20:
+Train Loss: 0.3302, Train Accuracy: 46.14%
+Validation Loss: 0.9331, Validation Accuracy: 45.62%
+[Epoch 3, Batch   100] loss: 0.914
+Epoch 3/20:
+Train Loss: 0.3245, Train Accuracy: 53.08%
+Validation Loss: 0.9459, Validation Accuracy: 45.46%
+[Epoch 4, Batch   100] loss: 0.898
+Epoch 4/20:
+Train Loss: 0.3193, Train Accuracy: 58.10%
+Validation Loss: 0.9276, Validation Accuracy: 49.82%
+[Epoch 5, Batch   100] loss: 0.879
+Epoch 5/20:
+Train Loss: 0.3149, Train Accuracy: 62.84%
+Validation Loss: 0.9224, Validation Accuracy: 51.01%
+[Epoch 6, Batch   100] loss: 0.869
+Epoch 6/20:
+Train Loss: 0.3088, Train Accuracy: 66.55%
+Validation Loss: 0.9377, Validation Accuracy: 48.67%
+[Epoch 7, Batch   100] loss: 0.853
+Epoch 7/20:
+Train Loss: 0.3046, Train Accuracy: 70.55%
+Validation Loss: 0.9170, Validation Accuracy: 54.75%
+[Epoch 8, Batch   100] loss: 0.838
+Epoch 8/20:
+Train Loss: 0.3000, Train Accuracy: 74.32%
+Validation Loss: 0.9061, Validation Accuracy: 57.35%
+[Epoch 9, Batch   100] loss: 0.828
+Epoch 9/20:
+Train Loss: 0.2958, Train Accuracy: 76.95%
+Validation Loss: 0.9073, Validation Accuracy: 58.11%
+[Epoch 10, Batch   100] loss: 0.817
+Epoch 10/20:
+Train Loss: 0.2896, Train Accuracy: 80.35%
+Validation Loss: 0.9139, Validation Accuracy: 57.90%
+[Epoch 11, Batch   100] loss: 0.804
+Epoch 11/20:
+Train Loss: 0.2890, Train Accuracy: 82.83%
+Validation Loss: 0.9250, Validation Accuracy: 55.03%
+[Epoch 12, Batch   100] loss: 0.802
+Epoch 12/20:
+Train Loss: 0.2838, Train Accuracy: 83.85%
+Validation Loss: 0.9075, Validation Accuracy: 60.07%
+[Epoch 13, Batch   100] loss: 0.788
+Epoch 13/20:
+Train Loss: 0.2838, Train Accuracy: 86.18%
+Validation Loss: 0.9373, Validation Accuracy: 55.07%
+[Epoch 14, Batch   100] loss: 0.787
+Epoch 14/20:
+Train Loss: 0.2783, Train Accuracy: 87.59%
+Validation Loss: 0.9164, Validation Accuracy: 58.64%
+[Epoch 15, Batch   100] loss: 0.775
+Epoch 15/20:
+Train Loss: 0.2777, Train Accuracy: 89.21%
+Validation Loss: 0.9118, Validation Accuracy: 59.62%
+[Epoch 16, Batch   100] loss: 0.771
+Epoch 16/20:
+Train Loss: 0.2759, Train Accuracy: 90.56%
+Validation Loss: 0.9307, Validation Accuracy: 57.32%
+[Epoch 17, Batch   100] loss: 0.769
+Epoch 17/20:
+Train Loss: 0.2762, Train Accuracy: 90.65%
+Validation Loss: 0.9083, Validation Accuracy: 60.87%
+[Epoch 18, Batch   100] loss: 0.766
+Epoch 18/20:
+Train Loss: 0.2728, Train Accuracy: 91.85%
+Validation Loss: 0.9152, Validation Accuracy: 60.09%
+[Epoch 19, Batch   100] loss: 0.758
+Epoch 19/20:
+Train Loss: 0.2719, Train Accuracy: 92.95%
+Validation Loss: 0.9178, Validation Accuracy: 59.71%
+[Epoch 20, Batch   100] loss: 0.758
+Epoch 20/20:
+Train Loss: 0.2723, Train Accuracy: 93.02%
+Validation Loss: 0.9154, Validation Accuracy: 60.88%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-EVIDENCE-balanced_by_score-0.8-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+Epoch 1/20:
+Train Loss: 0.9663, Train Accuracy: 31.31%
+Validation Loss: 0.9612, Validation Accuracy: 35.09%
+Epoch 2/20:
+Train Loss: 0.9443, Train Accuracy: 42.57%
+Validation Loss: 0.9540, Validation Accuracy: 37.76%
+Epoch 3/20:
+Train Loss: 0.9248, Train Accuracy: 49.49%
+Validation Loss: 0.9567, Validation Accuracy: 41.35%
+Epoch 4/20:
+Train Loss: 0.9082, Train Accuracy: 55.35%
+Validation Loss: 0.9456, Validation Accuracy: 42.35%
+Epoch 5/20:
+Train Loss: 0.8888, Train Accuracy: 61.06%
+Validation Loss: 0.9614, Validation Accuracy: 42.15%
+Epoch 6/20:
+Train Loss: 0.8774, Train Accuracy: 63.96%
+Validation Loss: 0.9497, Validation Accuracy: 44.00%
+Epoch 7/20:
+Train Loss: 0.8580, Train Accuracy: 69.78%
+Validation Loss: 0.9900, Validation Accuracy: 39.13%
+Epoch 8/20:
+Train Loss: 0.8409, Train Accuracy: 74.29%
+Validation Loss: 0.9433, Validation Accuracy: 49.54%
+Epoch 9/20:
+Train Loss: 0.8299, Train Accuracy: 77.31%
+Validation Loss: 0.9404, Validation Accuracy: 49.71%
+Epoch 10/20:
+Train Loss: 0.8113, Train Accuracy: 81.57%
+Validation Loss: 0.9495, Validation Accuracy: 48.56%
+Epoch 11/20:
+Train Loss: 0.8063, Train Accuracy: 82.71%
+Validation Loss: 0.9690, Validation Accuracy: 44.81%
+Epoch 12/20:
+Train Loss: 0.7946, Train Accuracy: 85.67%
+Validation Loss: 0.9415, Validation Accuracy: 50.29%
+Epoch 13/20:
+Train Loss: 0.7872, Train Accuracy: 87.00%
+Validation Loss: 0.9564, Validation Accuracy: 49.94%
+Epoch 14/20:
+Train Loss: 0.7799, Train Accuracy: 88.65%
+Validation Loss: 0.9918, Validation Accuracy: 44.24%
+Epoch 15/20:
+Train Loss: 0.7776, Train Accuracy: 89.57%
+Validation Loss: 0.9857, Validation Accuracy: 45.77%
+Epoch 16/20:
+Train Loss: 0.7733, Train Accuracy: 90.29%
+Validation Loss: 0.9701, Validation Accuracy: 47.00%
+Epoch 17/20:
+Train Loss: 0.7666, Train Accuracy: 91.98%
+Validation Loss: 0.9603, Validation Accuracy: 49.02%
+Epoch 18/20:
+Train Loss: 0.7642, Train Accuracy: 92.29%
+Validation Loss: 0.9705, Validation Accuracy: 48.43%
+Epoch 19/20:
+Train Loss: 0.7579, Train Accuracy: 93.69%
+Validation Loss: 0.9692, Validation Accuracy: 48.54%
+Epoch 20/20:
+Train Loss: 0.7578, Train Accuracy: 93.80%
+Validation Loss: 0.9623, Validation Accuracy: 50.72%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-EVIDENCE-balanced_by_score-0.9-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+Epoch 1/20:
+Train Loss: 0.9772, Train Accuracy: 28.52%
+Validation Loss: 0.9851, Validation Accuracy: 16.95%
+Epoch 2/20:
+Train Loss: 0.9489, Train Accuracy: 38.48%
+Validation Loss: 0.9722, Validation Accuracy: 34.04%
+Epoch 3/20:
+Train Loss: 0.9287, Train Accuracy: 48.68%
+Validation Loss: 0.9735, Validation Accuracy: 31.65%
+Epoch 4/20:
+Train Loss: 0.9097, Train Accuracy: 54.36%
+Validation Loss: 0.9846, Validation Accuracy: 34.59%
+Epoch 5/20:
+Train Loss: 0.8898, Train Accuracy: 60.80%
+Validation Loss: 0.9745, Validation Accuracy: 37.20%
+Epoch 6/20:
+Train Loss: 0.8816, Train Accuracy: 62.60%
+Validation Loss: 0.9766, Validation Accuracy: 36.21%
+Epoch 7/20:
+Train Loss: 0.8654, Train Accuracy: 67.72%
+Validation Loss: 0.9746, Validation Accuracy: 36.86%
+Epoch 8/20:
+Train Loss: 0.8490, Train Accuracy: 72.88%
+Validation Loss: 0.9713, Validation Accuracy: 39.46%
+Epoch 9/20:
+Train Loss: 0.8286, Train Accuracy: 77.92%
+Validation Loss: 0.9881, Validation Accuracy: 38.34%
+Epoch 10/20:
+Train Loss: 0.8192, Train Accuracy: 80.56%
+Validation Loss: 0.9640, Validation Accuracy: 44.75%
+Epoch 11/20:
+Train Loss: 0.8171, Train Accuracy: 81.24%
+Validation Loss: 0.9887, Validation Accuracy: 39.66%
+Epoch 12/20:
+Train Loss: 0.7993, Train Accuracy: 85.32%
+Validation Loss: 0.9715, Validation Accuracy: 42.97%
+Epoch 13/20:
+Train Loss: 0.7867, Train Accuracy: 87.56%
+Validation Loss: 0.9689, Validation Accuracy: 43.88%
+Epoch 14/20:
+Train Loss: 0.7735, Train Accuracy: 90.68%
+Validation Loss: 0.9689, Validation Accuracy: 44.81%
+Epoch 15/20:
+Train Loss: 0.7644, Train Accuracy: 92.24%
+Validation Loss: 0.9800, Validation Accuracy: 43.27%
+Epoch 16/20:
+Train Loss: 0.7763, Train Accuracy: 90.60%
+Validation Loss: 0.9730, Validation Accuracy: 44.14%
+Epoch 17/20:
+Train Loss: 0.7637, Train Accuracy: 93.20%
+Validation Loss: 0.9927, Validation Accuracy: 41.73%
+Epoch 18/20:
+Train Loss: 0.7548, Train Accuracy: 95.16%
+Validation Loss: 0.9735, Validation Accuracy: 45.69%
+Epoch 19/20:
+Train Loss: 0.7715, Train Accuracy: 92.04%
+Validation Loss: 0.9845, Validation Accuracy: 42.49%
+Epoch 20/20:
+Train Loss: 0.7957, Train Accuracy: 87.60%
+Validation Loss: 0.9930, Validation Accuracy: 41.76%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-EVIDENCE-balanced_by_score-0.95-1
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_CIFAR10_E1_1
+Files already downloaded and verified
+Files already downloaded and verified
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.967
+[Epoch 1, Batch   200] loss: 0.948
+[Epoch 1, Batch   300] loss: 0.937
+[Epoch 1, Batch   400] loss: 0.927
+[Epoch 1, Batch   500] loss: 0.921
+Epoch 1/20:
+Train Loss: 0.0791, Train Accuracy: 44.23%
+Validation Loss: 0.9405, Validation Accuracy: 41.86%
+[Epoch 2, Batch   100] loss: 0.911
+[Epoch 2, Batch   200] loss: 0.906
+[Epoch 2, Batch   300] loss: 0.897
+[Epoch 2, Batch   400] loss: 0.897
+[Epoch 2, Batch   500] loss: 0.893
+Epoch 2/20:
+Train Loss: 0.0765, Train Accuracy: 58.06%
+Validation Loss: 0.9226, Validation Accuracy: 51.92%
+[Epoch 3, Batch   100] loss: 0.880
+[Epoch 3, Batch   200] loss: 0.881
+[Epoch 3, Batch   300] loss: 0.878
+[Epoch 3, Batch   400] loss: 0.878
+[Epoch 3, Batch   500] loss: 0.876
+Epoch 3/20:
+Train Loss: 0.0752, Train Accuracy: 64.37%
+Validation Loss: 0.8792, Validation Accuracy: 63.87%
+[Epoch 4, Batch   100] loss: 0.863
+[Epoch 4, Batch   200] loss: 0.861
+[Epoch 4, Batch   300] loss: 0.867
+[Epoch 4, Batch   400] loss: 0.863
+[Epoch 4, Batch   500] loss: 0.861
+Epoch 4/20:
+Train Loss: 0.0740, Train Accuracy: 68.77%
+Validation Loss: 0.8707, Validation Accuracy: 66.53%
+[Epoch 5, Batch   100] loss: 0.850
+[Epoch 5, Batch   200] loss: 0.852
+[Epoch 5, Batch   300] loss: 0.855
+[Epoch 5, Batch   400] loss: 0.850
+[Epoch 5, Batch   500] loss: 0.851
+Epoch 5/20:
+Train Loss: 0.0730, Train Accuracy: 71.65%
+Validation Loss: 0.8744, Validation Accuracy: 65.00%
+[Epoch 6, Batch   100] loss: 0.833
+[Epoch 6, Batch   200] loss: 0.842
+[Epoch 6, Batch   300] loss: 0.844
+[Epoch 6, Batch   400] loss: 0.843
+[Epoch 6, Batch   500] loss: 0.842
+Epoch 6/20:
+Train Loss: 0.0725, Train Accuracy: 74.44%
+Validation Loss: 0.8824, Validation Accuracy: 64.13%
+[Epoch 7, Batch   100] loss: 0.826
+[Epoch 7, Batch   200] loss: 0.830
+[Epoch 7, Batch   300] loss: 0.836
+[Epoch 7, Batch   400] loss: 0.833
+[Epoch 7, Batch   500] loss: 0.829
+Epoch 7/20:
+Train Loss: 0.0720, Train Accuracy: 76.76%
+Validation Loss: 0.8777, Validation Accuracy: 65.54%
+[Epoch 8, Batch   100] loss: 0.819
+[Epoch 8, Batch   200] loss: 0.821
+[Epoch 8, Batch   300] loss: 0.824
+[Epoch 8, Batch   400] loss: 0.823
+[Epoch 8, Batch   500] loss: 0.821
+Epoch 8/20:
+Train Loss: 0.0711, Train Accuracy: 79.25%
+Validation Loss: 0.8576, Validation Accuracy: 70.56%
+[Epoch 9, Batch   100] loss: 0.807
+[Epoch 9, Batch   200] loss: 0.817
+[Epoch 9, Batch   300] loss: 0.816
+[Epoch 9, Batch   400] loss: 0.815
+[Epoch 9, Batch   500] loss: 0.815
+Epoch 9/20:
+Train Loss: 0.0702, Train Accuracy: 80.94%
+Validation Loss: 0.8577, Validation Accuracy: 70.76%
+[Epoch 10, Batch   100] loss: 0.802
+[Epoch 10, Batch   200] loss: 0.803
+[Epoch 10, Batch   300] loss: 0.806
+[Epoch 10, Batch   400] loss: 0.813
+[Epoch 10, Batch   500] loss: 0.812
+Epoch 10/20:
+Train Loss: 0.0697, Train Accuracy: 82.58%
+Validation Loss: 0.8633, Validation Accuracy: 69.51%
+[Epoch 11, Batch   100] loss: 0.794
+[Epoch 11, Batch   200] loss: 0.798
+[Epoch 11, Batch   300] loss: 0.802
+[Epoch 11, Batch   400] loss: 0.800
+[Epoch 11, Batch   500] loss: 0.803
+Epoch 11/20:
+Train Loss: 0.0694, Train Accuracy: 84.31%
+Validation Loss: 0.8696, Validation Accuracy: 68.45%
+[Epoch 12, Batch   100] loss: 0.789
+[Epoch 12, Batch   200] loss: 0.791
+[Epoch 12, Batch   300] loss: 0.796
+[Epoch 12, Batch   400] loss: 0.798
+[Epoch 12, Batch   500] loss: 0.801
+Epoch 12/20:
+Train Loss: 0.0686, Train Accuracy: 85.43%
+Validation Loss: 0.8679, Validation Accuracy: 69.27%
+[Epoch 13, Batch   100] loss: 0.784
+[Epoch 13, Batch   200] loss: 0.786
+[Epoch 13, Batch   300] loss: 0.788
+[Epoch 13, Batch   400] loss: 0.792
+[Epoch 13, Batch   500] loss: 0.790
+Epoch 13/20:
+Train Loss: 0.0680, Train Accuracy: 87.12%
+Validation Loss: 0.8603, Validation Accuracy: 71.40%
+[Epoch 14, Batch   100] loss: 0.779
+[Epoch 14, Batch   200] loss: 0.780
+[Epoch 14, Batch   300] loss: 0.782
+[Epoch 14, Batch   400] loss: 0.786
+[Epoch 14, Batch   500] loss: 0.788
+Epoch 14/20:
+Train Loss: 0.0680, Train Accuracy: 88.16%
+Validation Loss: 0.8807, Validation Accuracy: 67.67%
+[Epoch 15, Batch   100] loss: 0.774
+[Epoch 15, Batch   200] loss: 0.777
+[Epoch 15, Batch   300] loss: 0.781
+[Epoch 15, Batch   400] loss: 0.782
+[Epoch 15, Batch   500] loss: 0.785
+Epoch 15/20:
+Train Loss: 0.0674, Train Accuracy: 88.94%
+Validation Loss: 0.8680, Validation Accuracy: 69.88%
+[Epoch 16, Batch   100] loss: 0.771
+[Epoch 16, Batch   200] loss: 0.775
+[Epoch 16, Batch   300] loss: 0.774
+[Epoch 16, Batch   400] loss: 0.781
+[Epoch 16, Batch   500] loss: 0.780
+Epoch 16/20:
+Train Loss: 0.0668, Train Accuracy: 89.70%
+Validation Loss: 0.8660, Validation Accuracy: 71.10%
+[Epoch 17, Batch   100] loss: 0.766
+[Epoch 17, Batch   200] loss: 0.773
+[Epoch 17, Batch   300] loss: 0.774
+[Epoch 17, Batch   400] loss: 0.772
+[Epoch 17, Batch   500] loss: 0.777
+Epoch 17/20:
+Train Loss: 0.0670, Train Accuracy: 90.36%
+Validation Loss: 0.8576, Validation Accuracy: 72.68%
+[Epoch 18, Batch   100] loss: 0.765
+[Epoch 18, Batch   200] loss: 0.767
+[Epoch 18, Batch   300] loss: 0.772
+[Epoch 18, Batch   400] loss: 0.772
+[Epoch 18, Batch   500] loss: 0.778
+Epoch 18/20:
+Train Loss: 0.0669, Train Accuracy: 90.83%
+Validation Loss: 0.8604, Validation Accuracy: 72.01%
+[Epoch 19, Batch   100] loss: 0.762
+[Epoch 19, Batch   200] loss: 0.765
+[Epoch 19, Batch   300] loss: 0.769
+[Epoch 19, Batch   400] loss: 0.766
+[Epoch 19, Batch   500] loss: 0.775
+Epoch 19/20:
+Train Loss: 0.0666, Train Accuracy: 91.59%
+Validation Loss: 0.8651, Validation Accuracy: 71.45%
+[Epoch 20, Batch   100] loss: 0.763
+[Epoch 20, Batch   200] loss: 0.763
+[Epoch 20, Batch   300] loss: 0.766
+[Epoch 20, Batch   400] loss: 0.763
+[Epoch 20, Batch   500] loss: 0.765
+Epoch 20/20:
+Train Loss: 0.0663, Train Accuracy: 92.22%
+Validation Loss: 0.8627, Validation Accuracy: 71.73%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-BELIEF-balanced_by_score-0.3-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.967
+[Epoch 1, Batch   200] loss: 0.949
+[Epoch 1, Batch   300] loss: 0.936
+Epoch 1/20:
+Train Loss: 0.2157, Train Accuracy: 41.03%
+Validation Loss: 0.9352, Validation Accuracy: 45.30%
+[Epoch 2, Batch   100] loss: 0.916
+[Epoch 2, Batch   200] loss: 0.913
+[Epoch 2, Batch   300] loss: 0.907
+Epoch 2/20:
+Train Loss: 0.2102, Train Accuracy: 54.88%
+Validation Loss: 0.9171, Validation Accuracy: 51.90%
+[Epoch 3, Batch   100] loss: 0.891
+[Epoch 3, Batch   200] loss: 0.889
+[Epoch 3, Batch   300] loss: 0.890
+Epoch 3/20:
+Train Loss: 0.2061, Train Accuracy: 61.41%
+Validation Loss: 0.9169, Validation Accuracy: 52.49%
+[Epoch 4, Batch   100] loss: 0.873
+[Epoch 4, Batch   200] loss: 0.876
+[Epoch 4, Batch   300] loss: 0.873
+Epoch 4/20:
+Train Loss: 0.2032, Train Accuracy: 65.57%
+Validation Loss: 0.8984, Validation Accuracy: 58.42%
+[Epoch 5, Batch   100] loss: 0.859
+[Epoch 5, Batch   200] loss: 0.859
+[Epoch 5, Batch   300] loss: 0.861
+Epoch 5/20:
+Train Loss: 0.2007, Train Accuracy: 69.29%
+Validation Loss: 0.9000, Validation Accuracy: 59.00%
+[Epoch 6, Batch   100] loss: 0.846
+[Epoch 6, Batch   200] loss: 0.847
+[Epoch 6, Batch   300] loss: 0.851
+Epoch 6/20:
+Train Loss: 0.1984, Train Accuracy: 72.36%
+Validation Loss: 0.8844, Validation Accuracy: 63.07%
+[Epoch 7, Batch   100] loss: 0.839
+[Epoch 7, Batch   200] loss: 0.841
+[Epoch 7, Batch   300] loss: 0.843
+Epoch 7/20:
+Train Loss: 0.1959, Train Accuracy: 74.30%
+Validation Loss: 0.8696, Validation Accuracy: 67.43%
+[Epoch 8, Batch   100] loss: 0.824
+[Epoch 8, Batch   200] loss: 0.833
+[Epoch 8, Batch   300] loss: 0.830
+Epoch 8/20:
+Train Loss: 0.1938, Train Accuracy: 77.19%
+Validation Loss: 0.8788, Validation Accuracy: 65.44%
+[Epoch 9, Batch   100] loss: 0.814
+[Epoch 9, Batch   200] loss: 0.821
+[Epoch 9, Batch   300] loss: 0.821
+Epoch 9/20:
+Train Loss: 0.1925, Train Accuracy: 79.30%
+Validation Loss: 0.8830, Validation Accuracy: 65.44%
+[Epoch 10, Batch   100] loss: 0.807
+[Epoch 10, Batch   200] loss: 0.814
+[Epoch 10, Batch   300] loss: 0.813
+Epoch 10/20:
+Train Loss: 0.1899, Train Accuracy: 81.52%
+Validation Loss: 0.8884, Validation Accuracy: 63.42%
+[Epoch 11, Batch   100] loss: 0.800
+[Epoch 11, Batch   200] loss: 0.806
+[Epoch 11, Batch   300] loss: 0.805
+Epoch 11/20:
+Train Loss: 0.1884, Train Accuracy: 83.17%
+Validation Loss: 0.8789, Validation Accuracy: 66.05%
+[Epoch 12, Batch   100] loss: 0.790
+[Epoch 12, Batch   200] loss: 0.795
+[Epoch 12, Batch   300] loss: 0.802
+Epoch 12/20:
+Train Loss: 0.1861, Train Accuracy: 84.95%
+Validation Loss: 0.8658, Validation Accuracy: 69.04%
+[Epoch 13, Batch   100] loss: 0.790
+[Epoch 13, Batch   200] loss: 0.790
+[Epoch 13, Batch   300] loss: 0.798
+Epoch 13/20:
+Train Loss: 0.1848, Train Accuracy: 85.78%
+Validation Loss: 0.8648, Validation Accuracy: 69.90%
+[Epoch 14, Batch   100] loss: 0.781
+[Epoch 14, Batch   200] loss: 0.787
+[Epoch 14, Batch   300] loss: 0.785
+Epoch 14/20:
+Train Loss: 0.1839, Train Accuracy: 87.45%
+Validation Loss: 0.8810, Validation Accuracy: 66.92%
+[Epoch 15, Batch   100] loss: 0.778
+[Epoch 15, Batch   200] loss: 0.779
+[Epoch 15, Batch   300] loss: 0.785
+Epoch 15/20:
+Train Loss: 0.1823, Train Accuracy: 88.63%
+Validation Loss: 0.8697, Validation Accuracy: 69.44%
+[Epoch 16, Batch   100] loss: 0.772
+[Epoch 16, Batch   200] loss: 0.774
+[Epoch 16, Batch   300] loss: 0.778
+Epoch 16/20:
+Train Loss: 0.1817, Train Accuracy: 89.70%
+Validation Loss: 0.8782, Validation Accuracy: 67.93%
+[Epoch 17, Batch   100] loss: 0.770
+[Epoch 17, Batch   200] loss: 0.771
+[Epoch 17, Batch   300] loss: 0.777
+Epoch 17/20:
+Train Loss: 0.1806, Train Accuracy: 90.22%
+Validation Loss: 0.8774, Validation Accuracy: 68.45%
+[Epoch 18, Batch   100] loss: 0.765
+[Epoch 18, Batch   200] loss: 0.766
+[Epoch 18, Batch   300] loss: 0.772
+Epoch 18/20:
+Train Loss: 0.1811, Train Accuracy: 91.17%
+Validation Loss: 0.8911, Validation Accuracy: 65.34%
+[Epoch 19, Batch   100] loss: 0.764
+[Epoch 19, Batch   200] loss: 0.767
+[Epoch 19, Batch   300] loss: 0.764
+Epoch 19/20:
+Train Loss: 0.1789, Train Accuracy: 91.90%
+Validation Loss: 0.8949, Validation Accuracy: 65.91%
+[Epoch 20, Batch   100] loss: 0.758
+[Epoch 20, Batch   200] loss: 0.766
+[Epoch 20, Batch   300] loss: 0.771
+Epoch 20/20:
+Train Loss: 0.1792, Train Accuracy: 91.85%
+Validation Loss: 0.8813, Validation Accuracy: 68.84%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-BELIEF-balanced_by_score-0.5-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.965
+[Epoch 1, Batch   200] loss: 0.946
+Epoch 1/20:
+Train Loss: 0.1403, Train Accuracy: 37.55%
+Validation Loss: 0.9708, Validation Accuracy: 36.45%
+[Epoch 2, Batch   100] loss: 0.928
+[Epoch 2, Batch   200] loss: 0.923
+Epoch 2/20:
+Train Loss: 0.1361, Train Accuracy: 50.10%
+Validation Loss: 0.9269, Validation Accuracy: 48.48%
+[Epoch 3, Batch   100] loss: 0.903
+[Epoch 3, Batch   200] loss: 0.908
+Epoch 3/20:
+Train Loss: 0.1335, Train Accuracy: 56.83%
+Validation Loss: 0.9298, Validation Accuracy: 46.40%
+[Epoch 4, Batch   100] loss: 0.885
+[Epoch 4, Batch   200] loss: 0.890
+Epoch 4/20:
+Train Loss: 0.1321, Train Accuracy: 62.09%
+Validation Loss: 0.9328, Validation Accuracy: 48.72%
+[Epoch 5, Batch   100] loss: 0.869
+[Epoch 5, Batch   200] loss: 0.873
+Epoch 5/20:
+Train Loss: 0.1304, Train Accuracy: 66.19%
+Validation Loss: 0.9052, Validation Accuracy: 55.33%
+[Epoch 6, Batch   100] loss: 0.860
+[Epoch 6, Batch   200] loss: 0.861
+Epoch 6/20:
+Train Loss: 0.1278, Train Accuracy: 69.35%
+Validation Loss: 0.9069, Validation Accuracy: 56.95%
+[Epoch 7, Batch   100] loss: 0.849
+[Epoch 7, Batch   200] loss: 0.849
+Epoch 7/20:
+Train Loss: 0.1267, Train Accuracy: 71.64%
+Validation Loss: 0.9186, Validation Accuracy: 53.25%
+[Epoch 8, Batch   100] loss: 0.834
+[Epoch 8, Batch   200] loss: 0.842
+Epoch 8/20:
+Train Loss: 0.1261, Train Accuracy: 74.86%
+Validation Loss: 0.9079, Validation Accuracy: 57.97%
+[Epoch 9, Batch   100] loss: 0.819
+[Epoch 9, Batch   200] loss: 0.828
+Epoch 9/20:
+Train Loss: 0.1241, Train Accuracy: 78.02%
+Validation Loss: 0.8995, Validation Accuracy: 60.80%
+[Epoch 10, Batch   100] loss: 0.815
+[Epoch 10, Batch   200] loss: 0.819
+Epoch 10/20:
+Train Loss: 0.1219, Train Accuracy: 80.20%
+Validation Loss: 0.8988, Validation Accuracy: 60.70%
+[Epoch 11, Batch   100] loss: 0.808
+[Epoch 11, Batch   200] loss: 0.809
+Epoch 11/20:
+Train Loss: 0.1204, Train Accuracy: 82.43%
+Validation Loss: 0.9077, Validation Accuracy: 60.20%
+[Epoch 12, Batch   100] loss: 0.798
+[Epoch 12, Batch   200] loss: 0.806
+Epoch 12/20:
+Train Loss: 0.1204, Train Accuracy: 83.82%
+Validation Loss: 0.9105, Validation Accuracy: 60.47%
+[Epoch 13, Batch   100] loss: 0.794
+[Epoch 13, Batch   200] loss: 0.796
+Epoch 13/20:
+Train Loss: 0.1196, Train Accuracy: 85.01%
+Validation Loss: 0.8947, Validation Accuracy: 63.06%
+[Epoch 14, Batch   100] loss: 0.782
+[Epoch 14, Batch   200] loss: 0.791
+Epoch 14/20:
+Train Loss: 0.1177, Train Accuracy: 87.25%
+Validation Loss: 0.9224, Validation Accuracy: 57.47%
+[Epoch 15, Batch   100] loss: 0.778
+[Epoch 15, Batch   200] loss: 0.783
+Epoch 15/20:
+Train Loss: 0.1174, Train Accuracy: 88.50%
+Validation Loss: 0.9189, Validation Accuracy: 58.80%
+[Epoch 16, Batch   100] loss: 0.774
+[Epoch 16, Batch   200] loss: 0.781
+Epoch 16/20:
+Train Loss: 0.1165, Train Accuracy: 89.45%
+Validation Loss: 0.9066, Validation Accuracy: 61.93%
+[Epoch 17, Batch   100] loss: 0.774
+[Epoch 17, Batch   200] loss: 0.773
+Epoch 17/20:
+Train Loss: 0.1151, Train Accuracy: 90.33%
+Validation Loss: 0.8972, Validation Accuracy: 64.11%
+[Epoch 18, Batch   100] loss: 0.767
+[Epoch 18, Batch   200] loss: 0.773
+Epoch 18/20:
+Train Loss: 0.1153, Train Accuracy: 90.99%
+Validation Loss: 0.9057, Validation Accuracy: 62.70%
+[Epoch 19, Batch   100] loss: 0.762
+[Epoch 19, Batch   200] loss: 0.765
+Epoch 19/20:
+Train Loss: 0.1143, Train Accuracy: 92.44%
+Validation Loss: 0.9001, Validation Accuracy: 63.91%
+[Epoch 20, Batch   100] loss: 0.760
+[Epoch 20, Batch   200] loss: 0.767
+Epoch 20/20:
+Train Loss: 0.1143, Train Accuracy: 92.51%
+Validation Loss: 0.9016, Validation Accuracy: 63.32%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-BELIEF-balanced_by_score-0.7-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.964
+Epoch 1/20:
+Train Loss: 0.3382, Train Accuracy: 34.59%
+Validation Loss: 0.9574, Validation Accuracy: 38.98%
+[Epoch 2, Batch   100] loss: 0.936
+Epoch 2/20:
+Train Loss: 0.3298, Train Accuracy: 46.93%
+Validation Loss: 0.9497, Validation Accuracy: 39.86%
+[Epoch 3, Batch   100] loss: 0.915
+Epoch 3/20:
+Train Loss: 0.3260, Train Accuracy: 52.63%
+Validation Loss: 0.9380, Validation Accuracy: 43.84%
+[Epoch 4, Batch   100] loss: 0.896
+Epoch 4/20:
+Train Loss: 0.3216, Train Accuracy: 57.89%
+Validation Loss: 0.9191, Validation Accuracy: 51.54%
+[Epoch 5, Batch   100] loss: 0.883
+Epoch 5/20:
+Train Loss: 0.3146, Train Accuracy: 62.56%
+Validation Loss: 0.9364, Validation Accuracy: 49.10%
+[Epoch 6, Batch   100] loss: 0.868
+Epoch 6/20:
+Train Loss: 0.3109, Train Accuracy: 65.60%
+Validation Loss: 0.9357, Validation Accuracy: 51.43%
+[Epoch 7, Batch   100] loss: 0.853
+Epoch 7/20:
+Train Loss: 0.3048, Train Accuracy: 70.41%
+Validation Loss: 0.9092, Validation Accuracy: 55.57%
+[Epoch 8, Batch   100] loss: 0.839
+Epoch 8/20:
+Train Loss: 0.3012, Train Accuracy: 73.95%
+Validation Loss: 0.9215, Validation Accuracy: 52.97%
+[Epoch 9, Batch   100] loss: 0.824
+Epoch 9/20:
+Train Loss: 0.2974, Train Accuracy: 77.15%
+Validation Loss: 0.9224, Validation Accuracy: 56.03%
+[Epoch 10, Batch   100] loss: 0.815
+Epoch 10/20:
+Train Loss: 0.2921, Train Accuracy: 79.99%
+Validation Loss: 0.9261, Validation Accuracy: 54.95%
+[Epoch 11, Batch   100] loss: 0.807
+Epoch 11/20:
+Train Loss: 0.2884, Train Accuracy: 82.16%
+Validation Loss: 0.9166, Validation Accuracy: 57.00%
+[Epoch 12, Batch   100] loss: 0.799
+Epoch 12/20:
+Train Loss: 0.2850, Train Accuracy: 84.14%
+Validation Loss: 0.9303, Validation Accuracy: 55.26%
+[Epoch 13, Batch   100] loss: 0.790
+Epoch 13/20:
+Train Loss: 0.2825, Train Accuracy: 85.88%
+Validation Loss: 0.9119, Validation Accuracy: 59.32%
+[Epoch 14, Batch   100] loss: 0.780
+Epoch 14/20:
+Train Loss: 0.2790, Train Accuracy: 88.47%
+Validation Loss: 0.9278, Validation Accuracy: 56.37%
+[Epoch 15, Batch   100] loss: 0.780
+Epoch 15/20:
+Train Loss: 0.2775, Train Accuracy: 88.76%
+Validation Loss: 0.9338, Validation Accuracy: 55.92%
+[Epoch 16, Batch   100] loss: 0.772
+Epoch 16/20:
+Train Loss: 0.2754, Train Accuracy: 90.51%
+Validation Loss: 0.9178, Validation Accuracy: 58.48%
+[Epoch 17, Batch   100] loss: 0.772
+Epoch 17/20:
+Train Loss: 0.2743, Train Accuracy: 90.42%
+Validation Loss: 0.9136, Validation Accuracy: 59.87%
+[Epoch 18, Batch   100] loss: 0.761
+Epoch 18/20:
+Train Loss: 0.2717, Train Accuracy: 92.83%
+Validation Loss: 0.9189, Validation Accuracy: 59.93%
+[Epoch 19, Batch   100] loss: 0.762
+Epoch 19/20:
+Train Loss: 0.2706, Train Accuracy: 93.00%
+Validation Loss: 0.9176, Validation Accuracy: 59.58%
+[Epoch 20, Batch   100] loss: 0.759
+Epoch 20/20:
+Train Loss: 0.2718, Train Accuracy: 92.94%
+Validation Loss: 0.9508, Validation Accuracy: 53.58%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-BELIEF-balanced_by_score-0.8-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+Epoch 1/20:
+Train Loss: 0.9658, Train Accuracy: 32.33%
+Validation Loss: 0.9760, Validation Accuracy: 33.86%
+Epoch 2/20:
+Train Loss: 0.9411, Train Accuracy: 42.73%
+Validation Loss: 0.9617, Validation Accuracy: 34.32%
+Epoch 3/20:
+Train Loss: 0.9257, Train Accuracy: 49.41%
+Validation Loss: 0.9552, Validation Accuracy: 35.44%
+Epoch 4/20:
+Train Loss: 0.9052, Train Accuracy: 55.96%
+Validation Loss: 0.9601, Validation Accuracy: 37.96%
+Epoch 5/20:
+Train Loss: 0.8913, Train Accuracy: 60.59%
+Validation Loss: 0.9452, Validation Accuracy: 46.61%
+Epoch 6/20:
+Train Loss: 0.8755, Train Accuracy: 64.71%
+Validation Loss: 0.9513, Validation Accuracy: 43.35%
+Epoch 7/20:
+Train Loss: 0.8555, Train Accuracy: 70.18%
+Validation Loss: 0.9403, Validation Accuracy: 48.36%
+Epoch 8/20:
+Train Loss: 0.8444, Train Accuracy: 73.10%
+Validation Loss: 0.9448, Validation Accuracy: 46.92%
+Epoch 9/20:
+Train Loss: 0.8342, Train Accuracy: 75.41%
+Validation Loss: 0.9424, Validation Accuracy: 48.93%
+Epoch 10/20:
+Train Loss: 0.8189, Train Accuracy: 79.55%
+Validation Loss: 0.9404, Validation Accuracy: 50.12%
+Epoch 11/20:
+Train Loss: 0.8007, Train Accuracy: 84.10%
+Validation Loss: 0.9544, Validation Accuracy: 48.67%
+Epoch 12/20:
+Train Loss: 0.7961, Train Accuracy: 84.96%
+Validation Loss: 0.9586, Validation Accuracy: 48.90%
+Epoch 13/20:
+Train Loss: 0.7939, Train Accuracy: 86.16%
+Validation Loss: 0.9820, Validation Accuracy: 46.45%
+Epoch 14/20:
+Train Loss: 0.7807, Train Accuracy: 88.65%
+Validation Loss: 0.9785, Validation Accuracy: 46.03%
+Epoch 15/20:
+Train Loss: 0.7735, Train Accuracy: 90.02%
+Validation Loss: 0.9517, Validation Accuracy: 51.25%
+Epoch 16/20:
+Train Loss: 0.7715, Train Accuracy: 90.69%
+Validation Loss: 0.9569, Validation Accuracy: 50.71%
+Epoch 17/20:
+Train Loss: 0.7688, Train Accuracy: 91.55%
+Validation Loss: 0.9599, Validation Accuracy: 49.55%
+Epoch 18/20:
+Train Loss: 0.7623, Train Accuracy: 92.76%
+Validation Loss: 0.9740, Validation Accuracy: 47.82%
+Epoch 19/20:
+Train Loss: 0.7624, Train Accuracy: 92.59%
+Validation Loss: 0.9678, Validation Accuracy: 48.70%
+Epoch 20/20:
+Train Loss: 0.7622, Train Accuracy: 92.88%
+Validation Loss: 0.9624, Validation Accuracy: 50.09%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-BELIEF-balanced_by_score-0.9-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+Epoch 1/20:
+Train Loss: 0.9766, Train Accuracy: 26.40%
+Validation Loss: 0.9788, Validation Accuracy: 15.81%
+Epoch 2/20:
+Train Loss: 0.9505, Train Accuracy: 39.64%
+Validation Loss: 0.9572, Validation Accuracy: 35.93%
+Epoch 3/20:
+Train Loss: 0.9332, Train Accuracy: 45.48%
+Validation Loss: 0.9691, Validation Accuracy: 35.58%
+Epoch 4/20:
+Train Loss: 0.9137, Train Accuracy: 53.24%
+Validation Loss: 0.9591, Validation Accuracy: 39.26%
+Epoch 5/20:
+Train Loss: 0.8971, Train Accuracy: 59.12%
+Validation Loss: 0.9628, Validation Accuracy: 37.87%
+Epoch 6/20:
+Train Loss: 0.8829, Train Accuracy: 62.52%
+Validation Loss: 0.9720, Validation Accuracy: 34.69%
+Epoch 7/20:
+Train Loss: 0.8695, Train Accuracy: 66.84%
+Validation Loss: 0.9838, Validation Accuracy: 41.50%
+Epoch 8/20:
+Train Loss: 0.8575, Train Accuracy: 70.80%
+Validation Loss: 0.9621, Validation Accuracy: 41.94%
+Epoch 9/20:
+Train Loss: 0.8267, Train Accuracy: 77.92%
+Validation Loss: 0.9773, Validation Accuracy: 43.20%
+Epoch 10/20:
+Train Loss: 0.8143, Train Accuracy: 81.04%
+Validation Loss: 0.9644, Validation Accuracy: 43.60%
+Epoch 11/20:
+Train Loss: 0.8206, Train Accuracy: 79.80%
+Validation Loss: 0.9698, Validation Accuracy: 42.54%
+Epoch 12/20:
+Train Loss: 0.7976, Train Accuracy: 85.16%
+Validation Loss: 0.9713, Validation Accuracy: 42.34%
+Epoch 13/20:
+Train Loss: 0.7823, Train Accuracy: 89.12%
+Validation Loss: 0.9800, Validation Accuracy: 42.66%
+Epoch 14/20:
+Train Loss: 0.8092, Train Accuracy: 83.64%
+Validation Loss: 1.0198, Validation Accuracy: 34.11%
+Epoch 15/20:
+Train Loss: 0.8166, Train Accuracy: 81.64%
+Validation Loss: 0.9865, Validation Accuracy: 42.55%
+Epoch 16/20:
+Train Loss: 0.7868, Train Accuracy: 88.92%
+Validation Loss: 0.9822, Validation Accuracy: 42.20%
+Epoch 17/20:
+Train Loss: 0.7783, Train Accuracy: 90.40%
+Validation Loss: 0.9840, Validation Accuracy: 42.50%
+Epoch 18/20:
+Train Loss: 0.7779, Train Accuracy: 90.00%
+Validation Loss: 0.9846, Validation Accuracy: 42.58%
+Epoch 19/20:
+Train Loss: 0.7595, Train Accuracy: 93.96%
+Validation Loss: 0.9840, Validation Accuracy: 43.40%
+Epoch 20/20:
+Train Loss: 0.7620, Train Accuracy: 93.20%
+Validation Loss: 0.9801, Validation Accuracy: 44.21%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-BELIEF-balanced_by_score-0.95-1
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+Files already downloaded and verified
+Files already downloaded and verified
+[Epoch 1, Batch   100] loss: 0.966
+[Epoch 1, Batch   200] loss: 0.944
+[Epoch 1, Batch   300] loss: 0.936
+[Epoch 1, Batch   400] loss: 0.925
+[Epoch 1, Batch   500] loss: 0.920
+[Epoch 1, Batch   600] loss: 0.916
+[Epoch 1, Batch   700] loss: 0.910
+Epoch 1/20:
+Train Loss: 0.0949, Train Accuracy: 48.10%
+Validation Loss: 0.9092, Validation Accuracy: 55.45%
+[Epoch 2, Batch   100] loss: 0.896
+[Epoch 2, Batch   200] loss: 0.893
+[Epoch 2, Batch   300] loss: 0.894
+[Epoch 2, Batch   400] loss: 0.889
+[Epoch 2, Batch   500] loss: 0.886
+[Epoch 2, Batch   600] loss: 0.885
+[Epoch 2, Batch   700] loss: 0.884
+Epoch 2/20:
+Train Loss: 0.0923, Train Accuracy: 61.24%
+Validation Loss: 0.8989, Validation Accuracy: 58.08%
+[Epoch 3, Batch   100] loss: 0.873
+[Epoch 3, Batch   200] loss: 0.872
+[Epoch 3, Batch   300] loss: 0.874
+[Epoch 3, Batch   400] loss: 0.868
+[Epoch 3, Batch   500] loss: 0.866
+[Epoch 3, Batch   600] loss: 0.866
+[Epoch 3, Batch   700] loss: 0.867
+Epoch 3/20:
+Train Loss: 0.0903, Train Accuracy: 67.27%
+Validation Loss: 0.8867, Validation Accuracy: 62.30%
+[Epoch 4, Batch   100] loss: 0.852
+[Epoch 4, Batch   200] loss: 0.857
+[Epoch 4, Batch   300] loss: 0.855
+[Epoch 4, Batch   400] loss: 0.857
+[Epoch 4, Batch   500] loss: 0.855
+[Epoch 4, Batch   600] loss: 0.853
+[Epoch 4, Batch   700] loss: 0.855
+Epoch 4/20:
+Train Loss: 0.0893, Train Accuracy: 70.85%
+Validation Loss: 0.8694, Validation Accuracy: 66.22%
+[Epoch 5, Batch   100] loss: 0.843
+[Epoch 5, Batch   200] loss: 0.842
+[Epoch 5, Batch   300] loss: 0.843
+[Epoch 5, Batch   400] loss: 0.846
+[Epoch 5, Batch   500] loss: 0.843
+[Epoch 5, Batch   600] loss: 0.840
+[Epoch 5, Batch   700] loss: 0.841
+Epoch 5/20:
+Train Loss: 0.0885, Train Accuracy: 74.02%
+Validation Loss: 0.8813, Validation Accuracy: 64.36%
+[Epoch 6, Batch   100] loss: 0.833
+[Epoch 6, Batch   200] loss: 0.834
+[Epoch 6, Batch   300] loss: 0.831
+[Epoch 6, Batch   400] loss: 0.834
+[Epoch 6, Batch   500] loss: 0.833
+[Epoch 6, Batch   600] loss: 0.835
+[Epoch 6, Batch   700] loss: 0.833
+Epoch 6/20:
+Train Loss: 0.0877, Train Accuracy: 76.46%
+Validation Loss: 0.8601, Validation Accuracy: 69.89%
+[Epoch 7, Batch   100] loss: 0.820
+[Epoch 7, Batch   200] loss: 0.823
+[Epoch 7, Batch   300] loss: 0.821
+[Epoch 7, Batch   400] loss: 0.826
+[Epoch 7, Batch   500] loss: 0.825
+[Epoch 7, Batch   600] loss: 0.828
+[Epoch 7, Batch   700] loss: 0.827
+Epoch 7/20:
+Train Loss: 0.0866, Train Accuracy: 78.57%
+Validation Loss: 0.8435, Validation Accuracy: 73.74%
+[Epoch 8, Batch   100] loss: 0.813
+[Epoch 8, Batch   200] loss: 0.815
+[Epoch 8, Batch   300] loss: 0.818
+[Epoch 8, Batch   400] loss: 0.819
+[Epoch 8, Batch   500] loss: 0.815
+[Epoch 8, Batch   600] loss: 0.819
+[Epoch 8, Batch   700] loss: 0.818
+Epoch 8/20:
+Train Loss: 0.0859, Train Accuracy: 80.41%
+Validation Loss: 0.8491, Validation Accuracy: 73.05%
+[Epoch 9, Batch   100] loss: 0.804
+[Epoch 9, Batch   200] loss: 0.809
+[Epoch 9, Batch   300] loss: 0.808
+[Epoch 9, Batch   400] loss: 0.809
+[Epoch 9, Batch   500] loss: 0.810
+[Epoch 9, Batch   600] loss: 0.810
+[Epoch 9, Batch   700] loss: 0.809
+Epoch 9/20:
+Train Loss: 0.0852, Train Accuracy: 82.19%
+Validation Loss: 0.8698, Validation Accuracy: 67.61%
+[Epoch 10, Batch   100] loss: 0.799
+[Epoch 10, Batch   200] loss: 0.800
+[Epoch 10, Batch   300] loss: 0.802
+[Epoch 10, Batch   400] loss: 0.804
+[Epoch 10, Batch   500] loss: 0.802
+[Epoch 10, Batch   600] loss: 0.807
+[Epoch 10, Batch   700] loss: 0.807
+Epoch 10/20:
+Train Loss: 0.0848, Train Accuracy: 83.42%
+Validation Loss: 0.8605, Validation Accuracy: 70.23%
+[Epoch 11, Batch   100] loss: 0.791
+[Epoch 11, Batch   200] loss: 0.792
+[Epoch 11, Batch   300] loss: 0.799
+[Epoch 11, Batch   400] loss: 0.793
+[Epoch 11, Batch   500] loss: 0.801
+[Epoch 11, Batch   600] loss: 0.797
+[Epoch 11, Batch   700] loss: 0.801
+Epoch 11/20:
+Train Loss: 0.0835, Train Accuracy: 85.03%
+Validation Loss: 0.8585, Validation Accuracy: 70.75%
+[Epoch 12, Batch   100] loss: 0.785
+[Epoch 12, Batch   200] loss: 0.788
+[Epoch 12, Batch   300] loss: 0.791
+[Epoch 12, Batch   400] loss: 0.789
+[Epoch 12, Batch   500] loss: 0.793
+[Epoch 12, Batch   600] loss: 0.794
+[Epoch 12, Batch   700] loss: 0.795
+Epoch 12/20:
+Train Loss: 0.0838, Train Accuracy: 86.26%
+Validation Loss: 0.8489, Validation Accuracy: 73.84%
+[Epoch 13, Batch   100] loss: 0.780
+[Epoch 13, Batch   200] loss: 0.786
+[Epoch 13, Batch   300] loss: 0.788
+[Epoch 13, Batch   400] loss: 0.785
+[Epoch 13, Batch   500] loss: 0.786
+[Epoch 13, Batch   600] loss: 0.790
+[Epoch 13, Batch   700] loss: 0.788
+Epoch 13/20:
+Train Loss: 0.0834, Train Accuracy: 87.19%
+Validation Loss: 0.8492, Validation Accuracy: 74.21%
+[Epoch 14, Batch   100] loss: 0.780
+[Epoch 14, Batch   200] loss: 0.776
+[Epoch 14, Batch   300] loss: 0.783
+[Epoch 14, Batch   400] loss: 0.784
+[Epoch 14, Batch   500] loss: 0.785
+[Epoch 14, Batch   600] loss: 0.784
+[Epoch 14, Batch   700] loss: 0.785
+Epoch 14/20:
+Train Loss: 0.0825, Train Accuracy: 88.09%
+Validation Loss: 0.8440, Validation Accuracy: 75.09%
+[Epoch 15, Batch   100] loss: 0.775
+[Epoch 15, Batch   200] loss: 0.779
+[Epoch 15, Batch   300] loss: 0.778
+[Epoch 15, Batch   400] loss: 0.778
+[Epoch 15, Batch   500] loss: 0.780
+[Epoch 15, Batch   600] loss: 0.780
+[Epoch 15, Batch   700] loss: 0.785
+Epoch 15/20:
+Train Loss: 0.0824, Train Accuracy: 88.78%
+Validation Loss: 0.8537, Validation Accuracy: 73.28%
+[Epoch 16, Batch   100] loss: 0.770
+[Epoch 16, Batch   200] loss: 0.771
+[Epoch 16, Batch   300] loss: 0.775
+[Epoch 16, Batch   400] loss: 0.774
+[Epoch 16, Batch   500] loss: 0.779
+[Epoch 16, Batch   600] loss: 0.778
+[Epoch 16, Batch   700] loss: 0.778
+Epoch 16/20:
+Train Loss: 0.0818, Train Accuracy: 89.81%
+Validation Loss: 0.8464, Validation Accuracy: 75.13%
+[Epoch 17, Batch   100] loss: 0.767
+[Epoch 17, Batch   200] loss: 0.768
+[Epoch 17, Batch   300] loss: 0.769
+[Epoch 17, Batch   400] loss: 0.773
+[Epoch 17, Batch   500] loss: 0.775
+[Epoch 17, Batch   600] loss: 0.779
+[Epoch 17, Batch   700] loss: 0.778
+Epoch 17/20:
+Train Loss: 0.0816, Train Accuracy: 90.40%
+Validation Loss: 0.8597, Validation Accuracy: 72.47%
+[Epoch 18, Batch   100] loss: 0.764
+[Epoch 18, Batch   200] loss: 0.766
+[Epoch 18, Batch   300] loss: 0.770
+[Epoch 18, Batch   400] loss: 0.771
+[Epoch 18, Batch   500] loss: 0.775
+[Epoch 18, Batch   600] loss: 0.772
+[Epoch 18, Batch   700] loss: 0.775
+Epoch 18/20:
+Train Loss: 0.0809, Train Accuracy: 91.05%
+Validation Loss: 0.8462, Validation Accuracy: 75.54%
+[Epoch 19, Batch   100] loss: 0.766
+[Epoch 19, Batch   200] loss: 0.766
+[Epoch 19, Batch   300] loss: 0.772
+[Epoch 19, Batch   400] loss: 0.766
+[Epoch 19, Batch   500] loss: 0.770
+[Epoch 19, Batch   600] loss: 0.770
+[Epoch 19, Batch   700] loss: 0.773
+Epoch 19/20:
+Train Loss: 0.0811, Train Accuracy: 91.31%
+Validation Loss: 0.8488, Validation Accuracy: 74.47%
+[Epoch 20, Batch   100] loss: 0.762
+[Epoch 20, Batch   200] loss: 0.765
+[Epoch 20, Batch   300] loss: 0.765
+[Epoch 20, Batch   400] loss: 0.766
+[Epoch 20, Batch   500] loss: 0.773
+[Epoch 20, Batch   600] loss: 0.771
+[Epoch 20, Batch   700] loss: 0.770
+Epoch 20/20:
+Train Loss: 0.0807, Train Accuracy: 91.69%
+Validation Loss: 0.8526, Validation Accuracy: 73.80%
+Model saved to models/resnet18_CIFAR10_E1_2
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_CIFAR10_E1_2
+Files already downloaded and verified
+Files already downloaded and verified
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.966
+[Epoch 1, Batch   200] loss: 0.947
+[Epoch 1, Batch   300] loss: 0.937
+[Epoch 1, Batch   400] loss: 0.925
+[Epoch 1, Batch   500] loss: 0.920
+Epoch 1/20:
+Train Loss: 0.0792, Train Accuracy: 44.59%
+Validation Loss: 0.9310, Validation Accuracy: 46.63%
+[Epoch 2, Batch   100] loss: 0.907
+[Epoch 2, Batch   200] loss: 0.905
+[Epoch 2, Batch   300] loss: 0.901
+[Epoch 2, Batch   400] loss: 0.897
+[Epoch 2, Batch   500] loss: 0.892
+Epoch 2/20:
+Train Loss: 0.0763, Train Accuracy: 58.19%
+Validation Loss: 0.9730, Validation Accuracy: 40.98%
+[Epoch 3, Batch   100] loss: 0.881
+[Epoch 3, Batch   200] loss: 0.883
+[Epoch 3, Batch   300] loss: 0.883
+[Epoch 3, Batch   400] loss: 0.879
+[Epoch 3, Batch   500] loss: 0.876
+Epoch 3/20:
+Train Loss: 0.0751, Train Accuracy: 63.91%
+Validation Loss: 0.9113, Validation Accuracy: 54.10%
+[Epoch 4, Batch   100] loss: 0.866
+[Epoch 4, Batch   200] loss: 0.867
+[Epoch 4, Batch   300] loss: 0.864
+[Epoch 4, Batch   400] loss: 0.863
+[Epoch 4, Batch   500] loss: 0.863
+Epoch 4/20:
+Train Loss: 0.0746, Train Accuracy: 68.15%
+Validation Loss: 0.8764, Validation Accuracy: 64.86%
+[Epoch 5, Batch   100] loss: 0.850
+[Epoch 5, Batch   200] loss: 0.852
+[Epoch 5, Batch   300] loss: 0.853
+[Epoch 5, Batch   400] loss: 0.850
+[Epoch 5, Batch   500] loss: 0.853
+Epoch 5/20:
+Train Loss: 0.0732, Train Accuracy: 71.53%
+Validation Loss: 0.9066, Validation Accuracy: 56.84%
+[Epoch 6, Batch   100] loss: 0.839
+[Epoch 6, Batch   200] loss: 0.840
+[Epoch 6, Batch   300] loss: 0.842
+[Epoch 6, Batch   400] loss: 0.843
+[Epoch 6, Batch   500] loss: 0.845
+Epoch 6/20:
+Train Loss: 0.0729, Train Accuracy: 74.07%
+Validation Loss: 0.8732, Validation Accuracy: 66.63%
+[Epoch 7, Batch   100] loss: 0.827
+[Epoch 7, Batch   200] loss: 0.831
+[Epoch 7, Batch   300] loss: 0.832
+[Epoch 7, Batch   400] loss: 0.834
+[Epoch 7, Batch   500] loss: 0.834
+Epoch 7/20:
+Train Loss: 0.0715, Train Accuracy: 76.91%
+Validation Loss: 0.8940, Validation Accuracy: 60.66%
+[Epoch 8, Batch   100] loss: 0.817
+[Epoch 8, Batch   200] loss: 0.823
+[Epoch 8, Batch   300] loss: 0.823
+[Epoch 8, Batch   400] loss: 0.828
+[Epoch 8, Batch   500] loss: 0.827
+Epoch 8/20:
+Train Loss: 0.0708, Train Accuracy: 78.64%
+Validation Loss: 0.8672, Validation Accuracy: 68.44%
+[Epoch 9, Batch   100] loss: 0.808
+[Epoch 9, Batch   200] loss: 0.813
+[Epoch 9, Batch   300] loss: 0.816
+[Epoch 9, Batch   400] loss: 0.818
+[Epoch 9, Batch   500] loss: 0.820
+Epoch 9/20:
+Train Loss: 0.0704, Train Accuracy: 80.74%
+Validation Loss: 0.8772, Validation Accuracy: 65.93%
+[Epoch 10, Batch   100] loss: 0.803
+[Epoch 10, Batch   200] loss: 0.806
+[Epoch 10, Batch   300] loss: 0.806
+[Epoch 10, Batch   400] loss: 0.809
+[Epoch 10, Batch   500] loss: 0.811
+Epoch 10/20:
+Train Loss: 0.0695, Train Accuracy: 82.69%
+Validation Loss: 0.8528, Validation Accuracy: 71.88%
+[Epoch 11, Batch   100] loss: 0.794
+[Epoch 11, Batch   200] loss: 0.797
+[Epoch 11, Batch   300] loss: 0.802
+[Epoch 11, Batch   400] loss: 0.806
+[Epoch 11, Batch   500] loss: 0.811
+Epoch 11/20:
+Train Loss: 0.0693, Train Accuracy: 83.69%
+Validation Loss: 0.8621, Validation Accuracy: 70.16%
+[Epoch 12, Batch   100] loss: 0.790
+[Epoch 12, Batch   200] loss: 0.790
+[Epoch 12, Batch   300] loss: 0.795
+[Epoch 12, Batch   400] loss: 0.795
+[Epoch 12, Batch   500] loss: 0.800
+Epoch 12/20:
+Train Loss: 0.0688, Train Accuracy: 85.61%
+Validation Loss: 0.8609, Validation Accuracy: 70.61%
+[Epoch 13, Batch   100] loss: 0.784
+[Epoch 13, Batch   200] loss: 0.784
+[Epoch 13, Batch   300] loss: 0.790
+[Epoch 13, Batch   400] loss: 0.790
+[Epoch 13, Batch   500] loss: 0.794
+Epoch 13/20:
+Train Loss: 0.0682, Train Accuracy: 86.87%
+Validation Loss: 0.8576, Validation Accuracy: 71.58%
+[Epoch 14, Batch   100] loss: 0.779
+[Epoch 14, Batch   200] loss: 0.781
+[Epoch 14, Batch   300] loss: 0.786
+[Epoch 14, Batch   400] loss: 0.786
+[Epoch 14, Batch   500] loss: 0.788
+Epoch 14/20:
+Train Loss: 0.0677, Train Accuracy: 87.87%
+Validation Loss: 0.8634, Validation Accuracy: 70.52%
+[Epoch 15, Batch   100] loss: 0.775
+[Epoch 15, Batch   200] loss: 0.779
+[Epoch 15, Batch   300] loss: 0.777
+[Epoch 15, Batch   400] loss: 0.784
+[Epoch 15, Batch   500] loss: 0.785
+Epoch 15/20:
+Train Loss: 0.0674, Train Accuracy: 88.81%
+Validation Loss: 0.8645, Validation Accuracy: 71.20%
+[Epoch 16, Batch   100] loss: 0.768
+[Epoch 16, Batch   200] loss: 0.774
+[Epoch 16, Batch   300] loss: 0.778
+[Epoch 16, Batch   400] loss: 0.779
+[Epoch 16, Batch   500] loss: 0.782
+Epoch 16/20:
+Train Loss: 0.0669, Train Accuracy: 89.59%
+Validation Loss: 0.8761, Validation Accuracy: 67.72%
+[Epoch 17, Batch   100] loss: 0.769
+[Epoch 17, Batch   200] loss: 0.768
+[Epoch 17, Batch   300] loss: 0.774
+[Epoch 17, Batch   400] loss: 0.776
+[Epoch 17, Batch   500] loss: 0.780
+Epoch 17/20:
+Train Loss: 0.0669, Train Accuracy: 90.24%
+Validation Loss: 0.8590, Validation Accuracy: 71.96%
+[Epoch 18, Batch   100] loss: 0.764
+[Epoch 18, Batch   200] loss: 0.768
+[Epoch 18, Batch   300] loss: 0.770
+[Epoch 18, Batch   400] loss: 0.773
+[Epoch 18, Batch   500] loss: 0.774
+Epoch 18/20:
+Train Loss: 0.0666, Train Accuracy: 91.00%
+Validation Loss: 0.8587, Validation Accuracy: 72.63%
+[Epoch 19, Batch   100] loss: 0.763
+[Epoch 19, Batch   200] loss: 0.765
+[Epoch 19, Batch   300] loss: 0.768
+[Epoch 19, Batch   400] loss: 0.773
+[Epoch 19, Batch   500] loss: 0.775
+Epoch 19/20:
+Train Loss: 0.0665, Train Accuracy: 91.37%
+Validation Loss: 0.8789, Validation Accuracy: 68.32%
+[Epoch 20, Batch   100] loss: 0.762
+[Epoch 20, Batch   200] loss: 0.762
+[Epoch 20, Batch   300] loss: 0.762
+[Epoch 20, Batch   400] loss: 0.766
+[Epoch 20, Batch   500] loss: 0.770
+Epoch 20/20:
+Train Loss: 0.0663, Train Accuracy: 92.10%
+Validation Loss: 0.8630, Validation Accuracy: 71.62%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-random-0.3-2
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.965
+[Epoch 1, Batch   200] loss: 0.950
+[Epoch 1, Batch   300] loss: 0.938
+Epoch 1/20:
+Train Loss: 0.2159, Train Accuracy: 41.15%
+Validation Loss: 0.9439, Validation Accuracy: 42.55%
+[Epoch 2, Batch   100] loss: 0.915
+[Epoch 2, Batch   200] loss: 0.914
+[Epoch 2, Batch   300] loss: 0.912
+Epoch 2/20:
+Train Loss: 0.2104, Train Accuracy: 54.24%
+Validation Loss: 0.9123, Validation Accuracy: 53.91%
+[Epoch 3, Batch   100] loss: 0.893
+[Epoch 3, Batch   200] loss: 0.893
+[Epoch 3, Batch   300] loss: 0.889
+Epoch 3/20:
+Train Loss: 0.2054, Train Accuracy: 61.03%
+Validation Loss: 0.9127, Validation Accuracy: 54.06%
+[Epoch 4, Batch   100] loss: 0.874
+[Epoch 4, Batch   200] loss: 0.875
+[Epoch 4, Batch   300] loss: 0.868
+Epoch 4/20:
+Train Loss: 0.2036, Train Accuracy: 65.96%
+Validation Loss: 0.9472, Validation Accuracy: 47.99%
+[Epoch 5, Batch   100] loss: 0.854
+[Epoch 5, Batch   200] loss: 0.857
+[Epoch 5, Batch   300] loss: 0.863
+Epoch 5/20:
+Train Loss: 0.2007, Train Accuracy: 69.82%
+Validation Loss: 0.9143, Validation Accuracy: 57.01%
+[Epoch 6, Batch   100] loss: 0.843
+[Epoch 6, Batch   200] loss: 0.846
+[Epoch 6, Batch   300] loss: 0.851
+Epoch 6/20:
+Train Loss: 0.1979, Train Accuracy: 72.84%
+Validation Loss: 0.9318, Validation Accuracy: 55.29%
+[Epoch 7, Batch   100] loss: 0.834
+[Epoch 7, Batch   200] loss: 0.837
+[Epoch 7, Batch   300] loss: 0.839
+Epoch 7/20:
+Train Loss: 0.1956, Train Accuracy: 75.29%
+Validation Loss: 0.8809, Validation Accuracy: 63.92%
+[Epoch 8, Batch   100] loss: 0.824
+[Epoch 8, Batch   200] loss: 0.830
+[Epoch 8, Batch   300] loss: 0.827
+Epoch 8/20:
+Train Loss: 0.1934, Train Accuracy: 77.36%
+Validation Loss: 0.8839, Validation Accuracy: 63.44%
+[Epoch 9, Batch   100] loss: 0.816
+[Epoch 9, Batch   200] loss: 0.819
+[Epoch 9, Batch   300] loss: 0.819
+Epoch 9/20:
+Train Loss: 0.1915, Train Accuracy: 79.72%
+Validation Loss: 0.8790, Validation Accuracy: 65.78%
+[Epoch 10, Batch   100] loss: 0.805
+[Epoch 10, Batch   200] loss: 0.809
+[Epoch 10, Batch   300] loss: 0.811
+Epoch 10/20:
+Train Loss: 0.1899, Train Accuracy: 82.12%
+Validation Loss: 0.8685, Validation Accuracy: 68.12%
+[Epoch 11, Batch   100] loss: 0.795
+[Epoch 11, Batch   200] loss: 0.803
+[Epoch 11, Batch   300] loss: 0.806
+Epoch 11/20:
+Train Loss: 0.1886, Train Accuracy: 83.39%
+Validation Loss: 0.8813, Validation Accuracy: 65.19%
+[Epoch 12, Batch   100] loss: 0.789
+[Epoch 12, Batch   200] loss: 0.796
+[Epoch 12, Batch   300] loss: 0.800
+Epoch 12/20:
+Train Loss: 0.1869, Train Accuracy: 84.90%
+Validation Loss: 0.8830, Validation Accuracy: 65.90%
+[Epoch 13, Batch   100] loss: 0.787
+[Epoch 13, Batch   200] loss: 0.790
+[Epoch 13, Batch   300] loss: 0.792
+Epoch 13/20:
+Train Loss: 0.1857, Train Accuracy: 86.28%
+Validation Loss: 0.8981, Validation Accuracy: 63.50%
+[Epoch 14, Batch   100] loss: 0.776
+[Epoch 14, Batch   200] loss: 0.787
+[Epoch 14, Batch   300] loss: 0.788
+Epoch 14/20:
+Train Loss: 0.1838, Train Accuracy: 87.85%
+Validation Loss: 0.8762, Validation Accuracy: 67.43%
+[Epoch 15, Batch   100] loss: 0.776
+[Epoch 15, Batch   200] loss: 0.779
+[Epoch 15, Batch   300] loss: 0.782
+Epoch 15/20:
+Train Loss: 0.1823, Train Accuracy: 88.89%
+Validation Loss: 0.8864, Validation Accuracy: 65.67%
+[Epoch 16, Batch   100] loss: 0.770
+[Epoch 16, Batch   200] loss: 0.775
+[Epoch 16, Batch   300] loss: 0.779
+Epoch 16/20:
+Train Loss: 0.1816, Train Accuracy: 89.71%
+Validation Loss: 0.8689, Validation Accuracy: 70.05%
+[Epoch 17, Batch   100] loss: 0.768
+[Epoch 17, Batch   200] loss: 0.773
+[Epoch 17, Batch   300] loss: 0.774
+Epoch 17/20:
+Train Loss: 0.1806, Train Accuracy: 90.47%
+Validation Loss: 0.8863, Validation Accuracy: 67.15%
+[Epoch 18, Batch   100] loss: 0.763
+[Epoch 18, Batch   200] loss: 0.769
+[Epoch 18, Batch   300] loss: 0.773
+Epoch 18/20:
+Train Loss: 0.1806, Train Accuracy: 91.19%
+Validation Loss: 0.8772, Validation Accuracy: 69.02%
+[Epoch 19, Batch   100] loss: 0.766
+[Epoch 19, Batch   200] loss: 0.767
+[Epoch 19, Batch   300] loss: 0.769
+Epoch 19/20:
+Train Loss: 0.1789, Train Accuracy: 91.71%
+Validation Loss: 0.8768, Validation Accuracy: 69.01%
+[Epoch 20, Batch   100] loss: 0.760
+[Epoch 20, Batch   200] loss: 0.765
+[Epoch 20, Batch   300] loss: 0.766
+Epoch 20/20:
+Train Loss: 0.1791, Train Accuracy: 92.14%
+Validation Loss: 0.8872, Validation Accuracy: 67.44%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-random-0.5-2
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.966
+[Epoch 1, Batch   200] loss: 0.946
+Epoch 1/20:
+Train Loss: 0.1396, Train Accuracy: 38.10%
+Validation Loss: 0.9667, Validation Accuracy: 38.93%
+[Epoch 2, Batch   100] loss: 0.928
+[Epoch 2, Batch   200] loss: 0.919
+Epoch 2/20:
+Train Loss: 0.1366, Train Accuracy: 50.78%
+Validation Loss: 0.9408, Validation Accuracy: 44.14%
+[Epoch 3, Batch   100] loss: 0.903
+[Epoch 3, Batch   200] loss: 0.904
+Epoch 3/20:
+Train Loss: 0.1334, Train Accuracy: 57.41%
+Validation Loss: 0.9105, Validation Accuracy: 54.96%
+[Epoch 4, Batch   100] loss: 0.885
+[Epoch 4, Batch   200] loss: 0.885
+Epoch 4/20:
+Train Loss: 0.1337, Train Accuracy: 62.07%
+Validation Loss: 0.9211, Validation Accuracy: 51.16%
+[Epoch 5, Batch   100] loss: 0.872
+[Epoch 5, Batch   200] loss: 0.872
+Epoch 5/20:
+Train Loss: 0.1299, Train Accuracy: 65.78%
+Validation Loss: 0.9175, Validation Accuracy: 54.20%
+[Epoch 6, Batch   100] loss: 0.855
+[Epoch 6, Batch   200] loss: 0.860
+Epoch 6/20:
+Train Loss: 0.1285, Train Accuracy: 69.60%
+Validation Loss: 0.9093, Validation Accuracy: 56.43%
+[Epoch 7, Batch   100] loss: 0.844
+[Epoch 7, Batch   200] loss: 0.849
+Epoch 7/20:
+Train Loss: 0.1264, Train Accuracy: 72.97%
+Validation Loss: 0.9303, Validation Accuracy: 50.73%
+[Epoch 8, Batch   100] loss: 0.832
+[Epoch 8, Batch   200] loss: 0.835
+Epoch 8/20:
+Train Loss: 0.1254, Train Accuracy: 75.45%
+Validation Loss: 0.9033, Validation Accuracy: 58.16%
+[Epoch 9, Batch   100] loss: 0.822
+[Epoch 9, Batch   200] loss: 0.828
+Epoch 9/20:
+Train Loss: 0.1233, Train Accuracy: 78.08%
+Validation Loss: 0.9019, Validation Accuracy: 59.27%
+[Epoch 10, Batch   100] loss: 0.813
+[Epoch 10, Batch   200] loss: 0.818
+Epoch 10/20:
+Train Loss: 0.1224, Train Accuracy: 80.15%
+Validation Loss: 0.8990, Validation Accuracy: 60.58%
+[Epoch 11, Batch   100] loss: 0.801
+[Epoch 11, Batch   200] loss: 0.810
+Epoch 11/20:
+Train Loss: 0.1203, Train Accuracy: 82.91%
+Validation Loss: 0.8982, Validation Accuracy: 61.94%
+[Epoch 12, Batch   100] loss: 0.797
+[Epoch 12, Batch   200] loss: 0.799
+Epoch 12/20:
+Train Loss: 0.1190, Train Accuracy: 84.61%
+Validation Loss: 0.8938, Validation Accuracy: 63.19%
+[Epoch 13, Batch   100] loss: 0.789
+[Epoch 13, Batch   200] loss: 0.795
+Epoch 13/20:
+Train Loss: 0.1184, Train Accuracy: 85.93%
+Validation Loss: 0.9001, Validation Accuracy: 60.91%
+[Epoch 14, Batch   100] loss: 0.783
+[Epoch 14, Batch   200] loss: 0.787
+Epoch 14/20:
+Train Loss: 0.1183, Train Accuracy: 87.35%
+Validation Loss: 0.9030, Validation Accuracy: 61.62%
+[Epoch 15, Batch   100] loss: 0.778
+[Epoch 15, Batch   200] loss: 0.784
+Epoch 15/20:
+Train Loss: 0.1172, Train Accuracy: 88.57%
+Validation Loss: 0.8975, Validation Accuracy: 62.66%
+[Epoch 16, Batch   100] loss: 0.773
+[Epoch 16, Batch   200] loss: 0.777
+Epoch 16/20:
+Train Loss: 0.1157, Train Accuracy: 89.81%
+Validation Loss: 0.9001, Validation Accuracy: 63.22%
+[Epoch 17, Batch   100] loss: 0.765
+[Epoch 17, Batch   200] loss: 0.775
+Epoch 17/20:
+Train Loss: 0.1153, Train Accuracy: 90.90%
+Validation Loss: 0.9076, Validation Accuracy: 62.06%
+[Epoch 18, Batch   100] loss: 0.765
+[Epoch 18, Batch   200] loss: 0.771
+Epoch 18/20:
+Train Loss: 0.1149, Train Accuracy: 91.33%
+Validation Loss: 0.9085, Validation Accuracy: 62.74%
+[Epoch 19, Batch   100] loss: 0.766
+[Epoch 19, Batch   200] loss: 0.766
+Epoch 19/20:
+Train Loss: 0.1158, Train Accuracy: 91.41%
+Validation Loss: 0.9077, Validation Accuracy: 62.82%
+[Epoch 20, Batch   100] loss: 0.763
+[Epoch 20, Batch   200] loss: 0.763
+Epoch 20/20:
+Train Loss: 0.1140, Train Accuracy: 92.58%
+Validation Loss: 0.9078, Validation Accuracy: 62.98%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-random-0.7-2
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch   100] loss: 0.967
+Epoch 1/20:
+Train Loss: 0.3465, Train Accuracy: 33.24%
+Validation Loss: 0.9549, Validation Accuracy: 37.35%
+[Epoch 2, Batch   100] loss: 0.938
+Epoch 2/20:
+Train Loss: 0.3382, Train Accuracy: 45.52%
+Validation Loss: 0.9332, Validation Accuracy: 46.48%
+[Epoch 3, Batch   100] loss: 0.916
+Epoch 3/20:
+Train Loss: 0.3317, Train Accuracy: 52.81%
+Validation Loss: 0.9288, Validation Accuracy: 48.25%
+[Epoch 4, Batch   100] loss: 0.898
+Epoch 4/20:
+Train Loss: 0.3270, Train Accuracy: 58.10%
+Validation Loss: 0.9255, Validation Accuracy: 49.61%
+[Epoch 5, Batch   100] loss: 0.882
+Epoch 5/20:
+Train Loss: 0.3210, Train Accuracy: 62.60%
+Validation Loss: 0.9270, Validation Accuracy: 49.76%
+[Epoch 6, Batch   100] loss: 0.869
+Epoch 6/20:
+Train Loss: 0.3171, Train Accuracy: 66.76%
+Validation Loss: 0.9230, Validation Accuracy: 53.12%
+[Epoch 7, Batch   100] loss: 0.855
+Epoch 7/20:
+Train Loss: 0.3108, Train Accuracy: 70.49%
+Validation Loss: 0.9299, Validation Accuracy: 51.46%
+[Epoch 8, Batch   100] loss: 0.844
+Epoch 8/20:
+Train Loss: 0.3086, Train Accuracy: 73.24%
+Validation Loss: 0.9123, Validation Accuracy: 56.07%
+[Epoch 9, Batch   100] loss: 0.830
+Epoch 9/20:
+Train Loss: 0.3025, Train Accuracy: 76.81%
+Validation Loss: 0.9285, Validation Accuracy: 54.56%
+[Epoch 10, Batch   100] loss: 0.821
+Epoch 10/20:
+Train Loss: 0.2994, Train Accuracy: 78.81%
+Validation Loss: 0.9250, Validation Accuracy: 55.04%
+[Epoch 11, Batch   100] loss: 0.807
+Epoch 11/20:
+Train Loss: 0.2962, Train Accuracy: 81.84%
+Validation Loss: 0.9308, Validation Accuracy: 53.74%
+[Epoch 12, Batch   100] loss: 0.805
+Epoch 12/20:
+Train Loss: 0.2920, Train Accuracy: 82.99%
+Validation Loss: 0.9225, Validation Accuracy: 56.44%
+[Epoch 13, Batch   100] loss: 0.790
+Epoch 13/20:
+Train Loss: 0.2892, Train Accuracy: 86.05%
+Validation Loss: 0.9181, Validation Accuracy: 58.26%
+[Epoch 14, Batch   100] loss: 0.789
+Epoch 14/20:
+Train Loss: 0.2871, Train Accuracy: 86.54%
+Validation Loss: 0.9446, Validation Accuracy: 53.14%
+[Epoch 15, Batch   100] loss: 0.782
+Epoch 15/20:
+Train Loss: 0.2848, Train Accuracy: 88.16%
+Validation Loss: 0.9119, Validation Accuracy: 59.48%
+[Epoch 16, Batch   100] loss: 0.774
+Epoch 16/20:
+Train Loss: 0.2836, Train Accuracy: 89.93%
+Validation Loss: 0.9243, Validation Accuracy: 57.87%
+[Epoch 17, Batch   100] loss: 0.774
+Epoch 17/20:
+Train Loss: 0.2824, Train Accuracy: 89.79%
+Validation Loss: 0.9134, Validation Accuracy: 60.07%
+[Epoch 18, Batch   100] loss: 0.764
+Epoch 18/20:
+Train Loss: 0.2807, Train Accuracy: 91.61%
+Validation Loss: 0.9235, Validation Accuracy: 58.02%
+[Epoch 19, Batch   100] loss: 0.766
+Epoch 19/20:
+Train Loss: 0.2793, Train Accuracy: 91.72%
+Validation Loss: 0.9516, Validation Accuracy: 53.45%
+[Epoch 20, Batch   100] loss: 0.762
+Epoch 20/20:
+Train Loss: 0.2776, Train Accuracy: 92.67%
+Validation Loss: 0.9311, Validation Accuracy: 57.89%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-random-0.8-2
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+Epoch 1/20:
+Train Loss: 0.9671, Train Accuracy: 31.15%
+Validation Loss: 0.9607, Validation Accuracy: 33.90%
+Epoch 2/20:
+Train Loss: 0.9433, Train Accuracy: 42.87%
+Validation Loss: 0.9529, Validation Accuracy: 38.29%
+Epoch 3/20:
+Train Loss: 0.9241, Train Accuracy: 49.97%
+Validation Loss: 0.9651, Validation Accuracy: 35.93%
+Epoch 4/20:
+Train Loss: 0.9062, Train Accuracy: 55.63%
+Validation Loss: 0.9731, Validation Accuracy: 36.06%
+Epoch 5/20:
+Train Loss: 0.8938, Train Accuracy: 59.25%
+Validation Loss: 0.9778, Validation Accuracy: 38.87%
+Epoch 6/20:
+Train Loss: 0.8915, Train Accuracy: 60.89%
+Validation Loss: 0.9333, Validation Accuracy: 49.50%
+Epoch 7/20:
+Train Loss: 0.8726, Train Accuracy: 65.35%
+Validation Loss: 0.9311, Validation Accuracy: 49.95%
+Epoch 8/20:
+Train Loss: 0.8509, Train Accuracy: 71.67%
+Validation Loss: 0.9361, Validation Accuracy: 49.30%
+Epoch 9/20:
+Train Loss: 0.8374, Train Accuracy: 75.36%
+Validation Loss: 0.9687, Validation Accuracy: 42.92%
+Epoch 10/20:
+Train Loss: 0.8260, Train Accuracy: 77.98%
+Validation Loss: 0.9585, Validation Accuracy: 47.45%
+Epoch 11/20:
+Train Loss: 0.8479, Train Accuracy: 73.85%
+Validation Loss: 0.9444, Validation Accuracy: 49.78%
+Epoch 12/20:
+Train Loss: 0.8139, Train Accuracy: 81.32%
+Validation Loss: 0.9280, Validation Accuracy: 54.06%
+Epoch 13/20:
+Train Loss: 0.7990, Train Accuracy: 84.44%
+Validation Loss: 0.9389, Validation Accuracy: 52.68%
+Epoch 14/20:
+Train Loss: 0.7854, Train Accuracy: 87.86%
+Validation Loss: 0.9815, Validation Accuracy: 44.53%
+Epoch 15/20:
+Train Loss: 0.7807, Train Accuracy: 88.48%
+Validation Loss: 0.9457, Validation Accuracy: 51.76%
+Epoch 16/20:
+Train Loss: 0.7776, Train Accuracy: 89.04%
+Validation Loss: 0.9535, Validation Accuracy: 50.16%
+Epoch 17/20:
+Train Loss: 0.7736, Train Accuracy: 90.22%
+Validation Loss: 0.9663, Validation Accuracy: 50.18%
+Epoch 18/20:
+Train Loss: 0.7946, Train Accuracy: 85.74%
+Validation Loss: 0.9719, Validation Accuracy: 47.39%
+Epoch 19/20:
+Train Loss: 0.7935, Train Accuracy: 86.94%
+Validation Loss: 0.9450, Validation Accuracy: 52.51%
+Epoch 20/20:
+Train Loss: 0.7775, Train Accuracy: 89.70%
+Validation Loss: 0.9428, Validation Accuracy: 53.62%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-random-0.9-2
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+Epoch 1/20:
+Train Loss: 0.9780, Train Accuracy: 27.68%
+Validation Loss: 0.9781, Validation Accuracy: 16.39%
+Epoch 2/20:
+Train Loss: 0.9474, Train Accuracy: 40.12%
+Validation Loss: 0.9603, Validation Accuracy: 34.42%
+Epoch 3/20:
+Train Loss: 0.9335, Train Accuracy: 46.56%
+Validation Loss: 0.9680, Validation Accuracy: 36.93%
+Epoch 4/20:
+Train Loss: 0.9161, Train Accuracy: 52.84%
+Validation Loss: 0.9582, Validation Accuracy: 38.82%
+Epoch 5/20:
+Train Loss: 0.8975, Train Accuracy: 58.08%
+Validation Loss: 0.9672, Validation Accuracy: 38.46%
+Epoch 6/20:
+Train Loss: 0.8860, Train Accuracy: 62.76%
+Validation Loss: 0.9848, Validation Accuracy: 35.92%
+Epoch 7/20:
+Train Loss: 0.8772, Train Accuracy: 64.88%
+Validation Loss: 0.9863, Validation Accuracy: 38.67%
+Epoch 8/20:
+Train Loss: 0.8500, Train Accuracy: 72.64%
+Validation Loss: 1.0111, Validation Accuracy: 33.57%
+Epoch 9/20:
+Train Loss: 0.8441, Train Accuracy: 72.96%
+Validation Loss: 0.9673, Validation Accuracy: 42.12%
+Epoch 10/20:
+Train Loss: 0.8251, Train Accuracy: 79.40%
+Validation Loss: 0.9592, Validation Accuracy: 43.14%
+Epoch 11/20:
+Train Loss: 0.8177, Train Accuracy: 81.00%
+Validation Loss: 0.9890, Validation Accuracy: 38.72%
+Epoch 12/20:
+Train Loss: 0.8130, Train Accuracy: 82.16%
+Validation Loss: 0.9746, Validation Accuracy: 42.98%
+Epoch 13/20:
+Train Loss: 0.7934, Train Accuracy: 85.88%
+Validation Loss: 0.9695, Validation Accuracy: 44.01%
+Epoch 14/20:
+Train Loss: 0.7752, Train Accuracy: 89.68%
+Validation Loss: 0.9650, Validation Accuracy: 45.95%
+Epoch 15/20:
+Train Loss: 0.7739, Train Accuracy: 90.12%
+Validation Loss: 0.9761, Validation Accuracy: 44.13%
+Epoch 16/20:
+Train Loss: 0.7788, Train Accuracy: 89.68%
+Validation Loss: 0.9794, Validation Accuracy: 42.74%
+Epoch 17/20:
+Train Loss: 0.7764, Train Accuracy: 90.56%
+Validation Loss: 0.9831, Validation Accuracy: 43.42%
+Epoch 18/20:
+Train Loss: 0.7871, Train Accuracy: 88.96%
+Validation Loss: 1.0203, Validation Accuracy: 38.74%
+Epoch 19/20:
+Train Loss: 0.8084, Train Accuracy: 83.92%
+Validation Loss: 1.0012, Validation Accuracy: 39.20%
+Epoch 20/20:
+Train Loss: 0.7814, Train Accuracy: 89.28%
+Validation Loss: 0.9853, Validation Accuracy: 43.05%
+Model saved to models/resnet18-EvidenceLoss-CIFAR10-random-0.95-2
+Modified fc layer: updated out_features to 10.
+Traceback (most recent call last):
+  File "/home/fxq992/bachelor-project/main.py", line 65, in <module>
+    #run_experiment2()
+    ^^^^^^^^^^^^^^^^^
+  File "/home/fxq992/bachelor-project/main.py", line 61, in run_experiment2
+    repeat2(dataset_name, model_name, rates, uncertainty_metric, selection_method, f"models/{model_name}_{dataset_name}_E1_{suffix}",suffix)
+  File "/home/fxq992/bachelor-project/utils/repeater.py", line 143, in repeat2
+    model1 = initiate_model(model_name, dataset_name, pretrained) if pretrained else None
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fxq992/bachelor-project/utils/initiate.py", line 173, in initiate_model
+    model = model_constructor(weights=weights)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fxq992/miniconda3/envs/my_project_env/lib/python3.12/site-packages/torchvision/models/_utils.py", line 142, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/fxq992/miniconda3/envs/my_project_env/lib/python3.12/site-packages/torchvision/models/_utils.py", line 228, in inner_wrapper
+    return builder(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fxq992/miniconda3/envs/my_project_env/lib/python3.12/site-packages/torchvision/models/resnet.py", line 703, in resnet18
+    weights = ResNet18_Weights.verify(weights)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fxq992/miniconda3/envs/my_project_env/lib/python3.12/site-packages/torchvision/models/_api.py", line 82, in verify
+    obj = cls[obj.replace(cls.__name__ + ".", "")]
+          ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fxq992/miniconda3/envs/my_project_env/lib/python3.12/enum.py", line 808, in __getitem__
+    return cls._member_map_[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'models/resnet18_CIFAR10_E1_2'

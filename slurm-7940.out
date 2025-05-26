@@ -1,0 +1,2823 @@
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch     2] loss: 0.045
+[Epoch 1, Batch   102] loss: 0.373
+[Epoch 1, Batch   202] loss: 0.187
+[Epoch 1, Batch   302] loss: 0.167
+[Epoch 1, Batch   402] loss: 0.126
+[Epoch 1, Batch   502] loss: 0.110
+[Epoch 1, Batch   602] loss: 0.102
+[Epoch 1, Batch   702] loss: 0.104
+[Epoch 1, Batch   802] loss: 0.097
+[Epoch 1, Batch   902] loss: 0.096
+Epoch 1/5:
+Train Loss: 0.0025, Train Accuracy: 95.32%
+Validation Loss: 0.0591, Validation Accuracy: 98.19%
+[Epoch 2, Batch     2] loss: 0.002
+[Epoch 2, Batch   102] loss: 0.068
+[Epoch 2, Batch   202] loss: 0.080
+[Epoch 2, Batch   302] loss: 0.077
+[Epoch 2, Batch   402] loss: 0.071
+[Epoch 2, Batch   502] loss: 0.063
+[Epoch 2, Batch   602] loss: 0.065
+[Epoch 2, Batch   702] loss: 0.066
+[Epoch 2, Batch   802] loss: 0.058
+[Epoch 2, Batch   902] loss: 0.064
+Epoch 2/5:
+Train Loss: 0.0027, Train Accuracy: 97.94%
+Validation Loss: 0.0520, Validation Accuracy: 98.42%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.053
+[Epoch 3, Batch   202] loss: 0.047
+[Epoch 3, Batch   302] loss: 0.054
+[Epoch 3, Batch   402] loss: 0.054
+[Epoch 3, Batch   502] loss: 0.051
+[Epoch 3, Batch   602] loss: 0.064
+[Epoch 3, Batch   702] loss: 0.060
+[Epoch 3, Batch   802] loss: 0.058
+[Epoch 3, Batch   902] loss: 0.047
+Epoch 3/5:
+Train Loss: 0.0026, Train Accuracy: 98.33%
+Validation Loss: 0.0407, Validation Accuracy: 98.65%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.047
+[Epoch 4, Batch   202] loss: 0.056
+[Epoch 4, Batch   302] loss: 0.039
+[Epoch 4, Batch   402] loss: 0.038
+[Epoch 4, Batch   502] loss: 0.060
+[Epoch 4, Batch   602] loss: 0.042
+[Epoch 4, Batch   702] loss: 0.041
+[Epoch 4, Batch   802] loss: 0.059
+[Epoch 4, Batch   902] loss: 0.047
+Epoch 4/5:
+Train Loss: 0.0018, Train Accuracy: 98.56%
+Validation Loss: 0.0873, Validation Accuracy: 97.30%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.042
+[Epoch 5, Batch   202] loss: 0.037
+[Epoch 5, Batch   302] loss: 0.039
+[Epoch 5, Batch   402] loss: 0.043
+[Epoch 5, Batch   502] loss: 0.049
+[Epoch 5, Batch   602] loss: 0.042
+[Epoch 5, Batch   702] loss: 0.039
+[Epoch 5, Batch   802] loss: 0.037
+[Epoch 5, Batch   902] loss: 0.039
+Epoch 5/5:
+Train Loss: 0.0013, Train Accuracy: 98.79%
+Validation Loss: 0.0380, Validation Accuracy: 98.83%
+Model saved to models/resnet18_MNIST_1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_MNIST_1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.3-1
+[Epoch 1, Batch     2] loss: 0.043
+[Epoch 1, Batch   102] loss: 0.334
+[Epoch 1, Batch   202] loss: 0.159
+[Epoch 1, Batch   302] loss: 0.147
+[Epoch 1, Batch   402] loss: 0.115
+[Epoch 1, Batch   502] loss: 0.128
+[Epoch 1, Batch   602] loss: 0.110
+Epoch 1/5:
+Train Loss: 0.0074, Train Accuracy: 94.89%
+Validation Loss: 0.0736, Validation Accuracy: 97.65%
+[Epoch 2, Batch     2] loss: 0.002
+[Epoch 2, Batch   102] loss: 0.090
+[Epoch 2, Batch   202] loss: 0.072
+[Epoch 2, Batch   302] loss: 0.086
+[Epoch 2, Batch   402] loss: 0.070
+[Epoch 2, Batch   502] loss: 0.082
+[Epoch 2, Batch   602] loss: 0.063
+Epoch 2/5:
+Train Loss: 0.0075, Train Accuracy: 97.60%
+Validation Loss: 0.0829, Validation Accuracy: 97.56%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.073
+[Epoch 3, Batch   202] loss: 0.063
+[Epoch 3, Batch   302] loss: 0.069
+[Epoch 3, Batch   402] loss: 0.058
+[Epoch 3, Batch   502] loss: 0.061
+[Epoch 3, Batch   602] loss: 0.062
+Epoch 3/5:
+Train Loss: 0.0039, Train Accuracy: 98.11%
+Validation Loss: 0.0373, Validation Accuracy: 98.88%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.045
+[Epoch 4, Batch   202] loss: 0.047
+[Epoch 4, Batch   302] loss: 0.057
+[Epoch 4, Batch   402] loss: 0.047
+[Epoch 4, Batch   502] loss: 0.048
+[Epoch 4, Batch   602] loss: 0.055
+Epoch 4/5:
+Train Loss: 0.0047, Train Accuracy: 98.53%
+Validation Loss: 0.0841, Validation Accuracy: 97.45%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.048
+[Epoch 5, Batch   202] loss: 0.058
+[Epoch 5, Batch   302] loss: 0.049
+[Epoch 5, Batch   402] loss: 0.043
+[Epoch 5, Batch   502] loss: 0.038
+[Epoch 5, Batch   602] loss: 0.052
+Epoch 5/5:
+Train Loss: 0.0052, Train Accuracy: 98.53%
+Validation Loss: 0.0424, Validation Accuracy: 98.78%
+Model saved to models/resnet18-MNIST-random-0.3-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.5-1
+[Epoch 1, Batch     2] loss: 0.044
+[Epoch 1, Batch   102] loss: 0.338
+[Epoch 1, Batch   202] loss: 0.187
+[Epoch 1, Batch   302] loss: 0.160
+[Epoch 1, Batch   402] loss: 0.115
+Epoch 1/5:
+Train Loss: 0.0168, Train Accuracy: 94.05%
+Validation Loss: 0.0852, Validation Accuracy: 97.22%
+[Epoch 2, Batch     2] loss: 0.001
+[Epoch 2, Batch   102] loss: 0.085
+[Epoch 2, Batch   202] loss: 0.094
+[Epoch 2, Batch   302] loss: 0.086
+[Epoch 2, Batch   402] loss: 0.082
+Epoch 2/5:
+Train Loss: 0.0118, Train Accuracy: 97.41%
+Validation Loss: 0.0817, Validation Accuracy: 97.38%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.062
+[Epoch 3, Batch   202] loss: 0.070
+[Epoch 3, Batch   302] loss: 0.069
+[Epoch 3, Batch   402] loss: 0.062
+Epoch 3/5:
+Train Loss: 0.0081, Train Accuracy: 98.07%
+Validation Loss: 0.0975, Validation Accuracy: 97.02%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.048
+[Epoch 4, Batch   202] loss: 0.060
+[Epoch 4, Batch   302] loss: 0.050
+[Epoch 4, Batch   402] loss: 0.053
+Epoch 4/5:
+Train Loss: 0.0072, Train Accuracy: 98.37%
+Validation Loss: 0.0477, Validation Accuracy: 98.60%
+[Epoch 5, Batch     2] loss: 0.002
+[Epoch 5, Batch   102] loss: 0.031
+[Epoch 5, Batch   202] loss: 0.051
+[Epoch 5, Batch   302] loss: 0.050
+[Epoch 5, Batch   402] loss: 0.051
+Epoch 5/5:
+Train Loss: 0.0077, Train Accuracy: 98.60%
+Validation Loss: 0.1059, Validation Accuracy: 96.91%
+Model saved to models/resnet18-MNIST-random-0.5-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.7-1
+[Epoch 1, Batch     2] loss: 0.043
+[Epoch 1, Batch   102] loss: 0.336
+[Epoch 1, Batch   202] loss: 0.197
+Epoch 1/5:
+Train Loss: 0.0386, Train Accuracy: 92.28%
+Validation Loss: 0.1129, Validation Accuracy: 96.57%
+[Epoch 2, Batch     2] loss: 0.002
+[Epoch 2, Batch   102] loss: 0.106
+[Epoch 2, Batch   202] loss: 0.108
+Epoch 2/5:
+Train Loss: 0.0259, Train Accuracy: 96.89%
+Validation Loss: 0.0882, Validation Accuracy: 97.25%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.072
+[Epoch 3, Batch   202] loss: 0.086
+Epoch 3/5:
+Train Loss: 0.0214, Train Accuracy: 97.68%
+Validation Loss: 0.0800, Validation Accuracy: 97.44%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.071
+[Epoch 4, Batch   202] loss: 0.066
+Epoch 4/5:
+Train Loss: 0.0163, Train Accuracy: 98.02%
+Validation Loss: 0.1243, Validation Accuracy: 96.20%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.057
+[Epoch 5, Batch   202] loss: 0.038
+Epoch 5/5:
+Train Loss: 0.0191, Train Accuracy: 98.27%
+Validation Loss: 0.0963, Validation Accuracy: 96.92%
+Model saved to models/resnet18-MNIST-random-0.7-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.8-1
+[Epoch 1, Batch     2] loss: 0.042
+[Epoch 1, Batch   102] loss: 0.347
+Epoch 1/5:
+Train Loss: 0.0773, Train Accuracy: 91.33%
+Validation Loss: 0.1689, Validation Accuracy: 94.69%
+[Epoch 2, Batch     2] loss: 0.001
+[Epoch 2, Batch   102] loss: 0.128
+Epoch 2/5:
+Train Loss: 0.0455, Train Accuracy: 96.40%
+Validation Loss: 0.0747, Validation Accuracy: 97.59%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.070
+Epoch 3/5:
+Train Loss: 0.0429, Train Accuracy: 97.32%
+Validation Loss: 0.0885, Validation Accuracy: 97.39%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.075
+Epoch 4/5:
+Train Loss: 0.0325, Train Accuracy: 97.73%
+Validation Loss: 0.1182, Validation Accuracy: 96.41%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.055
+Epoch 5/5:
+Train Loss: 0.0300, Train Accuracy: 98.07%
+Validation Loss: 0.0729, Validation Accuracy: 97.82%
+Model saved to models/resnet18-MNIST-random-0.8-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.9-1
+[Epoch 1, Batch     2] loss: 0.043
+Epoch 1/5:
+Train Loss: 0.3404, Train Accuracy: 87.53%
+Validation Loss: 0.4012, Validation Accuracy: 87.52%
+[Epoch 2, Batch     2] loss: 0.003
+Epoch 2/5:
+Train Loss: 0.1313, Train Accuracy: 95.70%
+Validation Loss: 0.1332, Validation Accuracy: 96.06%
+[Epoch 3, Batch     2] loss: 0.002
+Epoch 3/5:
+Train Loss: 0.1057, Train Accuracy: 96.53%
+Validation Loss: 0.2260, Validation Accuracy: 93.69%
+[Epoch 4, Batch     2] loss: 0.002
+Epoch 4/5:
+Train Loss: 0.0853, Train Accuracy: 97.17%
+Validation Loss: 0.2123, Validation Accuracy: 93.55%
+[Epoch 5, Batch     2] loss: 0.002
+Epoch 5/5:
+Train Loss: 0.0481, Train Accuracy: 98.25%
+Validation Loss: 0.1228, Validation Accuracy: 96.42%
+Model saved to models/resnet18-MNIST-random-0.9-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.95-1
+[Epoch 1, Batch     2] loss: 0.044
+Epoch 1/5:
+Train Loss: 0.4287, Train Accuracy: 83.10%
+Validation Loss: 0.6454, Validation Accuracy: 80.88%
+[Epoch 2, Batch     2] loss: 0.004
+Epoch 2/5:
+Train Loss: 0.1588, Train Accuracy: 94.87%
+Validation Loss: 0.4089, Validation Accuracy: 87.11%
+[Epoch 3, Batch     2] loss: 0.002
+Epoch 3/5:
+Train Loss: 0.0950, Train Accuracy: 97.00%
+Validation Loss: 0.1876, Validation Accuracy: 94.34%
+[Epoch 4, Batch     2] loss: 0.001
+Epoch 4/5:
+Train Loss: 0.0626, Train Accuracy: 97.67%
+Validation Loss: 0.3689, Validation Accuracy: 89.74%
+[Epoch 5, Batch     2] loss: 0.001
+Epoch 5/5:
+Train Loss: 0.0941, Train Accuracy: 96.80%
+Validation Loss: 0.1453, Validation Accuracy: 95.67%
+Model saved to models/resnet18-MNIST-random-0.95-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_MNIST_1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.3-1
+[Epoch 1, Batch     2] loss: 0.039
+[Epoch 1, Batch   102] loss: 0.321
+[Epoch 1, Batch   202] loss: 0.179
+[Epoch 1, Batch   302] loss: 0.131
+[Epoch 1, Batch   402] loss: 0.122
+[Epoch 1, Batch   502] loss: 0.113
+[Epoch 1, Batch   602] loss: 0.115
+Epoch 1/5:
+Train Loss: 0.0115, Train Accuracy: 94.90%
+Validation Loss: 0.0709, Validation Accuracy: 97.81%
+[Epoch 2, Batch     2] loss: 0.001
+[Epoch 2, Batch   102] loss: 0.082
+[Epoch 2, Batch   202] loss: 0.075
+[Epoch 2, Batch   302] loss: 0.081
+[Epoch 2, Batch   402] loss: 0.061
+[Epoch 2, Batch   502] loss: 0.089
+[Epoch 2, Batch   602] loss: 0.070
+Epoch 2/5:
+Train Loss: 0.0062, Train Accuracy: 97.75%
+Validation Loss: 0.0473, Validation Accuracy: 98.56%
+[Epoch 3, Batch     2] loss: 0.000
+[Epoch 3, Batch   102] loss: 0.060
+[Epoch 3, Batch   202] loss: 0.062
+[Epoch 3, Batch   302] loss: 0.052
+[Epoch 3, Batch   402] loss: 0.068
+[Epoch 3, Batch   502] loss: 0.058
+[Epoch 3, Batch   602] loss: 0.059
+Epoch 3/5:
+Train Loss: 0.0046, Train Accuracy: 98.26%
+Validation Loss: 0.0484, Validation Accuracy: 98.53%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.048
+[Epoch 4, Batch   202] loss: 0.053
+[Epoch 4, Batch   302] loss: 0.060
+[Epoch 4, Batch   402] loss: 0.056
+[Epoch 4, Batch   502] loss: 0.045
+[Epoch 4, Batch   602] loss: 0.048
+Epoch 4/5:
+Train Loss: 0.0047, Train Accuracy: 98.48%
+Validation Loss: 0.0466, Validation Accuracy: 98.51%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.044
+[Epoch 5, Batch   202] loss: 0.044
+[Epoch 5, Batch   302] loss: 0.044
+[Epoch 5, Batch   402] loss: 0.054
+[Epoch 5, Batch   502] loss: 0.041
+[Epoch 5, Batch   602] loss: 0.053
+Epoch 5/5:
+Train Loss: 0.0037, Train Accuracy: 98.60%
+Validation Loss: 0.0482, Validation Accuracy: 98.53%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.3-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.5-1
+[Epoch 1, Batch     2] loss: 0.042
+[Epoch 1, Batch   102] loss: 0.361
+[Epoch 1, Batch   202] loss: 0.177
+[Epoch 1, Batch   302] loss: 0.129
+[Epoch 1, Batch   402] loss: 0.138
+Epoch 1/5:
+Train Loss: 0.0157, Train Accuracy: 94.03%
+Validation Loss: 0.1206, Validation Accuracy: 96.36%
+[Epoch 2, Batch     2] loss: 0.001
+[Epoch 2, Batch   102] loss: 0.099
+[Epoch 2, Batch   202] loss: 0.082
+[Epoch 2, Batch   302] loss: 0.089
+[Epoch 2, Batch   402] loss: 0.077
+Epoch 2/5:
+Train Loss: 0.0128, Train Accuracy: 97.32%
+Validation Loss: 0.0476, Validation Accuracy: 98.47%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.061
+[Epoch 3, Batch   202] loss: 0.053
+[Epoch 3, Batch   302] loss: 0.066
+[Epoch 3, Batch   402] loss: 0.063
+Epoch 3/5:
+Train Loss: 0.0100, Train Accuracy: 98.04%
+Validation Loss: 0.0632, Validation Accuracy: 98.08%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.045
+[Epoch 4, Batch   202] loss: 0.057
+[Epoch 4, Batch   302] loss: 0.062
+[Epoch 4, Batch   402] loss: 0.065
+Epoch 4/5:
+Train Loss: 0.0071, Train Accuracy: 98.31%
+Validation Loss: 0.1133, Validation Accuracy: 96.80%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.042
+[Epoch 5, Batch   202] loss: 0.055
+[Epoch 5, Batch   302] loss: 0.047
+[Epoch 5, Batch   402] loss: 0.041
+Epoch 5/5:
+Train Loss: 0.0072, Train Accuracy: 98.49%
+Validation Loss: 0.0715, Validation Accuracy: 97.77%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.5-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.7-1
+[Epoch 1, Batch     2] loss: 0.046
+[Epoch 1, Batch   102] loss: 0.345
+[Epoch 1, Batch   202] loss: 0.191
+Epoch 1/5:
+Train Loss: 0.0415, Train Accuracy: 92.51%
+Validation Loss: 0.1280, Validation Accuracy: 95.92%
+[Epoch 2, Batch     2] loss: 0.002
+[Epoch 2, Batch   102] loss: 0.101
+[Epoch 2, Batch   202] loss: 0.101
+Epoch 2/5:
+Train Loss: 0.0282, Train Accuracy: 96.84%
+Validation Loss: 0.1009, Validation Accuracy: 96.97%
+[Epoch 3, Batch     2] loss: 0.002
+[Epoch 3, Batch   102] loss: 0.091
+[Epoch 3, Batch   202] loss: 0.082
+Epoch 3/5:
+Train Loss: 0.0224, Train Accuracy: 97.49%
+Validation Loss: 0.0509, Validation Accuracy: 98.47%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.064
+[Epoch 4, Batch   202] loss: 0.069
+Epoch 4/5:
+Train Loss: 0.0166, Train Accuracy: 98.01%
+Validation Loss: 0.0719, Validation Accuracy: 97.77%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.054
+[Epoch 5, Batch   202] loss: 0.051
+Epoch 5/5:
+Train Loss: 0.0178, Train Accuracy: 98.28%
+Validation Loss: 0.0720, Validation Accuracy: 97.80%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.7-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.8-1
+[Epoch 1, Batch     2] loss: 0.043
+[Epoch 1, Batch   102] loss: 0.361
+Epoch 1/5:
+Train Loss: 0.0822, Train Accuracy: 90.50%
+Validation Loss: 0.4955, Validation Accuracy: 86.24%
+[Epoch 2, Batch     2] loss: 0.002
+[Epoch 2, Batch   102] loss: 0.137
+Epoch 2/5:
+Train Loss: 0.0533, Train Accuracy: 96.02%
+Validation Loss: 0.0913, Validation Accuracy: 97.03%
+[Epoch 3, Batch     2] loss: 0.000
+[Epoch 3, Batch   102] loss: 0.093
+Epoch 3/5:
+Train Loss: 0.0378, Train Accuracy: 97.17%
+Validation Loss: 0.0916, Validation Accuracy: 97.36%
+[Epoch 4, Batch     2] loss: 0.002
+[Epoch 4, Batch   102] loss: 0.069
+Epoch 4/5:
+Train Loss: 0.0383, Train Accuracy: 97.50%
+Validation Loss: 0.1144, Validation Accuracy: 96.71%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.062
+Epoch 5/5:
+Train Loss: 0.0250, Train Accuracy: 98.28%
+Validation Loss: 0.0811, Validation Accuracy: 97.62%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.8-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.9-1
+[Epoch 1, Batch     2] loss: 0.046
+Epoch 1/5:
+Train Loss: 0.3661, Train Accuracy: 87.41%
+Validation Loss: 0.2494, Validation Accuracy: 92.81%
+[Epoch 2, Batch     2] loss: 0.004
+Epoch 2/5:
+Train Loss: 0.1480, Train Accuracy: 95.36%
+Validation Loss: 0.5617, Validation Accuracy: 84.52%
+[Epoch 3, Batch     2] loss: 0.004
+Epoch 3/5:
+Train Loss: 0.1188, Train Accuracy: 96.17%
+Validation Loss: 0.2102, Validation Accuracy: 93.39%
+[Epoch 4, Batch     2] loss: 0.001
+Epoch 4/5:
+Train Loss: 0.0862, Train Accuracy: 97.46%
+Validation Loss: 0.1260, Validation Accuracy: 96.44%
+[Epoch 5, Batch     2] loss: 0.000
+Epoch 5/5:
+Train Loss: 0.0950, Train Accuracy: 96.83%
+Validation Loss: 0.3200, Validation Accuracy: 91.50%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.9-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.95-1
+[Epoch 1, Batch     2] loss: 0.042
+Epoch 1/5:
+Train Loss: 0.4412, Train Accuracy: 83.53%
+Validation Loss: 0.7456, Validation Accuracy: 77.65%
+[Epoch 2, Batch     2] loss: 0.006
+Epoch 2/5:
+Train Loss: 0.1704, Train Accuracy: 94.33%
+Validation Loss: 0.4517, Validation Accuracy: 87.68%
+[Epoch 3, Batch     2] loss: 0.003
+Epoch 3/5:
+Train Loss: 0.1248, Train Accuracy: 95.87%
+Validation Loss: 0.2893, Validation Accuracy: 91.48%
+[Epoch 4, Batch     2] loss: 0.002
+Epoch 4/5:
+Train Loss: 0.1090, Train Accuracy: 96.93%
+Validation Loss: 0.2276, Validation Accuracy: 93.24%
+[Epoch 5, Batch     2] loss: 0.000
+Epoch 5/5:
+Train Loss: 0.0826, Train Accuracy: 97.03%
+Validation Loss: 0.1909, Validation Accuracy: 94.47%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.95-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_MNIST_1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.3-1
+[Epoch 1, Batch     2] loss: 0.042
+[Epoch 1, Batch   102] loss: 0.417
+[Epoch 1, Batch   202] loss: 0.199
+[Epoch 1, Batch   302] loss: 0.200
+[Epoch 1, Batch   402] loss: 0.152
+[Epoch 1, Batch   502] loss: 0.129
+[Epoch 1, Batch   602] loss: 0.123
+Epoch 1/5:
+Train Loss: 0.0097, Train Accuracy: 93.69%
+Validation Loss: 0.0944, Validation Accuracy: 97.05%
+[Epoch 2, Batch     2] loss: 0.003
+[Epoch 2, Batch   102] loss: 0.111
+[Epoch 2, Batch   202] loss: 0.085
+[Epoch 2, Batch   302] loss: 0.087
+[Epoch 2, Batch   402] loss: 0.090
+[Epoch 2, Batch   502] loss: 0.091
+[Epoch 2, Batch   602] loss: 0.078
+Epoch 2/5:
+Train Loss: 0.0074, Train Accuracy: 97.37%
+Validation Loss: 0.0698, Validation Accuracy: 97.81%
+[Epoch 3, Batch     2] loss: 0.003
+[Epoch 3, Batch   102] loss: 0.077
+[Epoch 3, Batch   202] loss: 0.083
+[Epoch 3, Batch   302] loss: 0.063
+[Epoch 3, Batch   402] loss: 0.068
+[Epoch 3, Batch   502] loss: 0.079
+[Epoch 3, Batch   602] loss: 0.072
+Epoch 3/5:
+Train Loss: 0.0069, Train Accuracy: 97.82%
+Validation Loss: 0.0520, Validation Accuracy: 98.38%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.051
+[Epoch 4, Batch   202] loss: 0.064
+[Epoch 4, Batch   302] loss: 0.064
+[Epoch 4, Batch   402] loss: 0.046
+[Epoch 4, Batch   502] loss: 0.071
+[Epoch 4, Batch   602] loss: 0.060
+Epoch 4/5:
+Train Loss: 0.0065, Train Accuracy: 98.16%
+Validation Loss: 0.0453, Validation Accuracy: 98.66%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.052
+[Epoch 5, Batch   202] loss: 0.042
+[Epoch 5, Batch   302] loss: 0.069
+[Epoch 5, Batch   402] loss: 0.061
+[Epoch 5, Batch   502] loss: 0.059
+[Epoch 5, Batch   602] loss: 0.059
+Epoch 5/5:
+Train Loss: 0.0048, Train Accuracy: 98.26%
+Validation Loss: 0.0556, Validation Accuracy: 98.26%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.3-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.5-1
+[Epoch 1, Batch     2] loss: 0.044
+[Epoch 1, Batch   102] loss: 0.497
+[Epoch 1, Batch   202] loss: 0.260
+[Epoch 1, Batch   302] loss: 0.206
+[Epoch 1, Batch   402] loss: 0.195
+Epoch 1/5:
+Train Loss: 0.0229, Train Accuracy: 91.17%
+Validation Loss: 0.0780, Validation Accuracy: 97.41%
+[Epoch 2, Batch     2] loss: 0.002
+[Epoch 2, Batch   102] loss: 0.136
+[Epoch 2, Batch   202] loss: 0.126
+[Epoch 2, Batch   302] loss: 0.142
+[Epoch 2, Batch   402] loss: 0.115
+Epoch 2/5:
+Train Loss: 0.0164, Train Accuracy: 96.11%
+Validation Loss: 0.0520, Validation Accuracy: 98.32%
+[Epoch 3, Batch     2] loss: 0.002
+[Epoch 3, Batch   102] loss: 0.090
+[Epoch 3, Batch   202] loss: 0.091
+[Epoch 3, Batch   302] loss: 0.087
+[Epoch 3, Batch   402] loss: 0.104
+Epoch 3/5:
+Train Loss: 0.0136, Train Accuracy: 97.10%
+Validation Loss: 0.0361, Validation Accuracy: 98.88%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.073
+[Epoch 4, Batch   202] loss: 0.077
+[Epoch 4, Batch   302] loss: 0.074
+[Epoch 4, Batch   402] loss: 0.088
+Epoch 4/5:
+Train Loss: 0.0132, Train Accuracy: 97.60%
+Validation Loss: 0.0690, Validation Accuracy: 97.80%
+[Epoch 5, Batch     2] loss: 0.002
+[Epoch 5, Batch   102] loss: 0.054
+[Epoch 5, Batch   202] loss: 0.062
+[Epoch 5, Batch   302] loss: 0.075
+[Epoch 5, Batch   402] loss: 0.070
+Epoch 5/5:
+Train Loss: 0.0098, Train Accuracy: 97.94%
+Validation Loss: 0.0315, Validation Accuracy: 99.07%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.5-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.7-1
+[Epoch 1, Batch     2] loss: 0.046
+[Epoch 1, Batch   102] loss: 0.626
+[Epoch 1, Batch   202] loss: 0.334
+Epoch 1/5:
+Train Loss: 0.0747, Train Accuracy: 85.99%
+Validation Loss: 0.1867, Validation Accuracy: 93.93%
+[Epoch 2, Batch     2] loss: 0.006
+[Epoch 2, Batch   102] loss: 0.220
+[Epoch 2, Batch   202] loss: 0.206
+Epoch 2/5:
+Train Loss: 0.0492, Train Accuracy: 93.62%
+Validation Loss: 0.0676, Validation Accuracy: 97.94%
+[Epoch 3, Batch     2] loss: 0.005
+[Epoch 3, Batch   102] loss: 0.132
+[Epoch 3, Batch   202] loss: 0.151
+Epoch 3/5:
+Train Loss: 0.0438, Train Accuracy: 95.37%
+Validation Loss: 0.0916, Validation Accuracy: 97.01%
+[Epoch 4, Batch     2] loss: 0.003
+[Epoch 4, Batch   102] loss: 0.126
+[Epoch 4, Batch   202] loss: 0.109
+Epoch 4/5:
+Train Loss: 0.0400, Train Accuracy: 95.89%
+Validation Loss: 0.0560, Validation Accuracy: 98.30%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.089
+[Epoch 5, Batch   202] loss: 0.109
+Epoch 5/5:
+Train Loss: 0.0394, Train Accuracy: 96.46%
+Validation Loss: 0.0613, Validation Accuracy: 98.14%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.7-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.8-1
+[Epoch 1, Batch     2] loss: 0.045
+[Epoch 1, Batch   102] loss: 0.740
+Epoch 1/5:
+Train Loss: 0.1921, Train Accuracy: 80.15%
+Validation Loss: 0.1241, Validation Accuracy: 96.10%
+[Epoch 2, Batch     2] loss: 0.006
+[Epoch 2, Batch   102] loss: 0.293
+Epoch 2/5:
+Train Loss: 0.1237, Train Accuracy: 90.60%
+Validation Loss: 0.0809, Validation Accuracy: 97.47%
+[Epoch 3, Batch     2] loss: 0.005
+[Epoch 3, Batch   102] loss: 0.198
+Epoch 3/5:
+Train Loss: 0.0914, Train Accuracy: 93.54%
+Validation Loss: 0.0716, Validation Accuracy: 97.70%
+[Epoch 4, Batch     2] loss: 0.003
+[Epoch 4, Batch   102] loss: 0.165
+Epoch 4/5:
+Train Loss: 0.0831, Train Accuracy: 94.14%
+Validation Loss: 0.0480, Validation Accuracy: 98.70%
+[Epoch 5, Batch     2] loss: 0.002
+[Epoch 5, Batch   102] loss: 0.133
+Epoch 5/5:
+Train Loss: 0.0675, Train Accuracy: 95.34%
+Validation Loss: 0.0582, Validation Accuracy: 98.18%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.8-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.9-1
+[Epoch 1, Batch     2] loss: 0.044
+Epoch 1/5:
+Train Loss: 0.8514, Train Accuracy: 70.66%
+Validation Loss: 0.5791, Validation Accuracy: 80.19%
+[Epoch 2, Batch     2] loss: 0.008
+Epoch 2/5:
+Train Loss: 0.4651, Train Accuracy: 83.68%
+Validation Loss: 0.2112, Validation Accuracy: 92.56%
+[Epoch 3, Batch     2] loss: 0.007
+Epoch 3/5:
+Train Loss: 0.3493, Train Accuracy: 87.73%
+Validation Loss: 0.2672, Validation Accuracy: 91.32%
+[Epoch 4, Batch     2] loss: 0.006
+Epoch 4/5:
+Train Loss: 0.2873, Train Accuracy: 90.08%
+Validation Loss: 0.1604, Validation Accuracy: 94.52%
+[Epoch 5, Batch     2] loss: 0.006
+Epoch 5/5:
+Train Loss: 0.2021, Train Accuracy: 92.73%
+Validation Loss: 0.1514, Validation Accuracy: 95.13%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.9-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.95-1
+[Epoch 1, Batch     2] loss: 0.046
+Epoch 1/5:
+Train Loss: 1.1009, Train Accuracy: 61.53%
+Validation Loss: 1.0022, Validation Accuracy: 59.20%
+[Epoch 2, Batch     2] loss: 0.013
+Epoch 2/5:
+Train Loss: 0.6254, Train Accuracy: 78.47%
+Validation Loss: 0.8925, Validation Accuracy: 69.11%
+[Epoch 3, Batch     2] loss: 0.011
+Epoch 3/5:
+Train Loss: 0.5121, Train Accuracy: 81.93%
+Validation Loss: 0.6945, Validation Accuracy: 75.93%
+[Epoch 4, Batch     2] loss: 0.007
+Epoch 4/5:
+Train Loss: 0.3668, Train Accuracy: 86.63%
+Validation Loss: 0.6387, Validation Accuracy: 78.65%
+[Epoch 5, Batch     2] loss: 0.004
+Epoch 5/5:
+Train Loss: 0.3132, Train Accuracy: 88.70%
+Validation Loss: 0.9464, Validation Accuracy: 72.95%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.95-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_MNIST_1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.3-1
+[Epoch 1, Batch     2] loss: 0.037
+[Epoch 1, Batch   102] loss: 0.152
+[Epoch 1, Batch   202] loss: 0.059
+[Epoch 1, Batch   302] loss: 0.048
+[Epoch 1, Batch   402] loss: 0.029
+[Epoch 1, Batch   502] loss: 0.017
+[Epoch 1, Batch   602] loss: 0.027
+Epoch 1/5:
+Train Loss: 0.0015, Train Accuracy: 98.15%
+Validation Loss: 0.2458, Validation Accuracy: 93.74%
+[Epoch 2, Batch     2] loss: 0.000
+[Epoch 2, Batch   102] loss: 0.014
+[Epoch 2, Batch   202] loss: 0.011
+[Epoch 2, Batch   302] loss: 0.013
+[Epoch 2, Batch   402] loss: 0.031
+[Epoch 2, Batch   502] loss: 0.012
+[Epoch 2, Batch   602] loss: 0.011
+Epoch 2/5:
+Train Loss: 0.0011, Train Accuracy: 99.57%
+Validation Loss: 0.1342, Validation Accuracy: 96.27%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.029
+[Epoch 3, Batch   202] loss: 0.009
+[Epoch 3, Batch   302] loss: 0.008
+[Epoch 3, Batch   402] loss: 0.015
+[Epoch 3, Batch   502] loss: 0.011
+[Epoch 3, Batch   602] loss: 0.013
+Epoch 3/5:
+Train Loss: 0.0006, Train Accuracy: 99.65%
+Validation Loss: 0.1521, Validation Accuracy: 95.71%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.024
+[Epoch 4, Batch   202] loss: 0.010
+[Epoch 4, Batch   302] loss: 0.007
+[Epoch 4, Batch   402] loss: 0.008
+[Epoch 4, Batch   502] loss: 0.007
+[Epoch 4, Batch   602] loss: 0.004
+Epoch 4/5:
+Train Loss: 0.0007, Train Accuracy: 99.72%
+Validation Loss: 0.0984, Validation Accuracy: 97.36%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.007
+[Epoch 5, Batch   202] loss: 0.007
+[Epoch 5, Batch   302] loss: 0.009
+[Epoch 5, Batch   402] loss: 0.006
+[Epoch 5, Batch   502] loss: 0.006
+[Epoch 5, Batch   602] loss: 0.007
+Epoch 5/5:
+Train Loss: 0.0006, Train Accuracy: 99.84%
+Validation Loss: 0.1069, Validation Accuracy: 97.07%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.3-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.5-1
+[Epoch 1, Batch     2] loss: 0.034
+[Epoch 1, Batch   102] loss: 0.102
+[Epoch 1, Batch   202] loss: 0.054
+[Epoch 1, Batch   302] loss: 0.017
+[Epoch 1, Batch   402] loss: 0.030
+Epoch 1/5:
+Train Loss: 0.0012, Train Accuracy: 98.44%
+Validation Loss: 0.2290, Validation Accuracy: 93.82%
+[Epoch 2, Batch     2] loss: 0.000
+[Epoch 2, Batch   102] loss: 0.014
+[Epoch 2, Batch   202] loss: 0.010
+[Epoch 2, Batch   302] loss: 0.015
+[Epoch 2, Batch   402] loss: 0.004
+Epoch 2/5:
+Train Loss: 0.0011, Train Accuracy: 99.73%
+Validation Loss: 0.2131, Validation Accuracy: 94.40%
+[Epoch 3, Batch     2] loss: 0.000
+[Epoch 3, Batch   102] loss: 0.008
+[Epoch 3, Batch   202] loss: 0.004
+[Epoch 3, Batch   302] loss: 0.008
+[Epoch 3, Batch   402] loss: 0.014
+Epoch 3/5:
+Train Loss: 0.0008, Train Accuracy: 99.77%
+Validation Loss: 0.2119, Validation Accuracy: 94.49%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.006
+[Epoch 4, Batch   202] loss: 0.001
+[Epoch 4, Batch   302] loss: 0.009
+[Epoch 4, Batch   402] loss: 0.015
+Epoch 4/5:
+Train Loss: 0.0009, Train Accuracy: 99.77%
+Validation Loss: 0.1980, Validation Accuracy: 94.78%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.003
+[Epoch 5, Batch   202] loss: 0.004
+[Epoch 5, Batch   302] loss: 0.004
+[Epoch 5, Batch   402] loss: 0.002
+Epoch 5/5:
+Train Loss: 0.0002, Train Accuracy: 99.94%
+Validation Loss: 0.1950, Validation Accuracy: 94.64%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.5-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.7-1
+[Epoch 1, Batch     2] loss: 0.034
+[Epoch 1, Batch   102] loss: 0.078
+[Epoch 1, Batch   202] loss: 0.022
+Epoch 1/5:
+Train Loss: 0.0093, Train Accuracy: 98.25%
+Validation Loss: 2.5972, Validation Accuracy: 58.81%
+[Epoch 2, Batch     2] loss: 0.002
+[Epoch 2, Batch   102] loss: 0.015
+[Epoch 2, Batch   202] loss: 0.004
+Epoch 2/5:
+Train Loss: 0.0021, Train Accuracy: 99.71%
+Validation Loss: 0.3887, Validation Accuracy: 89.66%
+[Epoch 3, Batch     2] loss: 0.000
+[Epoch 3, Batch   102] loss: 0.014
+[Epoch 3, Batch   202] loss: 0.020
+Epoch 3/5:
+Train Loss: 0.0043, Train Accuracy: 99.53%
+Validation Loss: 0.5471, Validation Accuracy: 85.68%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.002
+[Epoch 4, Batch   202] loss: 0.001
+Epoch 4/5:
+Train Loss: 0.0001, Train Accuracy: 99.98%
+Validation Loss: 0.3553, Validation Accuracy: 89.86%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.004
+[Epoch 5, Batch   202] loss: 0.008
+Epoch 5/5:
+Train Loss: 0.0023, Train Accuracy: 99.84%
+Validation Loss: 0.5200, Validation Accuracy: 87.90%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.7-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.8-1
+[Epoch 1, Batch     2] loss: 0.034
+[Epoch 1, Batch   102] loss: 0.067
+Epoch 1/5:
+Train Loss: 0.0168, Train Accuracy: 97.92%
+Validation Loss: 1.0973, Validation Accuracy: 81.87%
+[Epoch 2, Batch     2] loss: 0.000
+[Epoch 2, Batch   102] loss: 0.024
+Epoch 2/5:
+Train Loss: 0.0072, Train Accuracy: 99.43%
+Validation Loss: 1.0125, Validation Accuracy: 83.70%
+[Epoch 3, Batch     2] loss: 0.000
+[Epoch 3, Batch   102] loss: 0.003
+Epoch 3/5:
+Train Loss: 0.0023, Train Accuracy: 99.84%
+Validation Loss: 0.9085, Validation Accuracy: 83.64%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.011
+Epoch 4/5:
+Train Loss: 0.0071, Train Accuracy: 99.68%
+Validation Loss: 1.2304, Validation Accuracy: 81.68%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.028
+Epoch 5/5:
+Train Loss: 0.0010, Train Accuracy: 99.57%
+Validation Loss: 0.7980, Validation Accuracy: 85.31%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.8-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.9-1
+[Epoch 1, Batch     2] loss: 0.035
+Epoch 1/5:
+Train Loss: 0.0580, Train Accuracy: 96.85%
+Validation Loss: 1.5955, Validation Accuracy: 71.68%
+[Epoch 2, Batch     2] loss: 0.000
+Epoch 2/5:
+Train Loss: 0.0199, Train Accuracy: 99.42%
+Validation Loss: 2.0692, Validation Accuracy: 69.81%
+[Epoch 3, Batch     2] loss: 0.000
+Epoch 3/5:
+Train Loss: 0.0066, Train Accuracy: 99.78%
+Validation Loss: 1.2982, Validation Accuracy: 78.90%
+[Epoch 4, Batch     2] loss: 0.000
+Epoch 4/5:
+Train Loss: 0.0101, Train Accuracy: 99.77%
+Validation Loss: 1.9442, Validation Accuracy: 66.53%
+[Epoch 5, Batch     2] loss: 0.001
+Epoch 5/5:
+Train Loss: 0.0272, Train Accuracy: 99.12%
+Validation Loss: 2.1189, Validation Accuracy: 67.84%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.9-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.95-1
+[Epoch 1, Batch     2] loss: 0.028
+Epoch 1/5:
+Train Loss: 0.0771, Train Accuracy: 95.73%
+Validation Loss: 2.4288, Validation Accuracy: 56.76%
+[Epoch 2, Batch     2] loss: 0.000
+Epoch 2/5:
+Train Loss: 0.0179, Train Accuracy: 99.40%
+Validation Loss: 2.6257, Validation Accuracy: 60.58%
+[Epoch 3, Batch     2] loss: 0.000
+Epoch 3/5:
+Train Loss: 0.0228, Train Accuracy: 99.33%
+Validation Loss: 2.0620, Validation Accuracy: 61.62%
+[Epoch 4, Batch     2] loss: 0.001
+Epoch 4/5:
+Train Loss: 0.0350, Train Accuracy: 99.27%
+Validation Loss: 2.3673, Validation Accuracy: 58.89%
+[Epoch 5, Batch     2] loss: 0.000
+Epoch 5/5:
+Train Loss: 0.0042, Train Accuracy: 99.93%
+Validation Loss: 2.0641, Validation Accuracy: 61.81%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.95-1
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch     2] loss: 0.044
+[Epoch 1, Batch   102] loss: 0.362
+[Epoch 1, Batch   202] loss: 0.157
+[Epoch 1, Batch   302] loss: 0.149
+[Epoch 1, Batch   402] loss: 0.115
+[Epoch 1, Batch   502] loss: 0.109
+[Epoch 1, Batch   602] loss: 0.092
+[Epoch 1, Batch   702] loss: 0.100
+[Epoch 1, Batch   802] loss: 0.094
+[Epoch 1, Batch   902] loss: 0.076
+Epoch 1/5:
+Train Loss: 0.0029, Train Accuracy: 95.70%
+Validation Loss: 0.0651, Validation Accuracy: 97.88%
+[Epoch 2, Batch     2] loss: 0.001
+[Epoch 2, Batch   102] loss: 0.063
+[Epoch 2, Batch   202] loss: 0.078
+[Epoch 2, Batch   302] loss: 0.051
+[Epoch 2, Batch   402] loss: 0.079
+[Epoch 2, Batch   502] loss: 0.078
+[Epoch 2, Batch   602] loss: 0.064
+[Epoch 2, Batch   702] loss: 0.071
+[Epoch 2, Batch   802] loss: 0.062
+[Epoch 2, Batch   902] loss: 0.054
+Epoch 2/5:
+Train Loss: 0.0028, Train Accuracy: 98.04%
+Validation Loss: 0.0854, Validation Accuracy: 97.46%
+[Epoch 3, Batch     2] loss: 0.004
+[Epoch 3, Batch   102] loss: 0.042
+[Epoch 3, Batch   202] loss: 0.045
+[Epoch 3, Batch   302] loss: 0.049
+[Epoch 3, Batch   402] loss: 0.053
+[Epoch 3, Batch   502] loss: 0.070
+[Epoch 3, Batch   602] loss: 0.052
+[Epoch 3, Batch   702] loss: 0.056
+[Epoch 3, Batch   802] loss: 0.060
+[Epoch 3, Batch   902] loss: 0.040
+Epoch 3/5:
+Train Loss: 0.0022, Train Accuracy: 98.45%
+Validation Loss: 0.0377, Validation Accuracy: 98.83%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.039
+[Epoch 4, Batch   202] loss: 0.047
+[Epoch 4, Batch   302] loss: 0.039
+[Epoch 4, Batch   402] loss: 0.052
+[Epoch 4, Batch   502] loss: 0.056
+[Epoch 4, Batch   602] loss: 0.055
+[Epoch 4, Batch   702] loss: 0.049
+[Epoch 4, Batch   802] loss: 0.043
+[Epoch 4, Batch   902] loss: 0.043
+Epoch 4/5:
+Train Loss: 0.0022, Train Accuracy: 98.53%
+Validation Loss: 0.0655, Validation Accuracy: 97.97%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.042
+[Epoch 5, Batch   202] loss: 0.034
+[Epoch 5, Batch   302] loss: 0.053
+[Epoch 5, Batch   402] loss: 0.040
+[Epoch 5, Batch   502] loss: 0.053
+[Epoch 5, Batch   602] loss: 0.042
+[Epoch 5, Batch   702] loss: 0.040
+[Epoch 5, Batch   802] loss: 0.041
+[Epoch 5, Batch   902] loss: 0.048
+Epoch 5/5:
+Train Loss: 0.0014, Train Accuracy: 98.67%
+Validation Loss: 0.0336, Validation Accuracy: 98.89%
+Model saved to models/resnet18_MNIST_2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_MNIST_2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.3-2
+[Epoch 1, Batch     2] loss: 0.046
+[Epoch 1, Batch   102] loss: 0.343
+[Epoch 1, Batch   202] loss: 0.169
+[Epoch 1, Batch   302] loss: 0.137
+[Epoch 1, Batch   402] loss: 0.139
+[Epoch 1, Batch   502] loss: 0.108
+[Epoch 1, Batch   602] loss: 0.096
+Epoch 1/5:
+Train Loss: 0.0098, Train Accuracy: 94.89%
+Validation Loss: 0.1681, Validation Accuracy: 94.53%
+[Epoch 2, Batch     2] loss: 0.003
+[Epoch 2, Batch   102] loss: 0.080
+[Epoch 2, Batch   202] loss: 0.061
+[Epoch 2, Batch   302] loss: 0.087
+[Epoch 2, Batch   402] loss: 0.076
+[Epoch 2, Batch   502] loss: 0.079
+[Epoch 2, Batch   602] loss: 0.068
+Epoch 2/5:
+Train Loss: 0.0071, Train Accuracy: 97.69%
+Validation Loss: 0.0527, Validation Accuracy: 98.33%
+[Epoch 3, Batch     2] loss: 0.000
+[Epoch 3, Batch   102] loss: 0.052
+[Epoch 3, Batch   202] loss: 0.047
+[Epoch 3, Batch   302] loss: 0.065
+[Epoch 3, Batch   402] loss: 0.059
+[Epoch 3, Batch   502] loss: 0.054
+[Epoch 3, Batch   602] loss: 0.059
+Epoch 3/5:
+Train Loss: 0.0061, Train Accuracy: 98.30%
+Validation Loss: 0.0575, Validation Accuracy: 98.23%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.045
+[Epoch 4, Batch   202] loss: 0.041
+[Epoch 4, Batch   302] loss: 0.054
+[Epoch 4, Batch   402] loss: 0.043
+[Epoch 4, Batch   502] loss: 0.051
+[Epoch 4, Batch   602] loss: 0.050
+Epoch 4/5:
+Train Loss: 0.0036, Train Accuracy: 98.53%
+Validation Loss: 0.0548, Validation Accuracy: 98.43%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.043
+[Epoch 5, Batch   202] loss: 0.036
+[Epoch 5, Batch   302] loss: 0.047
+[Epoch 5, Batch   402] loss: 0.043
+[Epoch 5, Batch   502] loss: 0.039
+[Epoch 5, Batch   602] loss: 0.039
+Epoch 5/5:
+Train Loss: 0.0036, Train Accuracy: 98.71%
+Validation Loss: 0.0692, Validation Accuracy: 97.84%
+Model saved to models/resnet18-MNIST-random-0.3-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.5-2
+[Epoch 1, Batch     2] loss: 0.042
+[Epoch 1, Batch   102] loss: 0.322
+[Epoch 1, Batch   202] loss: 0.180
+[Epoch 1, Batch   302] loss: 0.145
+[Epoch 1, Batch   402] loss: 0.141
+Epoch 1/5:
+Train Loss: 0.0160, Train Accuracy: 94.06%
+Validation Loss: 0.0911, Validation Accuracy: 97.02%
+[Epoch 2, Batch     2] loss: 0.003
+[Epoch 2, Batch   102] loss: 0.093
+[Epoch 2, Batch   202] loss: 0.088
+[Epoch 2, Batch   302] loss: 0.080
+[Epoch 2, Batch   402] loss: 0.092
+Epoch 2/5:
+Train Loss: 0.0109, Train Accuracy: 97.48%
+Validation Loss: 0.0752, Validation Accuracy: 97.62%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.055
+[Epoch 3, Batch   202] loss: 0.063
+[Epoch 3, Batch   302] loss: 0.074
+[Epoch 3, Batch   402] loss: 0.069
+Epoch 3/5:
+Train Loss: 0.0088, Train Accuracy: 97.96%
+Validation Loss: 0.0515, Validation Accuracy: 98.43%
+[Epoch 4, Batch     2] loss: 0.002
+[Epoch 4, Batch   102] loss: 0.052
+[Epoch 4, Batch   202] loss: 0.045
+[Epoch 4, Batch   302] loss: 0.072
+[Epoch 4, Batch   402] loss: 0.061
+Epoch 4/5:
+Train Loss: 0.0065, Train Accuracy: 98.31%
+Validation Loss: 0.0356, Validation Accuracy: 98.89%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.042
+[Epoch 5, Batch   202] loss: 0.056
+[Epoch 5, Batch   302] loss: 0.051
+[Epoch 5, Batch   402] loss: 0.046
+Epoch 5/5:
+Train Loss: 0.0071, Train Accuracy: 98.54%
+Validation Loss: 0.0413, Validation Accuracy: 98.71%
+Model saved to models/resnet18-MNIST-random-0.5-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.7-2
+[Epoch 1, Batch     2] loss: 0.044
+[Epoch 1, Batch   102] loss: 0.329
+[Epoch 1, Batch   202] loss: 0.184
+Epoch 1/5:
+Train Loss: 0.0414, Train Accuracy: 92.62%
+Validation Loss: 0.1445, Validation Accuracy: 95.63%
+[Epoch 2, Batch     2] loss: 0.002
+[Epoch 2, Batch   102] loss: 0.100
+[Epoch 2, Batch   202] loss: 0.108
+Epoch 2/5:
+Train Loss: 0.0261, Train Accuracy: 96.97%
+Validation Loss: 0.1626, Validation Accuracy: 95.48%
+[Epoch 3, Batch     2] loss: 0.002
+[Epoch 3, Batch   102] loss: 0.089
+[Epoch 3, Batch   202] loss: 0.084
+Epoch 3/5:
+Train Loss: 0.0257, Train Accuracy: 97.20%
+Validation Loss: 0.0752, Validation Accuracy: 97.56%
+[Epoch 4, Batch     2] loss: 0.002
+[Epoch 4, Batch   102] loss: 0.060
+[Epoch 4, Batch   202] loss: 0.060
+Epoch 4/5:
+Train Loss: 0.0169, Train Accuracy: 98.18%
+Validation Loss: 0.1061, Validation Accuracy: 96.94%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.056
+[Epoch 5, Batch   202] loss: 0.062
+Epoch 5/5:
+Train Loss: 0.0146, Train Accuracy: 98.29%
+Validation Loss: 0.1582, Validation Accuracy: 95.10%
+Model saved to models/resnet18-MNIST-random-0.7-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.8-2
+[Epoch 1, Batch     2] loss: 0.041
+[Epoch 1, Batch   102] loss: 0.343
+Epoch 1/5:
+Train Loss: 0.0767, Train Accuracy: 91.13%
+Validation Loss: 0.1657, Validation Accuracy: 94.94%
+[Epoch 2, Batch     2] loss: 0.003
+[Epoch 2, Batch   102] loss: 0.130
+Epoch 2/5:
+Train Loss: 0.0519, Train Accuracy: 96.32%
+Validation Loss: 0.0967, Validation Accuracy: 97.00%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.098
+Epoch 3/5:
+Train Loss: 0.0397, Train Accuracy: 97.16%
+Validation Loss: 0.0992, Validation Accuracy: 96.88%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.066
+Epoch 4/5:
+Train Loss: 0.0302, Train Accuracy: 98.01%
+Validation Loss: 0.0815, Validation Accuracy: 97.65%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.048
+Epoch 5/5:
+Train Loss: 0.0328, Train Accuracy: 98.06%
+Validation Loss: 0.1119, Validation Accuracy: 96.65%
+Model saved to models/resnet18-MNIST-random-0.8-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.9-2
+[Epoch 1, Batch     2] loss: 0.042
+Epoch 1/5:
+Train Loss: 0.3507, Train Accuracy: 87.40%
+Validation Loss: 0.2618, Validation Accuracy: 92.41%
+[Epoch 2, Batch     2] loss: 0.002
+Epoch 2/5:
+Train Loss: 0.1280, Train Accuracy: 96.12%
+Validation Loss: 0.1639, Validation Accuracy: 95.33%
+[Epoch 3, Batch     2] loss: 0.002
+Epoch 3/5:
+Train Loss: 0.1096, Train Accuracy: 96.48%
+Validation Loss: 0.2423, Validation Accuracy: 93.67%
+[Epoch 4, Batch     2] loss: 0.001
+Epoch 4/5:
+Train Loss: 0.0696, Train Accuracy: 97.62%
+Validation Loss: 0.1972, Validation Accuracy: 94.42%
+[Epoch 5, Batch     2] loss: 0.002
+Epoch 5/5:
+Train Loss: 0.0779, Train Accuracy: 97.67%
+Validation Loss: 0.1122, Validation Accuracy: 96.59%
+Model saved to models/resnet18-MNIST-random-0.9-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.95-2
+[Epoch 1, Batch     2] loss: 0.043
+Epoch 1/5:
+Train Loss: 0.4527, Train Accuracy: 82.03%
+Validation Loss: 0.4390, Validation Accuracy: 85.10%
+[Epoch 2, Batch     2] loss: 0.003
+Epoch 2/5:
+Train Loss: 0.1797, Train Accuracy: 94.13%
+Validation Loss: 0.3524, Validation Accuracy: 88.87%
+[Epoch 3, Batch     2] loss: 0.002
+Epoch 3/5:
+Train Loss: 0.1406, Train Accuracy: 95.70%
+Validation Loss: 0.3591, Validation Accuracy: 89.01%
+[Epoch 4, Batch     2] loss: 0.003
+Epoch 4/5:
+Train Loss: 0.0811, Train Accuracy: 96.93%
+Validation Loss: 0.1710, Validation Accuracy: 94.98%
+[Epoch 5, Batch     2] loss: 0.001
+Epoch 5/5:
+Train Loss: 0.0905, Train Accuracy: 97.10%
+Validation Loss: 0.1649, Validation Accuracy: 95.10%
+Model saved to models/resnet18-MNIST-random-0.95-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_MNIST_2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.3-2
+[Epoch 1, Batch     2] loss: 0.043
+[Epoch 1, Batch   102] loss: 0.353
+[Epoch 1, Batch   202] loss: 0.164
+[Epoch 1, Batch   302] loss: 0.131
+[Epoch 1, Batch   402] loss: 0.147
+[Epoch 1, Batch   502] loss: 0.117
+[Epoch 1, Batch   602] loss: 0.105
+Epoch 1/5:
+Train Loss: 0.0083, Train Accuracy: 94.75%
+Validation Loss: 0.0685, Validation Accuracy: 97.81%
+[Epoch 2, Batch     2] loss: 0.002
+[Epoch 2, Batch   102] loss: 0.078
+[Epoch 2, Batch   202] loss: 0.084
+[Epoch 2, Batch   302] loss: 0.078
+[Epoch 2, Batch   402] loss: 0.085
+[Epoch 2, Batch   502] loss: 0.073
+[Epoch 2, Batch   602] loss: 0.063
+Epoch 2/5:
+Train Loss: 0.0058, Train Accuracy: 97.70%
+Validation Loss: 0.0444, Validation Accuracy: 98.42%
+[Epoch 3, Batch     2] loss: 0.002
+[Epoch 3, Batch   102] loss: 0.059
+[Epoch 3, Batch   202] loss: 0.061
+[Epoch 3, Batch   302] loss: 0.053
+[Epoch 3, Batch   402] loss: 0.071
+[Epoch 3, Batch   502] loss: 0.062
+[Epoch 3, Batch   602] loss: 0.061
+Epoch 3/5:
+Train Loss: 0.0050, Train Accuracy: 98.20%
+Validation Loss: 0.0472, Validation Accuracy: 98.51%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.046
+[Epoch 4, Batch   202] loss: 0.052
+[Epoch 4, Batch   302] loss: 0.042
+[Epoch 4, Batch   402] loss: 0.058
+[Epoch 4, Batch   502] loss: 0.054
+[Epoch 4, Batch   602] loss: 0.057
+Epoch 4/5:
+Train Loss: 0.0044, Train Accuracy: 98.44%
+Validation Loss: 0.0525, Validation Accuracy: 98.47%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.038
+[Epoch 5, Batch   202] loss: 0.038
+[Epoch 5, Batch   302] loss: 0.046
+[Epoch 5, Batch   402] loss: 0.047
+[Epoch 5, Batch   502] loss: 0.052
+[Epoch 5, Batch   602] loss: 0.046
+Epoch 5/5:
+Train Loss: 0.0036, Train Accuracy: 98.66%
+Validation Loss: 0.0573, Validation Accuracy: 98.28%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.3-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.5-2
+[Epoch 1, Batch     2] loss: 0.043
+[Epoch 1, Batch   102] loss: 0.352
+[Epoch 1, Batch   202] loss: 0.175
+[Epoch 1, Batch   302] loss: 0.143
+[Epoch 1, Batch   402] loss: 0.136
+Epoch 1/5:
+Train Loss: 0.0162, Train Accuracy: 94.00%
+Validation Loss: 0.0955, Validation Accuracy: 97.09%
+[Epoch 2, Batch     2] loss: 0.001
+[Epoch 2, Batch   102] loss: 0.087
+[Epoch 2, Batch   202] loss: 0.084
+[Epoch 2, Batch   302] loss: 0.079
+[Epoch 2, Batch   402] loss: 0.082
+Epoch 2/5:
+Train Loss: 0.0099, Train Accuracy: 97.52%
+Validation Loss: 0.0491, Validation Accuracy: 98.41%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.069
+[Epoch 3, Batch   202] loss: 0.058
+[Epoch 3, Batch   302] loss: 0.067
+[Epoch 3, Batch   402] loss: 0.066
+Epoch 3/5:
+Train Loss: 0.0101, Train Accuracy: 98.02%
+Validation Loss: 0.0477, Validation Accuracy: 98.47%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.044
+[Epoch 4, Batch   202] loss: 0.052
+[Epoch 4, Batch   302] loss: 0.060
+[Epoch 4, Batch   402] loss: 0.058
+Epoch 4/5:
+Train Loss: 0.0086, Train Accuracy: 98.44%
+Validation Loss: 0.0486, Validation Accuracy: 98.54%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.041
+[Epoch 5, Batch   202] loss: 0.052
+[Epoch 5, Batch   302] loss: 0.049
+[Epoch 5, Batch   402] loss: 0.047
+Epoch 5/5:
+Train Loss: 0.0082, Train Accuracy: 98.51%
+Validation Loss: 0.0655, Validation Accuracy: 98.11%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.5-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.7-2
+[Epoch 1, Batch     2] loss: 0.042
+[Epoch 1, Batch   102] loss: 0.346
+[Epoch 1, Batch   202] loss: 0.185
+Epoch 1/5:
+Train Loss: 0.0467, Train Accuracy: 92.16%
+Validation Loss: 0.1464, Validation Accuracy: 95.02%
+[Epoch 2, Batch     2] loss: 0.003
+[Epoch 2, Batch   102] loss: 0.113
+[Epoch 2, Batch   202] loss: 0.105
+Epoch 2/5:
+Train Loss: 0.0256, Train Accuracy: 96.85%
+Validation Loss: 0.0795, Validation Accuracy: 97.69%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.065
+[Epoch 3, Batch   202] loss: 0.072
+Epoch 3/5:
+Train Loss: 0.0270, Train Accuracy: 97.68%
+Validation Loss: 0.0589, Validation Accuracy: 98.27%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.051
+[Epoch 4, Batch   202] loss: 0.059
+Epoch 4/5:
+Train Loss: 0.0160, Train Accuracy: 98.25%
+Validation Loss: 0.0881, Validation Accuracy: 97.38%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.052
+[Epoch 5, Batch   202] loss: 0.056
+Epoch 5/5:
+Train Loss: 0.0155, Train Accuracy: 98.40%
+Validation Loss: 0.0612, Validation Accuracy: 98.13%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.7-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.8-2
+[Epoch 1, Batch     2] loss: 0.043
+[Epoch 1, Batch   102] loss: 0.318
+Epoch 1/5:
+Train Loss: 0.0842, Train Accuracy: 91.48%
+Validation Loss: 0.2145, Validation Accuracy: 92.50%
+[Epoch 2, Batch     2] loss: 0.003
+[Epoch 2, Batch   102] loss: 0.127
+Epoch 2/5:
+Train Loss: 0.0531, Train Accuracy: 96.34%
+Validation Loss: 0.1091, Validation Accuracy: 96.50%
+[Epoch 3, Batch     2] loss: 0.003
+[Epoch 3, Batch   102] loss: 0.076
+Epoch 3/5:
+Train Loss: 0.0343, Train Accuracy: 97.50%
+Validation Loss: 0.0978, Validation Accuracy: 96.85%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.074
+Epoch 4/5:
+Train Loss: 0.0358, Train Accuracy: 97.55%
+Validation Loss: 0.0947, Validation Accuracy: 97.12%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.052
+Epoch 5/5:
+Train Loss: 0.0312, Train Accuracy: 98.12%
+Validation Loss: 0.0795, Validation Accuracy: 97.67%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.8-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.9-2
+[Epoch 1, Batch     2] loss: 0.040
+Epoch 1/5:
+Train Loss: 0.3361, Train Accuracy: 88.29%
+Validation Loss: 0.1708, Validation Accuracy: 94.73%
+[Epoch 2, Batch     2] loss: 0.003
+Epoch 2/5:
+Train Loss: 0.1453, Train Accuracy: 95.51%
+Validation Loss: 0.4597, Validation Accuracy: 86.18%
+[Epoch 3, Batch     2] loss: 0.004
+Epoch 3/5:
+Train Loss: 0.1166, Train Accuracy: 96.10%
+Validation Loss: 0.2988, Validation Accuracy: 90.53%
+[Epoch 4, Batch     2] loss: 0.001
+Epoch 4/5:
+Train Loss: 0.0841, Train Accuracy: 97.53%
+Validation Loss: 0.0996, Validation Accuracy: 97.18%
+[Epoch 5, Batch     2] loss: 0.001
+Epoch 5/5:
+Train Loss: 0.0724, Train Accuracy: 97.73%
+Validation Loss: 0.0780, Validation Accuracy: 97.78%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.9-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.95-2
+[Epoch 1, Batch     2] loss: 0.046
+Epoch 1/5:
+Train Loss: 0.4305, Train Accuracy: 83.00%
+Validation Loss: 0.4648, Validation Accuracy: 85.72%
+[Epoch 2, Batch     2] loss: 0.003
+Epoch 2/5:
+Train Loss: 0.1740, Train Accuracy: 94.20%
+Validation Loss: 0.3372, Validation Accuracy: 90.78%
+[Epoch 3, Batch     2] loss: 0.001
+Epoch 3/5:
+Train Loss: 0.1181, Train Accuracy: 96.03%
+Validation Loss: 0.3812, Validation Accuracy: 89.67%
+[Epoch 4, Batch     2] loss: 0.003
+Epoch 4/5:
+Train Loss: 0.1115, Train Accuracy: 95.97%
+Validation Loss: 0.3947, Validation Accuracy: 89.22%
+[Epoch 5, Batch     2] loss: 0.003
+Epoch 5/5:
+Train Loss: 0.0734, Train Accuracy: 97.40%
+Validation Loss: 0.2157, Validation Accuracy: 93.87%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.95-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_MNIST_2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.3-2
+[Epoch 1, Batch     2] loss: 0.042
+[Epoch 1, Batch   102] loss: 0.410
+[Epoch 1, Batch   202] loss: 0.210
+[Epoch 1, Batch   302] loss: 0.169
+[Epoch 1, Batch   402] loss: 0.149
+[Epoch 1, Batch   502] loss: 0.134
+[Epoch 1, Batch   602] loss: 0.125
+Epoch 1/5:
+Train Loss: 0.0100, Train Accuracy: 93.87%
+Validation Loss: 0.3118, Validation Accuracy: 90.27%
+[Epoch 2, Batch     2] loss: 0.001
+[Epoch 2, Batch   102] loss: 0.089
+[Epoch 2, Batch   202] loss: 0.116
+[Epoch 2, Batch   302] loss: 0.095
+[Epoch 2, Batch   402] loss: 0.104
+[Epoch 2, Batch   502] loss: 0.082
+[Epoch 2, Batch   602] loss: 0.080
+Epoch 2/5:
+Train Loss: 0.0060, Train Accuracy: 97.21%
+Validation Loss: 0.0443, Validation Accuracy: 98.55%
+[Epoch 3, Batch     2] loss: 0.002
+[Epoch 3, Batch   102] loss: 0.087
+[Epoch 3, Batch   202] loss: 0.057
+[Epoch 3, Batch   302] loss: 0.069
+[Epoch 3, Batch   402] loss: 0.070
+[Epoch 3, Batch   502] loss: 0.081
+[Epoch 3, Batch   602] loss: 0.062
+Epoch 3/5:
+Train Loss: 0.0049, Train Accuracy: 97.81%
+Validation Loss: 0.0643, Validation Accuracy: 98.06%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.058
+[Epoch 4, Batch   202] loss: 0.058
+[Epoch 4, Batch   302] loss: 0.073
+[Epoch 4, Batch   402] loss: 0.065
+[Epoch 4, Batch   502] loss: 0.060
+[Epoch 4, Batch   602] loss: 0.053
+Epoch 4/5:
+Train Loss: 0.0042, Train Accuracy: 98.12%
+Validation Loss: 0.0462, Validation Accuracy: 98.53%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.051
+[Epoch 5, Batch   202] loss: 0.043
+[Epoch 5, Batch   302] loss: 0.072
+[Epoch 5, Batch   402] loss: 0.065
+[Epoch 5, Batch   502] loss: 0.059
+[Epoch 5, Batch   602] loss: 0.054
+Epoch 5/5:
+Train Loss: 0.0045, Train Accuracy: 98.20%
+Validation Loss: 0.0339, Validation Accuracy: 99.09%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.3-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.5-2
+[Epoch 1, Batch     2] loss: 0.041
+[Epoch 1, Batch   102] loss: 0.489
+[Epoch 1, Batch   202] loss: 0.236
+[Epoch 1, Batch   302] loss: 0.229
+[Epoch 1, Batch   402] loss: 0.171
+Epoch 1/5:
+Train Loss: 0.0224, Train Accuracy: 91.46%
+Validation Loss: 0.0781, Validation Accuracy: 97.65%
+[Epoch 2, Batch     2] loss: 0.002
+[Epoch 2, Batch   102] loss: 0.117
+[Epoch 2, Batch   202] loss: 0.144
+[Epoch 2, Batch   302] loss: 0.121
+[Epoch 2, Batch   402] loss: 0.118
+Epoch 2/5:
+Train Loss: 0.0147, Train Accuracy: 96.25%
+Validation Loss: 0.0748, Validation Accuracy: 97.77%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.095
+[Epoch 3, Batch   202] loss: 0.103
+[Epoch 3, Batch   302] loss: 0.097
+[Epoch 3, Batch   402] loss: 0.091
+Epoch 3/5:
+Train Loss: 0.0130, Train Accuracy: 97.11%
+Validation Loss: 0.0608, Validation Accuracy: 98.13%
+[Epoch 4, Batch     2] loss: 0.002
+[Epoch 4, Batch   102] loss: 0.065
+[Epoch 4, Batch   202] loss: 0.081
+[Epoch 4, Batch   302] loss: 0.084
+[Epoch 4, Batch   402] loss: 0.065
+Epoch 4/5:
+Train Loss: 0.0114, Train Accuracy: 97.64%
+Validation Loss: 0.0848, Validation Accuracy: 97.59%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.074
+[Epoch 5, Batch   202] loss: 0.083
+[Epoch 5, Batch   302] loss: 0.060
+[Epoch 5, Batch   402] loss: 0.068
+Epoch 5/5:
+Train Loss: 0.0117, Train Accuracy: 97.75%
+Validation Loss: 0.0652, Validation Accuracy: 97.94%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.5-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.7-2
+[Epoch 1, Batch     2] loss: 0.043
+[Epoch 1, Batch   102] loss: 0.600
+[Epoch 1, Batch   202] loss: 0.336
+Epoch 1/5:
+Train Loss: 0.0829, Train Accuracy: 85.92%
+Validation Loss: 0.1297, Validation Accuracy: 95.64%
+[Epoch 2, Batch     2] loss: 0.004
+[Epoch 2, Batch   102] loss: 0.214
+[Epoch 2, Batch   202] loss: 0.193
+Epoch 2/5:
+Train Loss: 0.0552, Train Accuracy: 93.36%
+Validation Loss: 0.0996, Validation Accuracy: 96.76%
+[Epoch 3, Batch     2] loss: 0.003
+[Epoch 3, Batch   102] loss: 0.153
+[Epoch 3, Batch   202] loss: 0.152
+Epoch 3/5:
+Train Loss: 0.0414, Train Accuracy: 95.12%
+Validation Loss: 0.0508, Validation Accuracy: 98.43%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.108
+[Epoch 4, Batch   202] loss: 0.108
+Epoch 4/5:
+Train Loss: 0.0398, Train Accuracy: 96.21%
+Validation Loss: 0.0617, Validation Accuracy: 98.16%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.083
+[Epoch 5, Batch   202] loss: 0.107
+Epoch 5/5:
+Train Loss: 0.0280, Train Accuracy: 96.93%
+Validation Loss: 0.0442, Validation Accuracy: 98.60%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.7-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.8-2
+[Epoch 1, Batch     2] loss: 0.048
+[Epoch 1, Batch   102] loss: 0.740
+Epoch 1/5:
+Train Loss: 0.1951, Train Accuracy: 79.76%
+Validation Loss: 0.1437, Validation Accuracy: 95.44%
+[Epoch 2, Batch     2] loss: 0.004
+[Epoch 2, Batch   102] loss: 0.296
+Epoch 2/5:
+Train Loss: 0.1293, Train Accuracy: 90.48%
+Validation Loss: 0.0931, Validation Accuracy: 97.07%
+[Epoch 3, Batch     2] loss: 0.006
+[Epoch 3, Batch   102] loss: 0.199
+Epoch 3/5:
+Train Loss: 0.0963, Train Accuracy: 93.17%
+Validation Loss: 0.0528, Validation Accuracy: 98.41%
+[Epoch 4, Batch     2] loss: 0.002
+[Epoch 4, Batch   102] loss: 0.178
+Epoch 4/5:
+Train Loss: 0.0856, Train Accuracy: 94.07%
+Validation Loss: 0.0644, Validation Accuracy: 97.99%
+[Epoch 5, Batch     2] loss: 0.003
+[Epoch 5, Batch   102] loss: 0.140
+Epoch 5/5:
+Train Loss: 0.0728, Train Accuracy: 94.98%
+Validation Loss: 0.0609, Validation Accuracy: 98.15%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.8-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.9-2
+[Epoch 1, Batch     2] loss: 0.046
+Epoch 1/5:
+Train Loss: 0.9778, Train Accuracy: 64.81%
+Validation Loss: 0.3900, Validation Accuracy: 86.41%
+[Epoch 2, Batch     2] loss: 0.012
+Epoch 2/5:
+Train Loss: 0.5314, Train Accuracy: 81.11%
+Validation Loss: 0.2499, Validation Accuracy: 90.86%
+[Epoch 3, Batch     2] loss: 0.007
+Epoch 3/5:
+Train Loss: 0.3757, Train Accuracy: 86.98%
+Validation Loss: 0.4276, Validation Accuracy: 87.91%
+[Epoch 4, Batch     2] loss: 0.005
+Epoch 4/5:
+Train Loss: 0.3046, Train Accuracy: 89.51%
+Validation Loss: 0.3336, Validation Accuracy: 88.12%
+[Epoch 5, Batch     2] loss: 0.006
+Epoch 5/5:
+Train Loss: 0.2502, Train Accuracy: 90.93%
+Validation Loss: 0.1853, Validation Accuracy: 93.67%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.9-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.95-2
+[Epoch 1, Batch     2] loss: 0.049
+Epoch 1/5:
+Train Loss: 1.3152, Train Accuracy: 52.43%
+Validation Loss: 1.1284, Validation Accuracy: 62.83%
+[Epoch 2, Batch     2] loss: 0.020
+Epoch 2/5:
+Train Loss: 0.7521, Train Accuracy: 72.53%
+Validation Loss: 0.7868, Validation Accuracy: 71.28%
+[Epoch 3, Batch     2] loss: 0.012
+Epoch 3/5:
+Train Loss: 0.5497, Train Accuracy: 79.97%
+Validation Loss: 0.7019, Validation Accuracy: 79.96%
+[Epoch 4, Batch     2] loss: 0.009
+Epoch 4/5:
+Train Loss: 0.4280, Train Accuracy: 83.80%
+Validation Loss: 0.3011, Validation Accuracy: 90.26%
+[Epoch 5, Batch     2] loss: 0.007
+Epoch 5/5:
+Train Loss: 0.3775, Train Accuracy: 87.07%
+Validation Loss: 0.4761, Validation Accuracy: 82.84%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.95-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_MNIST_2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.3-2
+[Epoch 1, Batch     2] loss: 0.039
+[Epoch 1, Batch   102] loss: 0.146
+[Epoch 1, Batch   202] loss: 0.055
+[Epoch 1, Batch   302] loss: 0.050
+[Epoch 1, Batch   402] loss: 0.035
+[Epoch 1, Batch   502] loss: 0.020
+[Epoch 1, Batch   602] loss: 0.012
+Epoch 1/5:
+Train Loss: 0.0010, Train Accuracy: 98.26%
+Validation Loss: 0.3066, Validation Accuracy: 92.35%
+[Epoch 2, Batch     2] loss: 0.000
+[Epoch 2, Batch   102] loss: 0.012
+[Epoch 2, Batch   202] loss: 0.017
+[Epoch 2, Batch   302] loss: 0.011
+[Epoch 2, Batch   402] loss: 0.013
+[Epoch 2, Batch   502] loss: 0.019
+[Epoch 2, Batch   602] loss: 0.022
+Epoch 2/5:
+Train Loss: 0.0013, Train Accuracy: 99.56%
+Validation Loss: 0.1739, Validation Accuracy: 95.60%
+[Epoch 3, Batch     2] loss: 0.000
+[Epoch 3, Batch   102] loss: 0.013
+[Epoch 3, Batch   202] loss: 0.006
+[Epoch 3, Batch   302] loss: 0.013
+[Epoch 3, Batch   402] loss: 0.005
+[Epoch 3, Batch   502] loss: 0.011
+[Epoch 3, Batch   602] loss: 0.014
+Epoch 3/5:
+Train Loss: 0.0003, Train Accuracy: 99.73%
+Validation Loss: 0.1853, Validation Accuracy: 95.60%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.014
+[Epoch 4, Batch   202] loss: 0.019
+[Epoch 4, Batch   302] loss: 0.021
+[Epoch 4, Batch   402] loss: 0.009
+[Epoch 4, Batch   502] loss: 0.006
+[Epoch 4, Batch   602] loss: 0.007
+Epoch 4/5:
+Train Loss: 0.0002, Train Accuracy: 99.69%
+Validation Loss: 0.1061, Validation Accuracy: 97.26%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.007
+[Epoch 5, Batch   202] loss: 0.007
+[Epoch 5, Batch   302] loss: 0.003
+[Epoch 5, Batch   402] loss: 0.001
+[Epoch 5, Batch   502] loss: 0.004
+[Epoch 5, Batch   602] loss: 0.008
+Epoch 5/5:
+Train Loss: 0.0018, Train Accuracy: 99.83%
+Validation Loss: 0.1537, Validation Accuracy: 96.11%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.3-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.5-2
+[Epoch 1, Batch     2] loss: 0.040
+[Epoch 1, Batch   102] loss: 0.118
+[Epoch 1, Batch   202] loss: 0.040
+[Epoch 1, Batch   302] loss: 0.029
+[Epoch 1, Batch   402] loss: 0.025
+Epoch 1/5:
+Train Loss: 0.0025, Train Accuracy: 98.19%
+Validation Loss: 0.2771, Validation Accuracy: 93.12%
+[Epoch 2, Batch     2] loss: 0.000
+[Epoch 2, Batch   102] loss: 0.007
+[Epoch 2, Batch   202] loss: 0.007
+[Epoch 2, Batch   302] loss: 0.007
+[Epoch 2, Batch   402] loss: 0.006
+Epoch 2/5:
+Train Loss: 0.0009, Train Accuracy: 99.78%
+Validation Loss: 0.1945, Validation Accuracy: 95.22%
+[Epoch 3, Batch     2] loss: 0.000
+[Epoch 3, Batch   102] loss: 0.007
+[Epoch 3, Batch   202] loss: 0.017
+[Epoch 3, Batch   302] loss: 0.010
+[Epoch 3, Batch   402] loss: 0.006
+Epoch 3/5:
+Train Loss: 0.0015, Train Accuracy: 99.69%
+Validation Loss: 0.1832, Validation Accuracy: 95.51%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.007
+[Epoch 4, Batch   202] loss: 0.008
+[Epoch 4, Batch   302] loss: 0.006
+[Epoch 4, Batch   402] loss: 0.010
+Epoch 4/5:
+Train Loss: 0.0018, Train Accuracy: 99.77%
+Validation Loss: 0.2292, Validation Accuracy: 94.60%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.004
+[Epoch 5, Batch   202] loss: 0.008
+[Epoch 5, Batch   302] loss: 0.010
+[Epoch 5, Batch   402] loss: 0.002
+Epoch 5/5:
+Train Loss: 0.0003, Train Accuracy: 99.84%
+Validation Loss: 0.1670, Validation Accuracy: 95.64%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.5-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.7-2
+[Epoch 1, Batch     2] loss: 0.039
+[Epoch 1, Batch   102] loss: 0.100
+[Epoch 1, Batch   202] loss: 0.030
+Epoch 1/5:
+Train Loss: 0.0048, Train Accuracy: 97.83%
+Validation Loss: 0.5469, Validation Accuracy: 87.25%
+[Epoch 2, Batch     2] loss: 0.001
+[Epoch 2, Batch   102] loss: 0.014
+[Epoch 2, Batch   202] loss: 0.004
+Epoch 2/5:
+Train Loss: 0.0013, Train Accuracy: 99.79%
+Validation Loss: 0.3669, Validation Accuracy: 91.10%
+[Epoch 3, Batch     2] loss: 0.000
+[Epoch 3, Batch   102] loss: 0.023
+[Epoch 3, Batch   202] loss: 0.011
+Epoch 3/5:
+Train Loss: 0.0034, Train Accuracy: 99.58%
+Validation Loss: 0.4542, Validation Accuracy: 89.18%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.002
+[Epoch 4, Batch   202] loss: 0.001
+Epoch 4/5:
+Train Loss: 0.0032, Train Accuracy: 99.88%
+Validation Loss: 0.7297, Validation Accuracy: 86.68%
+[Epoch 5, Batch     2] loss: 0.002
+[Epoch 5, Batch   102] loss: 0.015
+[Epoch 5, Batch   202] loss: 0.004
+Epoch 5/5:
+Train Loss: 0.0003, Train Accuracy: 99.81%
+Validation Loss: 0.2834, Validation Accuracy: 92.69%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.7-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.8-2
+[Epoch 1, Batch     2] loss: 0.038
+[Epoch 1, Batch   102] loss: 0.069
+Epoch 1/5:
+Train Loss: 0.0115, Train Accuracy: 97.98%
+Validation Loss: 1.7590, Validation Accuracy: 64.85%
+[Epoch 2, Batch     2] loss: 0.001
+[Epoch 2, Batch   102] loss: 0.017
+Epoch 2/5:
+Train Loss: 0.0037, Train Accuracy: 99.59%
+Validation Loss: 1.0211, Validation Accuracy: 72.42%
+[Epoch 3, Batch     2] loss: 0.000
+[Epoch 3, Batch   102] loss: 0.003
+Epoch 3/5:
+Train Loss: 0.0004, Train Accuracy: 99.94%
+Validation Loss: 0.8516, Validation Accuracy: 81.49%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.006
+Epoch 4/5:
+Train Loss: 0.0041, Train Accuracy: 99.77%
+Validation Loss: 1.3510, Validation Accuracy: 69.94%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.031
+Epoch 5/5:
+Train Loss: 0.0024, Train Accuracy: 99.51%
+Validation Loss: 1.0761, Validation Accuracy: 77.43%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.8-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.9-2
+[Epoch 1, Batch     2] loss: 0.034
+Epoch 1/5:
+Train Loss: 0.0358, Train Accuracy: 97.68%
+Validation Loss: 4.1647, Validation Accuracy: 43.83%
+[Epoch 2, Batch     2] loss: 0.000
+Epoch 2/5:
+Train Loss: 0.0279, Train Accuracy: 99.37%
+Validation Loss: 5.6445, Validation Accuracy: 34.38%
+[Epoch 3, Batch     2] loss: 0.000
+Epoch 3/5:
+Train Loss: 0.0125, Train Accuracy: 99.75%
+Validation Loss: 3.2024, Validation Accuracy: 49.08%
+[Epoch 4, Batch     2] loss: 0.000
+Epoch 4/5:
+Train Loss: 0.0097, Train Accuracy: 99.72%
+Validation Loss: 3.0311, Validation Accuracy: 50.36%
+[Epoch 5, Batch     2] loss: 0.000
+Epoch 5/5:
+Train Loss: 0.0043, Train Accuracy: 99.85%
+Validation Loss: 3.8319, Validation Accuracy: 47.17%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.9-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.95-2
+[Epoch 1, Batch     2] loss: 0.035
+Epoch 1/5:
+Train Loss: 0.0288, Train Accuracy: 97.30%
+Validation Loss: 3.3789, Validation Accuracy: 28.44%
+[Epoch 2, Batch     2] loss: 0.000
+Epoch 2/5:
+Train Loss: 0.0066, Train Accuracy: 99.90%
+Validation Loss: 3.9500, Validation Accuracy: 28.12%
+[Epoch 3, Batch     2] loss: 0.000
+Epoch 3/5:
+Train Loss: 0.0103, Train Accuracy: 99.77%
+Validation Loss: 4.3714, Validation Accuracy: 27.49%
+[Epoch 4, Batch     2] loss: 0.000
+Epoch 4/5:
+Train Loss: 0.0067, Train Accuracy: 99.87%
+Validation Loss: 4.3766, Validation Accuracy: 28.82%
+[Epoch 5, Batch     2] loss: 0.000
+Epoch 5/5:
+Train Loss: 0.0063, Train Accuracy: 99.90%
+Validation Loss: 3.9350, Validation Accuracy: 29.00%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.95-2
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+[Epoch 1, Batch     2] loss: 0.042
+[Epoch 1, Batch   102] loss: 0.341
+[Epoch 1, Batch   202] loss: 0.185
+[Epoch 1, Batch   302] loss: 0.151
+[Epoch 1, Batch   402] loss: 0.139
+[Epoch 1, Batch   502] loss: 0.107
+[Epoch 1, Batch   602] loss: 0.120
+[Epoch 1, Batch   702] loss: 0.091
+[Epoch 1, Batch   802] loss: 0.072
+[Epoch 1, Batch   902] loss: 0.076
+Epoch 1/5:
+Train Loss: 0.0045, Train Accuracy: 95.56%
+Validation Loss: 0.0762, Validation Accuracy: 97.63%
+[Epoch 2, Batch     2] loss: 0.003
+[Epoch 2, Batch   102] loss: 0.073
+[Epoch 2, Batch   202] loss: 0.069
+[Epoch 2, Batch   302] loss: 0.074
+[Epoch 2, Batch   402] loss: 0.075
+[Epoch 2, Batch   502] loss: 0.079
+[Epoch 2, Batch   602] loss: 0.078
+[Epoch 2, Batch   702] loss: 0.056
+[Epoch 2, Batch   802] loss: 0.053
+[Epoch 2, Batch   902] loss: 0.062
+Epoch 2/5:
+Train Loss: 0.0021, Train Accuracy: 97.88%
+Validation Loss: 0.0593, Validation Accuracy: 98.31%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.051
+[Epoch 3, Batch   202] loss: 0.059
+[Epoch 3, Batch   302] loss: 0.045
+[Epoch 3, Batch   402] loss: 0.057
+[Epoch 3, Batch   502] loss: 0.052
+[Epoch 3, Batch   602] loss: 0.047
+[Epoch 3, Batch   702] loss: 0.052
+[Epoch 3, Batch   802] loss: 0.064
+[Epoch 3, Batch   902] loss: 0.057
+Epoch 3/5:
+Train Loss: 0.0026, Train Accuracy: 98.36%
+Validation Loss: 0.0533, Validation Accuracy: 98.49%
+[Epoch 4, Batch     2] loss: 0.002
+[Epoch 4, Batch   102] loss: 0.039
+[Epoch 4, Batch   202] loss: 0.048
+[Epoch 4, Batch   302] loss: 0.045
+[Epoch 4, Batch   402] loss: 0.045
+[Epoch 4, Batch   502] loss: 0.056
+[Epoch 4, Batch   602] loss: 0.041
+[Epoch 4, Batch   702] loss: 0.047
+[Epoch 4, Batch   802] loss: 0.047
+[Epoch 4, Batch   902] loss: 0.050
+Epoch 4/5:
+Train Loss: 0.0014, Train Accuracy: 98.58%
+Validation Loss: 0.0354, Validation Accuracy: 98.95%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.041
+[Epoch 5, Batch   202] loss: 0.038
+[Epoch 5, Batch   302] loss: 0.036
+[Epoch 5, Batch   402] loss: 0.039
+[Epoch 5, Batch   502] loss: 0.046
+[Epoch 5, Batch   602] loss: 0.044
+[Epoch 5, Batch   702] loss: 0.044
+[Epoch 5, Batch   802] loss: 0.044
+[Epoch 5, Batch   902] loss: 0.033
+Epoch 5/5:
+Train Loss: 0.0018, Train Accuracy: 98.75%
+Validation Loss: 0.0395, Validation Accuracy: 98.73%
+Model saved to models/resnet18_MNIST_3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_MNIST_3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.3-3
+[Epoch 1, Batch     2] loss: 0.045
+[Epoch 1, Batch   102] loss: 0.335
+[Epoch 1, Batch   202] loss: 0.191
+[Epoch 1, Batch   302] loss: 0.129
+[Epoch 1, Batch   402] loss: 0.125
+[Epoch 1, Batch   502] loss: 0.118
+[Epoch 1, Batch   602] loss: 0.112
+Epoch 1/5:
+Train Loss: 0.0063, Train Accuracy: 94.77%
+Validation Loss: 0.0730, Validation Accuracy: 97.58%
+[Epoch 2, Batch     2] loss: 0.001
+[Epoch 2, Batch   102] loss: 0.072
+[Epoch 2, Batch   202] loss: 0.079
+[Epoch 2, Batch   302] loss: 0.082
+[Epoch 2, Batch   402] loss: 0.070
+[Epoch 2, Batch   502] loss: 0.066
+[Epoch 2, Batch   602] loss: 0.096
+Epoch 2/5:
+Train Loss: 0.0052, Train Accuracy: 97.73%
+Validation Loss: 0.0418, Validation Accuracy: 98.59%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.048
+[Epoch 3, Batch   202] loss: 0.055
+[Epoch 3, Batch   302] loss: 0.049
+[Epoch 3, Batch   402] loss: 0.059
+[Epoch 3, Batch   502] loss: 0.065
+[Epoch 3, Batch   602] loss: 0.054
+Epoch 3/5:
+Train Loss: 0.0048, Train Accuracy: 98.31%
+Validation Loss: 0.0621, Validation Accuracy: 98.07%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.059
+[Epoch 4, Batch   202] loss: 0.035
+[Epoch 4, Batch   302] loss: 0.050
+[Epoch 4, Batch   402] loss: 0.046
+[Epoch 4, Batch   502] loss: 0.063
+[Epoch 4, Batch   602] loss: 0.047
+Epoch 4/5:
+Train Loss: 0.0045, Train Accuracy: 98.49%
+Validation Loss: 0.0411, Validation Accuracy: 98.88%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.030
+[Epoch 5, Batch   202] loss: 0.041
+[Epoch 5, Batch   302] loss: 0.050
+[Epoch 5, Batch   402] loss: 0.045
+[Epoch 5, Batch   502] loss: 0.040
+[Epoch 5, Batch   602] loss: 0.040
+Epoch 5/5:
+Train Loss: 0.0046, Train Accuracy: 98.73%
+Validation Loss: 0.0493, Validation Accuracy: 98.52%
+Model saved to models/resnet18-MNIST-random-0.3-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.5-3
+[Epoch 1, Batch     2] loss: 0.044
+[Epoch 1, Batch   102] loss: 0.332
+[Epoch 1, Batch   202] loss: 0.190
+[Epoch 1, Batch   302] loss: 0.147
+[Epoch 1, Batch   402] loss: 0.127
+Epoch 1/5:
+Train Loss: 0.0180, Train Accuracy: 93.88%
+Validation Loss: 0.1107, Validation Accuracy: 96.45%
+[Epoch 2, Batch     2] loss: 0.001
+[Epoch 2, Batch   102] loss: 0.094
+[Epoch 2, Batch   202] loss: 0.085
+[Epoch 2, Batch   302] loss: 0.090
+[Epoch 2, Batch   402] loss: 0.077
+Epoch 2/5:
+Train Loss: 0.0112, Train Accuracy: 97.51%
+Validation Loss: 0.0689, Validation Accuracy: 97.79%
+[Epoch 3, Batch     2] loss: 0.000
+[Epoch 3, Batch   102] loss: 0.051
+[Epoch 3, Batch   202] loss: 0.078
+[Epoch 3, Batch   302] loss: 0.059
+[Epoch 3, Batch   402] loss: 0.067
+Epoch 3/5:
+Train Loss: 0.0106, Train Accuracy: 98.05%
+Validation Loss: 0.0715, Validation Accuracy: 97.87%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.064
+[Epoch 4, Batch   202] loss: 0.051
+[Epoch 4, Batch   302] loss: 0.048
+[Epoch 4, Batch   402] loss: 0.050
+Epoch 4/5:
+Train Loss: 0.0090, Train Accuracy: 98.40%
+Validation Loss: 0.0927, Validation Accuracy: 97.24%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.048
+[Epoch 5, Batch   202] loss: 0.053
+[Epoch 5, Batch   302] loss: 0.054
+[Epoch 5, Batch   402] loss: 0.041
+Epoch 5/5:
+Train Loss: 0.0053, Train Accuracy: 98.59%
+Validation Loss: 0.0624, Validation Accuracy: 98.23%
+Model saved to models/resnet18-MNIST-random-0.5-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.7-3
+[Epoch 1, Batch     2] loss: 0.040
+[Epoch 1, Batch   102] loss: 0.343
+[Epoch 1, Batch   202] loss: 0.173
+Epoch 1/5:
+Train Loss: 0.0417, Train Accuracy: 92.63%
+Validation Loss: 0.0850, Validation Accuracy: 97.38%
+[Epoch 2, Batch     2] loss: 0.003
+[Epoch 2, Batch   102] loss: 0.120
+[Epoch 2, Batch   202] loss: 0.109
+Epoch 2/5:
+Train Loss: 0.0240, Train Accuracy: 96.68%
+Validation Loss: 0.0928, Validation Accuracy: 97.05%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.090
+[Epoch 3, Batch   202] loss: 0.070
+Epoch 3/5:
+Train Loss: 0.0235, Train Accuracy: 97.50%
+Validation Loss: 0.0639, Validation Accuracy: 98.03%
+[Epoch 4, Batch     2] loss: 0.002
+[Epoch 4, Batch   102] loss: 0.052
+[Epoch 4, Batch   202] loss: 0.068
+Epoch 4/5:
+Train Loss: 0.0203, Train Accuracy: 97.97%
+Validation Loss: 0.1633, Validation Accuracy: 95.42%
+[Epoch 5, Batch     2] loss: 0.003
+[Epoch 5, Batch   102] loss: 0.053
+[Epoch 5, Batch   202] loss: 0.050
+Epoch 5/5:
+Train Loss: 0.0139, Train Accuracy: 98.44%
+Validation Loss: 0.0574, Validation Accuracy: 98.32%
+Model saved to models/resnet18-MNIST-random-0.7-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.8-3
+[Epoch 1, Batch     2] loss: 0.043
+[Epoch 1, Batch   102] loss: 0.364
+Epoch 1/5:
+Train Loss: 0.0930, Train Accuracy: 90.47%
+Validation Loss: 0.2086, Validation Accuracy: 93.66%
+[Epoch 2, Batch     2] loss: 0.004
+[Epoch 2, Batch   102] loss: 0.123
+Epoch 2/5:
+Train Loss: 0.0591, Train Accuracy: 95.91%
+Validation Loss: 0.2288, Validation Accuracy: 93.30%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.089
+Epoch 3/5:
+Train Loss: 0.0430, Train Accuracy: 97.19%
+Validation Loss: 0.0680, Validation Accuracy: 97.90%
+[Epoch 4, Batch     2] loss: 0.002
+[Epoch 4, Batch   102] loss: 0.082
+Epoch 4/5:
+Train Loss: 0.0324, Train Accuracy: 97.76%
+Validation Loss: 0.0655, Validation Accuracy: 98.04%
+[Epoch 5, Batch     2] loss: 0.002
+[Epoch 5, Batch   102] loss: 0.060
+Epoch 5/5:
+Train Loss: 0.0273, Train Accuracy: 98.21%
+Validation Loss: 0.0575, Validation Accuracy: 98.13%
+Model saved to models/resnet18-MNIST-random-0.8-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.9-3
+[Epoch 1, Batch     2] loss: 0.045
+Epoch 1/5:
+Train Loss: 0.3486, Train Accuracy: 87.58%
+Validation Loss: 0.2859, Validation Accuracy: 91.00%
+[Epoch 2, Batch     2] loss: 0.003
+Epoch 2/5:
+Train Loss: 0.1397, Train Accuracy: 95.77%
+Validation Loss: 0.2066, Validation Accuracy: 93.95%
+[Epoch 3, Batch     2] loss: 0.003
+Epoch 3/5:
+Train Loss: 0.0993, Train Accuracy: 96.92%
+Validation Loss: 0.2176, Validation Accuracy: 93.24%
+[Epoch 4, Batch     2] loss: 0.001
+Epoch 4/5:
+Train Loss: 0.0862, Train Accuracy: 97.50%
+Validation Loss: 0.1824, Validation Accuracy: 94.55%
+[Epoch 5, Batch     2] loss: 0.001
+Epoch 5/5:
+Train Loss: 0.0764, Train Accuracy: 97.55%
+Validation Loss: 0.1595, Validation Accuracy: 95.42%
+Model saved to models/resnet18-MNIST-random-0.9-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-random-0.95-3
+[Epoch 1, Batch     2] loss: 0.046
+Epoch 1/5:
+Train Loss: 0.4358, Train Accuracy: 82.37%
+Validation Loss: 0.4125, Validation Accuracy: 87.59%
+[Epoch 2, Batch     2] loss: 0.004
+Epoch 2/5:
+Train Loss: 0.1850, Train Accuracy: 93.50%
+Validation Loss: 0.2999, Validation Accuracy: 90.84%
+[Epoch 3, Batch     2] loss: 0.002
+Epoch 3/5:
+Train Loss: 0.0921, Train Accuracy: 96.77%
+Validation Loss: 0.5042, Validation Accuracy: 85.15%
+[Epoch 4, Batch     2] loss: 0.004
+Epoch 4/5:
+Train Loss: 0.0754, Train Accuracy: 97.03%
+Validation Loss: 0.2248, Validation Accuracy: 93.47%
+[Epoch 5, Batch     2] loss: 0.001
+Epoch 5/5:
+Train Loss: 0.0824, Train Accuracy: 97.40%
+Validation Loss: 0.2694, Validation Accuracy: 92.72%
+Model saved to models/resnet18-MNIST-random-0.95-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_MNIST_3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.3-3
+[Epoch 1, Batch     2] loss: 0.040
+[Epoch 1, Batch   102] loss: 0.324
+[Epoch 1, Batch   202] loss: 0.180
+[Epoch 1, Batch   302] loss: 0.138
+[Epoch 1, Batch   402] loss: 0.125
+[Epoch 1, Batch   502] loss: 0.122
+[Epoch 1, Batch   602] loss: 0.120
+Epoch 1/5:
+Train Loss: 0.0083, Train Accuracy: 94.89%
+Validation Loss: 0.0871, Validation Accuracy: 97.25%
+[Epoch 2, Batch     2] loss: 0.003
+[Epoch 2, Batch   102] loss: 0.100
+[Epoch 2, Batch   202] loss: 0.079
+[Epoch 2, Batch   302] loss: 0.069
+[Epoch 2, Batch   402] loss: 0.081
+[Epoch 2, Batch   502] loss: 0.073
+[Epoch 2, Batch   602] loss: 0.074
+Epoch 2/5:
+Train Loss: 0.0058, Train Accuracy: 97.55%
+Validation Loss: 0.0561, Validation Accuracy: 98.37%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.055
+[Epoch 3, Batch   202] loss: 0.056
+[Epoch 3, Batch   302] loss: 0.060
+[Epoch 3, Batch   402] loss: 0.068
+[Epoch 3, Batch   502] loss: 0.054
+[Epoch 3, Batch   602] loss: 0.053
+Epoch 3/5:
+Train Loss: 0.0044, Train Accuracy: 98.25%
+Validation Loss: 0.0508, Validation Accuracy: 98.49%
+[Epoch 4, Batch     2] loss: 0.002
+[Epoch 4, Batch   102] loss: 0.052
+[Epoch 4, Batch   202] loss: 0.049
+[Epoch 4, Batch   302] loss: 0.053
+[Epoch 4, Batch   402] loss: 0.048
+[Epoch 4, Batch   502] loss: 0.051
+[Epoch 4, Batch   602] loss: 0.046
+Epoch 4/5:
+Train Loss: 0.0045, Train Accuracy: 98.39%
+Validation Loss: 0.0932, Validation Accuracy: 97.25%
+[Epoch 5, Batch     2] loss: 0.003
+[Epoch 5, Batch   102] loss: 0.045
+[Epoch 5, Batch   202] loss: 0.041
+[Epoch 5, Batch   302] loss: 0.041
+[Epoch 5, Batch   402] loss: 0.048
+[Epoch 5, Batch   502] loss: 0.039
+[Epoch 5, Batch   602] loss: 0.042
+Epoch 5/5:
+Train Loss: 0.0050, Train Accuracy: 98.69%
+Validation Loss: 0.0508, Validation Accuracy: 98.46%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.3-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.5-3
+[Epoch 1, Batch     2] loss: 0.044
+[Epoch 1, Batch   102] loss: 0.338
+[Epoch 1, Batch   202] loss: 0.167
+[Epoch 1, Batch   302] loss: 0.140
+[Epoch 1, Batch   402] loss: 0.116
+Epoch 1/5:
+Train Loss: 0.0177, Train Accuracy: 94.04%
+Validation Loss: 0.2832, Validation Accuracy: 90.61%
+[Epoch 2, Batch     2] loss: 0.003
+[Epoch 2, Batch   102] loss: 0.080
+[Epoch 2, Batch   202] loss: 0.101
+[Epoch 2, Batch   302] loss: 0.088
+[Epoch 2, Batch   402] loss: 0.071
+Epoch 2/5:
+Train Loss: 0.0116, Train Accuracy: 97.48%
+Validation Loss: 0.1021, Validation Accuracy: 96.90%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.054
+[Epoch 3, Batch   202] loss: 0.073
+[Epoch 3, Batch   302] loss: 0.059
+[Epoch 3, Batch   402] loss: 0.064
+Epoch 3/5:
+Train Loss: 0.0097, Train Accuracy: 98.14%
+Validation Loss: 0.0689, Validation Accuracy: 97.66%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.047
+[Epoch 4, Batch   202] loss: 0.049
+[Epoch 4, Batch   302] loss: 0.057
+[Epoch 4, Batch   402] loss: 0.051
+Epoch 4/5:
+Train Loss: 0.0077, Train Accuracy: 98.46%
+Validation Loss: 0.0504, Validation Accuracy: 98.35%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.041
+[Epoch 5, Batch   202] loss: 0.049
+[Epoch 5, Batch   302] loss: 0.059
+[Epoch 5, Batch   402] loss: 0.043
+Epoch 5/5:
+Train Loss: 0.0069, Train Accuracy: 98.57%
+Validation Loss: 0.0688, Validation Accuracy: 98.02%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.5-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.7-3
+[Epoch 1, Batch     2] loss: 0.044
+[Epoch 1, Batch   102] loss: 0.343
+[Epoch 1, Batch   202] loss: 0.198
+Epoch 1/5:
+Train Loss: 0.0392, Train Accuracy: 92.19%
+Validation Loss: 0.1802, Validation Accuracy: 94.28%
+[Epoch 2, Batch     2] loss: 0.004
+[Epoch 2, Batch   102] loss: 0.107
+[Epoch 2, Batch   202] loss: 0.104
+Epoch 2/5:
+Train Loss: 0.0328, Train Accuracy: 96.76%
+Validation Loss: 0.2215, Validation Accuracy: 93.76%
+[Epoch 3, Batch     2] loss: 0.002
+[Epoch 3, Batch   102] loss: 0.083
+[Epoch 3, Batch   202] loss: 0.074
+Epoch 3/5:
+Train Loss: 0.0195, Train Accuracy: 97.61%
+Validation Loss: 0.1087, Validation Accuracy: 96.50%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.056
+[Epoch 4, Batch   202] loss: 0.067
+Epoch 4/5:
+Train Loss: 0.0193, Train Accuracy: 98.12%
+Validation Loss: 0.1061, Validation Accuracy: 96.41%
+[Epoch 5, Batch     2] loss: 0.002
+[Epoch 5, Batch   102] loss: 0.061
+[Epoch 5, Batch   202] loss: 0.040
+Epoch 5/5:
+Train Loss: 0.0139, Train Accuracy: 98.57%
+Validation Loss: 0.1011, Validation Accuracy: 96.72%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.7-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.8-3
+[Epoch 1, Batch     2] loss: 0.040
+[Epoch 1, Batch   102] loss: 0.343
+Epoch 1/5:
+Train Loss: 0.0745, Train Accuracy: 91.28%
+Validation Loss: 0.2379, Validation Accuracy: 92.62%
+[Epoch 2, Batch     2] loss: 0.002
+[Epoch 2, Batch   102] loss: 0.115
+Epoch 2/5:
+Train Loss: 0.0547, Train Accuracy: 96.25%
+Validation Loss: 0.2127, Validation Accuracy: 93.61%
+[Epoch 3, Batch     2] loss: 0.002
+[Epoch 3, Batch   102] loss: 0.073
+Epoch 3/5:
+Train Loss: 0.0405, Train Accuracy: 97.47%
+Validation Loss: 0.1207, Validation Accuracy: 96.24%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.066
+Epoch 4/5:
+Train Loss: 0.0251, Train Accuracy: 98.11%
+Validation Loss: 0.0631, Validation Accuracy: 97.99%
+[Epoch 5, Batch     2] loss: 0.002
+[Epoch 5, Batch   102] loss: 0.050
+Epoch 5/5:
+Train Loss: 0.0266, Train Accuracy: 98.30%
+Validation Loss: 0.0622, Validation Accuracy: 98.12%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.8-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.9-3
+[Epoch 1, Batch     2] loss: 0.039
+Epoch 1/5:
+Train Loss: 0.3421, Train Accuracy: 88.12%
+Validation Loss: 0.6803, Validation Accuracy: 82.11%
+[Epoch 2, Batch     2] loss: 0.005
+Epoch 2/5:
+Train Loss: 0.1599, Train Accuracy: 95.00%
+Validation Loss: 0.1446, Validation Accuracy: 95.40%
+[Epoch 3, Batch     2] loss: 0.003
+Epoch 3/5:
+Train Loss: 0.1150, Train Accuracy: 96.51%
+Validation Loss: 0.1037, Validation Accuracy: 96.82%
+[Epoch 4, Batch     2] loss: 0.001
+Epoch 4/5:
+Train Loss: 0.0938, Train Accuracy: 97.10%
+Validation Loss: 0.1397, Validation Accuracy: 95.70%
+[Epoch 5, Batch     2] loss: 0.002
+Epoch 5/5:
+Train Loss: 0.0687, Train Accuracy: 97.81%
+Validation Loss: 0.1275, Validation Accuracy: 96.53%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.9-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-balanced_by_score-0.95-3
+[Epoch 1, Batch     2] loss: 0.044
+Epoch 1/5:
+Train Loss: 0.4417, Train Accuracy: 82.17%
+Validation Loss: 0.7276, Validation Accuracy: 80.75%
+[Epoch 2, Batch     2] loss: 0.004
+Epoch 2/5:
+Train Loss: 0.1727, Train Accuracy: 94.63%
+Validation Loss: 0.2737, Validation Accuracy: 92.37%
+[Epoch 3, Batch     2] loss: 0.003
+Epoch 3/5:
+Train Loss: 0.1107, Train Accuracy: 96.50%
+Validation Loss: 0.3316, Validation Accuracy: 91.11%
+[Epoch 4, Batch     2] loss: 0.001
+Epoch 4/5:
+Train Loss: 0.1006, Train Accuracy: 96.60%
+Validation Loss: 0.2744, Validation Accuracy: 92.23%
+[Epoch 5, Batch     2] loss: 0.003
+Epoch 5/5:
+Train Loss: 0.0694, Train Accuracy: 97.53%
+Validation Loss: 0.1723, Validation Accuracy: 95.34%
+Model saved to models/resnet18-MNIST-predictive_entropy-balanced_by_score-0.95-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_MNIST_3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.3-3
+[Epoch 1, Batch     2] loss: 0.040
+[Epoch 1, Batch   102] loss: 0.428
+[Epoch 1, Batch   202] loss: 0.213
+[Epoch 1, Batch   302] loss: 0.157
+[Epoch 1, Batch   402] loss: 0.157
+[Epoch 1, Batch   502] loss: 0.136
+[Epoch 1, Batch   602] loss: 0.129
+Epoch 1/5:
+Train Loss: 0.0113, Train Accuracy: 93.70%
+Validation Loss: 0.0804, Validation Accuracy: 97.64%
+[Epoch 2, Batch     2] loss: 0.002
+[Epoch 2, Batch   102] loss: 0.097
+[Epoch 2, Batch   202] loss: 0.088
+[Epoch 2, Batch   302] loss: 0.098
+[Epoch 2, Batch   402] loss: 0.103
+[Epoch 2, Batch   502] loss: 0.085
+[Epoch 2, Batch   602] loss: 0.096
+Epoch 2/5:
+Train Loss: 0.0078, Train Accuracy: 97.00%
+Validation Loss: 0.0944, Validation Accuracy: 97.02%
+[Epoch 3, Batch     2] loss: 0.002
+[Epoch 3, Batch   102] loss: 0.078
+[Epoch 3, Batch   202] loss: 0.062
+[Epoch 3, Batch   302] loss: 0.083
+[Epoch 3, Batch   402] loss: 0.082
+[Epoch 3, Batch   502] loss: 0.067
+[Epoch 3, Batch   602] loss: 0.068
+Epoch 3/5:
+Train Loss: 0.0049, Train Accuracy: 97.78%
+Validation Loss: 0.0493, Validation Accuracy: 98.48%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.060
+[Epoch 4, Batch   202] loss: 0.060
+[Epoch 4, Batch   302] loss: 0.054
+[Epoch 4, Batch   402] loss: 0.058
+[Epoch 4, Batch   502] loss: 0.065
+[Epoch 4, Batch   602] loss: 0.061
+Epoch 4/5:
+Train Loss: 0.0061, Train Accuracy: 98.13%
+Validation Loss: 0.0679, Validation Accuracy: 97.81%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.060
+[Epoch 5, Batch   202] loss: 0.055
+[Epoch 5, Batch   302] loss: 0.059
+[Epoch 5, Batch   402] loss: 0.043
+[Epoch 5, Batch   502] loss: 0.057
+[Epoch 5, Batch   602] loss: 0.051
+Epoch 5/5:
+Train Loss: 0.0035, Train Accuracy: 98.34%
+Validation Loss: 0.0408, Validation Accuracy: 98.77%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.3-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.5-3
+[Epoch 1, Batch     2] loss: 0.041
+[Epoch 1, Batch   102] loss: 0.478
+[Epoch 1, Batch   202] loss: 0.234
+[Epoch 1, Batch   302] loss: 0.204
+[Epoch 1, Batch   402] loss: 0.195
+Epoch 1/5:
+Train Loss: 0.0257, Train Accuracy: 91.38%
+Validation Loss: 0.0742, Validation Accuracy: 97.58%
+[Epoch 2, Batch     2] loss: 0.002
+[Epoch 2, Batch   102] loss: 0.123
+[Epoch 2, Batch   202] loss: 0.136
+[Epoch 2, Batch   302] loss: 0.131
+[Epoch 2, Batch   402] loss: 0.115
+Epoch 2/5:
+Train Loss: 0.0163, Train Accuracy: 96.12%
+Validation Loss: 0.0767, Validation Accuracy: 97.53%
+[Epoch 3, Batch     2] loss: 0.003
+[Epoch 3, Batch   102] loss: 0.096
+[Epoch 3, Batch   202] loss: 0.094
+[Epoch 3, Batch   302] loss: 0.097
+[Epoch 3, Batch   402] loss: 0.095
+Epoch 3/5:
+Train Loss: 0.0134, Train Accuracy: 97.02%
+Validation Loss: 0.0527, Validation Accuracy: 98.46%
+[Epoch 4, Batch     2] loss: 0.003
+[Epoch 4, Batch   102] loss: 0.065
+[Epoch 4, Batch   202] loss: 0.088
+[Epoch 4, Batch   302] loss: 0.084
+[Epoch 4, Batch   402] loss: 0.074
+Epoch 4/5:
+Train Loss: 0.0138, Train Accuracy: 97.47%
+Validation Loss: 0.0567, Validation Accuracy: 98.19%
+[Epoch 5, Batch     2] loss: 0.001
+[Epoch 5, Batch   102] loss: 0.060
+[Epoch 5, Batch   202] loss: 0.075
+[Epoch 5, Batch   302] loss: 0.070
+[Epoch 5, Batch   402] loss: 0.065
+Epoch 5/5:
+Train Loss: 0.0092, Train Accuracy: 97.81%
+Validation Loss: 0.0456, Validation Accuracy: 98.58%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.5-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.7-3
+[Epoch 1, Batch     2] loss: 0.043
+[Epoch 1, Batch   102] loss: 0.628
+[Epoch 1, Batch   202] loss: 0.338
+Epoch 1/5:
+Train Loss: 0.0826, Train Accuracy: 85.96%
+Validation Loss: 0.1300, Validation Accuracy: 95.82%
+[Epoch 2, Batch     2] loss: 0.004
+[Epoch 2, Batch   102] loss: 0.220
+[Epoch 2, Batch   202] loss: 0.200
+Epoch 2/5:
+Train Loss: 0.0566, Train Accuracy: 93.18%
+Validation Loss: 0.1329, Validation Accuracy: 95.64%
+[Epoch 3, Batch     2] loss: 0.004
+[Epoch 3, Batch   102] loss: 0.145
+[Epoch 3, Batch   202] loss: 0.157
+Epoch 3/5:
+Train Loss: 0.0442, Train Accuracy: 94.97%
+Validation Loss: 0.0822, Validation Accuracy: 97.60%
+[Epoch 4, Batch     2] loss: 0.002
+[Epoch 4, Batch   102] loss: 0.112
+[Epoch 4, Batch   202] loss: 0.116
+Epoch 4/5:
+Train Loss: 0.0346, Train Accuracy: 96.16%
+Validation Loss: 0.0665, Validation Accuracy: 97.93%
+[Epoch 5, Batch     2] loss: 0.004
+[Epoch 5, Batch   102] loss: 0.106
+[Epoch 5, Batch   202] loss: 0.109
+Epoch 5/5:
+Train Loss: 0.0353, Train Accuracy: 96.36%
+Validation Loss: 0.0737, Validation Accuracy: 97.66%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.7-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.8-3
+[Epoch 1, Batch     2] loss: 0.040
+[Epoch 1, Batch   102] loss: 0.643
+Epoch 1/5:
+Train Loss: 0.1814, Train Accuracy: 82.41%
+Validation Loss: 0.2908, Validation Accuracy: 89.96%
+[Epoch 2, Batch     2] loss: 0.004
+[Epoch 2, Batch   102] loss: 0.296
+Epoch 2/5:
+Train Loss: 0.1347, Train Accuracy: 90.41%
+Validation Loss: 0.2487, Validation Accuracy: 90.88%
+[Epoch 3, Batch     2] loss: 0.006
+[Epoch 3, Batch   102] loss: 0.192
+Epoch 3/5:
+Train Loss: 0.0925, Train Accuracy: 93.43%
+Validation Loss: 0.1161, Validation Accuracy: 95.88%
+[Epoch 4, Batch     2] loss: 0.003
+[Epoch 4, Batch   102] loss: 0.168
+Epoch 4/5:
+Train Loss: 0.0848, Train Accuracy: 94.12%
+Validation Loss: 0.0854, Validation Accuracy: 97.34%
+[Epoch 5, Batch     2] loss: 0.003
+[Epoch 5, Batch   102] loss: 0.146
+Epoch 5/5:
+Train Loss: 0.0677, Train Accuracy: 95.10%
+Validation Loss: 0.0771, Validation Accuracy: 97.36%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.8-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.9-3
+[Epoch 1, Batch     2] loss: 0.048
+Epoch 1/5:
+Train Loss: 0.8252, Train Accuracy: 71.98%
+Validation Loss: 0.6546, Validation Accuracy: 76.00%
+[Epoch 2, Batch     2] loss: 0.009
+Epoch 2/5:
+Train Loss: 0.4606, Train Accuracy: 84.03%
+Validation Loss: 0.4745, Validation Accuracy: 84.01%
+[Epoch 3, Batch     2] loss: 0.007
+Epoch 3/5:
+Train Loss: 0.3591, Train Accuracy: 87.48%
+Validation Loss: 0.2804, Validation Accuracy: 90.43%
+[Epoch 4, Batch     2] loss: 0.005
+Epoch 4/5:
+Train Loss: 0.2747, Train Accuracy: 90.88%
+Validation Loss: 0.3650, Validation Accuracy: 88.29%
+[Epoch 5, Batch     2] loss: 0.007
+Epoch 5/5:
+Train Loss: 0.2339, Train Accuracy: 92.08%
+Validation Loss: 0.4289, Validation Accuracy: 85.68%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.9-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-top-0.95-3
+[Epoch 1, Batch     2] loss: 0.042
+Epoch 1/5:
+Train Loss: 1.1675, Train Accuracy: 59.80%
+Validation Loss: 1.3591, Validation Accuracy: 51.27%
+[Epoch 2, Batch     2] loss: 0.013
+Epoch 2/5:
+Train Loss: 0.6041, Train Accuracy: 79.40%
+Validation Loss: 0.7939, Validation Accuracy: 70.00%
+[Epoch 3, Batch     2] loss: 0.010
+Epoch 3/5:
+Train Loss: 0.4989, Train Accuracy: 81.77%
+Validation Loss: 1.2576, Validation Accuracy: 57.71%
+[Epoch 4, Batch     2] loss: 0.006
+Epoch 4/5:
+Train Loss: 0.3589, Train Accuracy: 87.40%
+Validation Loss: 0.5178, Validation Accuracy: 82.51%
+[Epoch 5, Batch     2] loss: 0.007
+Epoch 5/5:
+Train Loss: 0.3102, Train Accuracy: 88.50%
+Validation Loss: 1.0550, Validation Accuracy: 71.00%
+Model saved to models/resnet18-MNIST-predictive_entropy-top-0.95-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Loaded weights from file: models/resnet18_MNIST_3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.3-3
+[Epoch 1, Batch     2] loss: 0.040
+[Epoch 1, Batch   102] loss: 0.140
+[Epoch 1, Batch   202] loss: 0.053
+[Epoch 1, Batch   302] loss: 0.054
+[Epoch 1, Batch   402] loss: 0.040
+[Epoch 1, Batch   502] loss: 0.029
+[Epoch 1, Batch   602] loss: 0.019
+Epoch 1/5:
+Train Loss: 0.0012, Train Accuracy: 98.21%
+Validation Loss: 0.2170, Validation Accuracy: 94.58%
+[Epoch 2, Batch     2] loss: 0.001
+[Epoch 2, Batch   102] loss: 0.016
+[Epoch 2, Batch   202] loss: 0.004
+[Epoch 2, Batch   302] loss: 0.004
+[Epoch 2, Batch   402] loss: 0.008
+[Epoch 2, Batch   502] loss: 0.018
+[Epoch 2, Batch   602] loss: 0.022
+Epoch 2/5:
+Train Loss: 0.0026, Train Accuracy: 99.61%
+Validation Loss: 0.3926, Validation Accuracy: 89.95%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.013
+[Epoch 3, Batch   202] loss: 0.010
+[Epoch 3, Batch   302] loss: 0.010
+[Epoch 3, Batch   402] loss: 0.015
+[Epoch 3, Batch   502] loss: 0.005
+[Epoch 3, Batch   602] loss: 0.015
+Epoch 3/5:
+Train Loss: 0.0016, Train Accuracy: 99.70%
+Validation Loss: 0.3336, Validation Accuracy: 92.27%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.015
+[Epoch 4, Batch   202] loss: 0.018
+[Epoch 4, Batch   302] loss: 0.014
+[Epoch 4, Batch   402] loss: 0.006
+[Epoch 4, Batch   502] loss: 0.003
+[Epoch 4, Batch   602] loss: 0.009
+Epoch 4/5:
+Train Loss: 0.0017, Train Accuracy: 99.66%
+Validation Loss: 0.1788, Validation Accuracy: 95.71%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.017
+[Epoch 5, Batch   202] loss: 0.006
+[Epoch 5, Batch   302] loss: 0.004
+[Epoch 5, Batch   402] loss: 0.004
+[Epoch 5, Batch   502] loss: 0.009
+[Epoch 5, Batch   602] loss: 0.008
+Epoch 5/5:
+Train Loss: 0.0004, Train Accuracy: 99.80%
+Validation Loss: 0.1555, Validation Accuracy: 96.20%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.3-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.5-3
+[Epoch 1, Batch     2] loss: 0.039
+[Epoch 1, Batch   102] loss: 0.105
+[Epoch 1, Batch   202] loss: 0.045
+[Epoch 1, Batch   302] loss: 0.021
+[Epoch 1, Batch   402] loss: 0.015
+Epoch 1/5:
+Train Loss: 0.0036, Train Accuracy: 98.41%
+Validation Loss: 1.0005, Validation Accuracy: 84.16%
+[Epoch 2, Batch     2] loss: 0.000
+[Epoch 2, Batch   102] loss: 0.012
+[Epoch 2, Batch   202] loss: 0.008
+[Epoch 2, Batch   302] loss: 0.006
+[Epoch 2, Batch   402] loss: 0.013
+Epoch 2/5:
+Train Loss: 0.0021, Train Accuracy: 99.68%
+Validation Loss: 1.2293, Validation Accuracy: 82.65%
+[Epoch 3, Batch     2] loss: 0.000
+[Epoch 3, Batch   102] loss: 0.012
+[Epoch 3, Batch   202] loss: 0.001
+[Epoch 3, Batch   302] loss: 0.005
+[Epoch 3, Batch   402] loss: 0.014
+Epoch 3/5:
+Train Loss: 0.0016, Train Accuracy: 99.78%
+Validation Loss: 0.8220, Validation Accuracy: 84.89%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.004
+[Epoch 4, Batch   202] loss: 0.003
+[Epoch 4, Batch   302] loss: 0.005
+[Epoch 4, Batch   402] loss: 0.011
+Epoch 4/5:
+Train Loss: 0.0010, Train Accuracy: 99.85%
+Validation Loss: 0.9872, Validation Accuracy: 85.02%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.004
+[Epoch 5, Batch   202] loss: 0.008
+[Epoch 5, Batch   302] loss: 0.017
+[Epoch 5, Batch   402] loss: 0.015
+Epoch 5/5:
+Train Loss: 0.0008, Train Accuracy: 99.72%
+Validation Loss: 1.0073, Validation Accuracy: 82.99%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.5-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.7-3
+[Epoch 1, Batch     2] loss: 0.034
+[Epoch 1, Batch   102] loss: 0.064
+[Epoch 1, Batch   202] loss: 0.018
+Epoch 1/5:
+Train Loss: 0.0046, Train Accuracy: 98.68%
+Validation Loss: 1.9189, Validation Accuracy: 69.62%
+[Epoch 2, Batch     2] loss: 0.000
+[Epoch 2, Batch   102] loss: 0.014
+[Epoch 2, Batch   202] loss: 0.006
+Epoch 2/5:
+Train Loss: 0.0031, Train Accuracy: 99.71%
+Validation Loss: 2.1603, Validation Accuracy: 69.66%
+[Epoch 3, Batch     2] loss: 0.000
+[Epoch 3, Batch   102] loss: 0.027
+[Epoch 3, Batch   202] loss: 0.011
+Epoch 3/5:
+Train Loss: 0.0019, Train Accuracy: 99.61%
+Validation Loss: 1.3616, Validation Accuracy: 76.95%
+[Epoch 4, Batch     2] loss: 0.000
+[Epoch 4, Batch   102] loss: 0.007
+[Epoch 4, Batch   202] loss: 0.005
+Epoch 4/5:
+Train Loss: 0.0003, Train Accuracy: 99.87%
+Validation Loss: 1.5037, Validation Accuracy: 75.93%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.002
+[Epoch 5, Batch   202] loss: 0.002
+Epoch 5/5:
+Train Loss: 0.0010, Train Accuracy: 99.93%
+Validation Loss: 1.5541, Validation Accuracy: 74.18%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.7-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.8-3
+[Epoch 1, Batch     2] loss: 0.034
+[Epoch 1, Batch   102] loss: 0.037
+Epoch 1/5:
+Train Loss: 0.0131, Train Accuracy: 98.40%
+Validation Loss: 2.4576, Validation Accuracy: 66.22%
+[Epoch 2, Batch     2] loss: 0.000
+[Epoch 2, Batch   102] loss: 0.016
+Epoch 2/5:
+Train Loss: 0.0007, Train Accuracy: 99.74%
+Validation Loss: 2.5923, Validation Accuracy: 65.82%
+[Epoch 3, Batch     2] loss: 0.001
+[Epoch 3, Batch   102] loss: 0.004
+Epoch 3/5:
+Train Loss: 0.0013, Train Accuracy: 99.91%
+Validation Loss: 2.8198, Validation Accuracy: 62.19%
+[Epoch 4, Batch     2] loss: 0.001
+[Epoch 4, Batch   102] loss: 0.019
+Epoch 4/5:
+Train Loss: 0.0040, Train Accuracy: 99.52%
+Validation Loss: 2.6032, Validation Accuracy: 66.01%
+[Epoch 5, Batch     2] loss: 0.000
+[Epoch 5, Batch   102] loss: 0.001
+Epoch 5/5:
+Train Loss: 0.0001, Train Accuracy: 99.99%
+Validation Loss: 2.6312, Validation Accuracy: 65.30%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.8-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.9-3
+[Epoch 1, Batch     2] loss: 0.029
+Epoch 1/5:
+Train Loss: 0.0331, Train Accuracy: 98.07%
+Validation Loss: 4.1239, Validation Accuracy: 47.99%
+[Epoch 2, Batch     2] loss: 0.001
+Epoch 2/5:
+Train Loss: 0.0155, Train Accuracy: 99.43%
+Validation Loss: 3.7028, Validation Accuracy: 44.29%
+[Epoch 3, Batch     2] loss: 0.000
+Epoch 3/5:
+Train Loss: 0.0096, Train Accuracy: 99.68%
+Validation Loss: 3.2446, Validation Accuracy: 50.54%
+[Epoch 4, Batch     2] loss: 0.000
+Epoch 4/5:
+Train Loss: 0.0026, Train Accuracy: 99.88%
+Validation Loss: 3.7382, Validation Accuracy: 51.66%
+[Epoch 5, Batch     2] loss: 0.000
+Epoch 5/5:
+Train Loss: 0.0002, Train Accuracy: 100.00%
+Validation Loss: 3.9877, Validation Accuracy: 51.83%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.9-3
+Modified conv1: updated in_channels to 1.
+Modified fc layer: updated out_features to 10.
+Initialized untrained model.
+resnet18-MNIST-predictive_entropy-bottom-0.95-3
+[Epoch 1, Batch     2] loss: 0.034
+Epoch 1/5:
+Train Loss: 0.0501, Train Accuracy: 96.33%
+Validation Loss: 4.7995, Validation Accuracy: 37.09%
+[Epoch 2, Batch     2] loss: 0.000
+Epoch 2/5:
+Train Loss: 0.0124, Train Accuracy: 99.60%
+Validation Loss: 5.2855, Validation Accuracy: 34.83%
+[Epoch 3, Batch     2] loss: 0.000
+Epoch 3/5:
+Train Loss: 0.0172, Train Accuracy: 99.70%
+Validation Loss: 4.8861, Validation Accuracy: 37.31%
+[Epoch 4, Batch     2] loss: 0.000
+Epoch 4/5:
+Train Loss: 0.0039, Train Accuracy: 99.87%
+Validation Loss: 4.9485, Validation Accuracy: 38.42%
+[Epoch 5, Batch     2] loss: 0.000
+Epoch 5/5:
+Train Loss: 0.0018, Train Accuracy: 99.93%
+Validation Loss: 4.7321, Validation Accuracy: 41.38%
+Model saved to models/resnet18-MNIST-predictive_entropy-bottom-0.95-3
