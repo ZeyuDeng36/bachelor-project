@@ -111,3 +111,24 @@ MODEL:resnet18-MNIST-predictive_entropy-balanced_by_score1-0.7-3 , Train Loss: 0
 MODEL:resnet18-MNIST-predictive_entropy-balanced_by_score1-0.8-3 , Train Loss: 0.0105, Train Accuracy: 99.10, Validation Loss: 0.0597, Validation Accuracy: 98.35%
 MODEL:resnet18-MNIST-predictive_entropy-balanced_by_score1-0.9-3 , Train Loss: 0.0189, Train Accuracy: 99.39, Validation Loss: 0.1234, Validation Accuracy: 96.93%
 MODEL:resnet18-MNIST-predictive_entropy-balanced_by_score1-0.95-3 , Train Loss: 0.0188, Train Accuracy: 99.15, Validation Loss: 0.1350, Validation Accuracy: 96.64%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

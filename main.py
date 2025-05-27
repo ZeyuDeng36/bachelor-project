@@ -12,7 +12,7 @@ from utils.trainer_standard import Trainer as TrainerS
 def run_experiment1():
     models = ["resnet18"]
     datasets = ["MNIST"]
-    rates = [0.95, 0.5, 0.7, 0.8, 0.9, 0.95]
+    rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
     uncertainty_metrics = ["predictive_entropy"]
     selection_methods = ["top","bottom","balanced_by_label","median","balanced_by_score1"]
     for model_name in models:
