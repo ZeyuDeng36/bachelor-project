@@ -1,0 +1,7 @@
+MODEL:resnet18_MNIST_1 , Train Loss: 0.0006, Train Accuracy: 99.55, Validation Loss: 0.0297, Validation Accuracy: 99.19%
+MODEL:resnet18_MNIST_2 , Train Loss: 0.0008, Train Accuracy: 99.54, Validation Loss: 0.0413, Validation Accuracy: 98.88%
+MODEL:resnet18_MNIST_3 , Train Loss: 0.0004, Train Accuracy: 99.56, Validation Loss: 0.0365, Validation Accuracy: 98.93%
+
+MODEL:resnet18_CIFAR10_1 , Train Loss: 0.0147, Train Accuracy: 95.95, Validation Loss: 1.0535, Validation Accuracy: 75.30%
+MODEL:resnet18_CIFAR10_2 , Train Loss: 0.0155, Train Accuracy: 95.76, Validation Loss: 1.0761, Validation Accuracy: 75.18%
+MODEL:resnet18_CIFAR10_3 , Train Loss: 0.0179, Train Accuracy: 95.66, Validation Loss: 1.0447, Validation Accuracy: 73.76%
