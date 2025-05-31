@@ -14,7 +14,7 @@ def run_experiment1():
     datasets = ["MNIST"]
     rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
     uncertainty_metrics = ["predictive_entropy"]
-    selection_methods = ["top","bottom","balanced_by_label","median","balanced_by_score1"]
+    selection_methods = ["cover_centric"]#"top","bottom","balanced_by_label","median","balanced_by_score1"]
     for model_name in models:
         for dataset_name in datasets:
             for suffix in [1,2,3]:
@@ -38,7 +38,7 @@ def run_experiment2():
     datasets = ["MNIST"]
     rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
     uncertainty_metrics = ["EVIDENCE"]
-    selection_methods = ["top","bottom","balanced_by_label","median","balanced_by_score1"]
+    selection_methods = ["cover_centric"]#"top","bottom","balanced_by_label","median","balanced_by_score1"]
     for model_name in models:
         for dataset_name in datasets:
             for suffix in [1,2,3]:
@@ -62,7 +62,7 @@ def run_experiment3():
     datasets = ["CIFAR10"]
     rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
     uncertainty_metrics = ["predictive_entropy"]
-    selection_methods = ["top","bottom","balanced_by_label","median","balanced_by_score1"]
+    selection_methods = ["cover_centric"]#"top","bottom","balanced_by_label","median","balanced_by_score1"]
     for model_name in models:
         for dataset_name in datasets:
             for suffix in [1,2,3]:
@@ -86,7 +86,7 @@ def run_experiment4():
     datasets = ["CIFAR10"]
     rates = [0.3, 0.5, 0.7, 0.8, 0.9, 0.95]
     uncertainty_metrics = ["EVIDENCE"]
-    selection_methods = ["top","bottom","balanced_by_label","median","balanced_by_score1"]
+    selection_methods = ["cover_centric"]#"top","bottom","balanced_by_label","median","balanced_by_score1"]
     for model_name in models:
         for dataset_name in datasets:
             for suffix in [1,2,3]:
@@ -108,7 +108,7 @@ def run_experiment4():
 
 if __name__ == '__main__':    
     #model,(trainset, testset) = initiate_model_and_dataset("resnet18","cifar10")
-    #run_experiment3()
-    #run_experiment4()
+    run_experiment3()
+    run_experiment4()
     run_experiment2()
     run_experiment1()

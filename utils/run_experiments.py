@@ -10,7 +10,7 @@ import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
 from torchvision.models import resnet18
-from condensation.select import random_selection,balanced_by_label,balanced_by_score,select_top,select_bottom,balanced_by_score1,balanced_by_range,select_median_centered
+from condensation.select import random_selection,balanced_by_label,balanced_by_score,select_top,select_bottom,balanced_by_score1,balanced_by_range,select_median_centered,select_least_bin
 from condensation.sort_entropy import sort_by_log_percentage_entropy,sort_by_predictive_entropy
 from condensation.sort_evidence import sort_by_total_evidence,sort_by_label_evidence, sort_by_label_uncertainty,sort_by_total_uncertainty,sort_by_combined_loss
 from condensation.sort_evidence1 import sort_by_total_evidence_dirichlet,sort_by_label_belief,compute_input_gradient_norm
@@ -50,7 +50,8 @@ selection_methods = {
     "balanced_by_range": balanced_by_range,
     "top":select_top,
     "bottom":select_bottom,
-    "median":select_median_centered
+    "median":select_median_centered,
+    "cover_centric": select_least_bin
 }
 
 def run_experiments(

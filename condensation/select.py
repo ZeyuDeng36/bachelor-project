@@ -1,3 +1,5 @@
+from collections import defaultdict
+import math
 import random
 import time
 import numpy as np
@@ -307,3 +309,77 @@ def select_median_centered(dataset, rate, scores):
     # The selected block of indices (from the sorted list)
     selected_indices = [scores[i][1] for i in range(start_index, end_index)]
     return selected_indices
+
+def select_least_bin(scores, eta, seed=None):
+    """
+    Implements the "Coverage‐Centric Sampling" (least‐bin) procedure:
+      1) Partition all examples into bins by their integer distance.
+      2) Repeat:
+         a) Find the bin with smallest cardinality.
+         b) From that bin, select min( bin_size, floor(q / (#bins_remain)) ) examples.
+         c) Remove that bin, subtract from q, and add chosen indices to S.
+      3) Stop when either q ≤ 0 or no bins remain.
+
+    Args:
+        scores (List[ (int distance, int idx) ]): 
+            Each tuple holds (distance_i, index_i). Distances should be 
+            nonnegative integers (0,1,…,k).
+        eta (float): Fraction ∈ (0,1] specifying how large the coreset should be
+                     relative to the full dataset size m = len(scores).
+        seed (int, optional): Random seed for reproducibility.
+
+    Returns:
+        List[int]: The list of selected indices (the η‐coreset).
+    """
+    if seed is not None:
+        random.seed(seed)
+    
+    # 1) Total number of examples:
+    m = len(scores)
+    if not (0 < eta <= 1.0):
+        raise ValueError("eta must be in (0,1].")
+    
+    # 2) Compute how many we need in the end (q):
+    q = int(math.floor(m * eta))
+    if q <= 0:
+        return []
+    
+    # 3) Build a dictionary mapping distance → list of indices
+    D = defaultdict(list)
+    for dist, idx in scores:
+        D[dist].append(idx)
+    
+    # 4) Initialize the coreset list
+    S_co = []
+    
+    # 5) Iterate until either no bins remain or q ≤ 0
+    while D and q > 0:
+        # 5a) Find the key 'dist_min' whose bin is smallest
+        dist_min = min(D.keys(), key=lambda d: len(D[d]))
+        bin_min = D[dist_min]
+        size_min = len(bin_min)
+        
+        # 5b) Number of bins currently in D
+        B = len(D)
+        
+        # 5c) How many to sample from this bin:
+        avg_allotment = math.floor(q / B)
+        m_D = min(size_min, avg_allotment)
+        
+        # 5d) Sample m_D indices from bin_min
+        if m_D >= size_min:
+            chosen = bin_min[:]  # take all if bin is small enough
+        else:
+            chosen = random.sample(bin_min, m_D)
+        
+        # 5e) Add them to S_co
+        S_co.extend(chosen)
+        
+        # 5f) Remove this bin from D
+        del D[dist_min]
+        
+        # 5g) Update remaining budget
+        q -= m_D
+    
+    # 6) Return the indices we selected
+    return S_co

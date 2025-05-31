@@ -4,7 +4,6 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 from torch import nn
 import torch.nn.functional as F
-
 # -------------------------
 # Helper functions for evidential loss components
 # -------------------------
@@ -54,14 +53,23 @@ def calc_kl_divergence(alpha):
         Tensor of shape [batch] containing the KL divergence per sample.
     """
     # Sum of Dirichlet parameters for each sample: shape [batch]
+
     S = torch.sum(alpha, dim=1)
     K = alpha.size(1)
     
-    # Compute each term using torch.lgamma (for log-gamma) and torch.digamma (for psi)
-    kl = torch.lgamma(S) - torch.lgamma(torch.tensor(K, dtype=S.dtype, device=S.device))
-    kl -= torch.sum(torch.lgamma(alpha), dim=1)
-    # Since lgamma(1)=0, we omit the term sum(log(Γ(1)))
-    kl += torch.sum((alpha - 1) * (torch.digamma(alpha) - torch.digamma(S).unsqueeze(1)), dim=1)
+    ones = torch.ones([1, K], dtype=torch.float32, device=S.device)
+    first_term = (
+        torch.lgamma(S)
+        - torch.lgamma(alpha).sum(dim=1)
+        + torch.lgamma(ones).sum(dim=1)
+        - torch.lgamma(ones.sum(dim=1))
+    )
+    second_term = (
+        (alpha - ones)
+        .mul(torch.digamma(alpha) - torch.digamma(S).unsqueeze(1))
+        .sum(dim=1)
+    )
+    kl = first_term + second_term
     return kl
 
 
