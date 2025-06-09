@@ -4,20 +4,21 @@ import torch
 from torch.special import digamma
 from torch.utils.data import DataLoader
 
+
 def get_scores_batched(model, dataset, func, batch_size=128):
     """
     Computes and sorts scores for each sample based on a batched function.
-    
+
     Args:
         model (torch.nn.Module): Trained evidential model.
         dataset (torch.utils.data.Dataset): Dataset to evaluate.
         func (callable): Function that takes batched evidence and returns a tensor of scores.
         batch_size (int): Batch size for processing.
-    
+
     Returns:
         list of tuples: (score, sample_index) sorted in descending order.
     """
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)
     model.eval()
     data_loader = DataLoader(dataset, batch_size=batch_size, shuffle=False)
@@ -37,6 +38,7 @@ def get_scores_batched(model, dataset, func, batch_size=128):
             index_offset += len(batch_scores)
     return sorted(scores, key=lambda x: x[0], reverse=True)
 
+
 def compute_label_belief_batched(evidence: torch.Tensor, labels) -> torch.Tensor:
     # Convert raw evidence to Dirichlet parameters
     alpha = evidence + 1.0
@@ -51,15 +53,20 @@ def compute_label_belief_batched(evidence: torch.Tensor, labels) -> torch.Tensor
     belief = (alpha_hat - 1) / S.squeeze(1)
     return belief
 
+
 def sort_by_label_belief(model, dataset, batch_size=128):
     return get_scores_batched(model, dataset, compute_label_belief_batched, batch_size)
+
+
 def compute_total_evidence_dirichlet(evidence: torch.Tensor, labels) -> torch.Tensor:
     # Convert raw evidence to Dirichlet parameters.
     alpha = evidence + 1.0
     # Total evidence S = sum_j alpha_j for each sample.
     num_classes = evidence.size(1)
-    S = num_classes/torch.sum(alpha, dim=1)
+    S = num_classes / torch.sum(alpha, dim=1)
     return S
+
+
 def compute_total_uncertainty(evidence: torch.Tensor, labels=None):
     """
     Given nonnegative evidence e_k for each of K classes, compute:
@@ -68,45 +75,50 @@ def compute_total_uncertainty(evidence: torch.Tensor, labels=None):
     Returns two tensors of shape (batch_size,).
     """
     # 1) Dirichlet parameters
-    alpha = evidence + 1.0              # shape (B, K)
+    alpha = evidence + 1.0  # shape (B, K)
     S = alpha.sum(dim=1, keepdim=True)  # shape (B, 1)
     K = evidence.size(1)
 
     # 2) Epistemic vacuity u = K / S
-    u = K / S.squeeze(1)                # shape (B,)
+    u = K / S.squeeze(1)  # shape (B,)
 
     # 3) Aleatoric = E_p~Dir(alpha)[H(p)]
     #    E[H(p)] = sum_k (alpha_k / S) * (psi(S + 1) - psi(alpha_k + 1))
-    digamma_Sp1   = digamma(S + 1)      # shape (B, 1)
-    digamma_ap1   = digamma(alpha + 1)  # shape (B, K)
-    probs_mean    = alpha / S           # shape (B, K)
+    digamma_Sp1 = digamma(S + 1)  # shape (B, 1)
+    digamma_ap1 = digamma(alpha + 1)  # shape (B, K)
+    probs_mean = alpha / S  # shape (B, K)
 
     aleatoric = (probs_mean * (digamma_Sp1 - digamma_ap1)).sum(dim=1)  # shape (B,)
 
     return u + aleatoric
+
+
 def sort_by_total_evidence_dirichlet(model, dataset, batch_size=128):
-    return get_scores_batched(model, dataset, compute_total_evidence_dirichlet, batch_size)
+    return get_scores_batched(
+        model, dataset, compute_total_evidence_dirichlet, batch_size
+    )
+
 
 def compute_input_gradient_norm(model, dataset, batch_size=128):
     """
     Computes gradient norm (sensitivity) for each sample in the dataset.
-    
+
     Args:
         model (torch.nn.Module): Trained model.
         dataset (torch.utils.data.Dataset): Dataset to evaluate.
         batch_size (int): Batch size for processing.
-    
+
     Returns:
         list of tuples: (gradient_norm, sample_index) sorted in descending order.
     """
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)
     model.eval()
-    
+
     data_loader = DataLoader(dataset, batch_size=batch_size, shuffle=False)
     scores = []
     index_offset = 0
-    
+
     for inputs, labels in data_loader:
         inputs = inputs.to(device)
         labels = labels.to(device)
@@ -119,7 +131,9 @@ def compute_input_gradient_norm(model, dataset, batch_size=128):
 
         # Compute gradient norm for each sample in the batch
         gradient = inputs.grad  # shape: [batch_size, C, H, W] or similar
-        gradient_norm = gradient.view(gradient.size(0), -1).norm(p=2, dim=1)  # L2 norm per sample
+        gradient_norm = gradient.view(gradient.size(0), -1).norm(
+            p=2, dim=1
+        )  # L2 norm per sample
 
         batch_scores = gradient_norm.detach().cpu().tolist()
         batch_indices = list(range(index_offset, index_offset + len(batch_scores)))

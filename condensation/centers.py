@@ -1,13 +1,12 @@
-
 def compute_class_centers(representations, labels, num_classes):
     """
     Compute the class center for each class as the mean of its representations.
-    
+
     Args:
         representations (torch.Tensor): Tensor of shape (N, rep_dim).
         labels (torch.Tensor): Tensor of shape (N,).
         num_classes (int): Total number of classes.
-        
+
     Returns:
         class_centers (list of torch.Tensor): List of length num_classes with center for each class.
     """
@@ -18,15 +17,16 @@ def compute_class_centers(representations, labels, num_classes):
         class_centers.append(center)
     return class_centers
 
+
 def compute_distances(representations, labels, class_centers):
     """
     Compute the Euclidean distance from each sample's representation to its class center.
-    
+
     Args:
         representations (torch.Tensor): Tensor of shape (N, rep_dim).
         labels (torch.Tensor): Tensor of shape (N,).
         class_centers (list of torch.Tensor): Precomputed centers for each class.
-        
+
     Returns:
         distances (list of float): Euclidean distances for each sample.
     """
